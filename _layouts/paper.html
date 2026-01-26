@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article>
+  <h2>{{ page.title }}</h2>
+  <p>
+    {% if page.authors %}<strong>Authors:</strong> {{ page.authors }}<br>{% endif %}
+    {% if page.year %}<strong>Year:</strong> {{ page.year }}<br>{% endif %}
+    {% if page.journal %}<strong>Venue:</strong> {{ page.journal }}<br>{% endif %}
+  </p>
+
+  {% if page.abstract %}
+  <h3>Abstract</h3>
+  <p>{{ page.abstract }}</p>
+  {% endif %}
+
+  {% if page.pdf %}
+  <p><a href="{{ page.pdf | relative_url }}" target="_blank">Download PDF</a></p>
+  {% endif %}
+
+  {% if page.bibtex %}
+  <h4>BibTeX</h4>
+  <pre>{{ page.bibtex }}</pre>
+  {% endif %}
+</article>
