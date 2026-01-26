@@ -1,0 +1,21 @@
+---
+title: "Stefan Hoffelner — Research"
+email: ""
+description: "Personal site for research papers"
+baseurl: "" # leave empty for username.github.io
+url: "https://stefanhoffe.github.io"
+theme: minima
+
+# Collections: each paper is a markdown file under _papers, outputs HTML
+collections:
+  papers:
+    output: true
+    permalink: /papers/:name/
+
+# Defaults for paper layout
+defaults:
+  - scope:
+      path: ""
+      type: "papers"
+    values:
+      layout: "paper"
