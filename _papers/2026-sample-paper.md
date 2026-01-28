@@ -13,8 +13,6 @@ bibtex: |
     journal={Journal / Conference Name},
     year={2026}
   }
----
-Short note: download the PDF using the link above.
 
 title: A $\Sigma^1_4$ wellorder of the reals with $\text{NS}_{\omega_1}$ saturated.
 authors: Sy-David Friedman and Stefan Hoffelner
