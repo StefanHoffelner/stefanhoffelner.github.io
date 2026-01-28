@@ -15,7 +15,7 @@ bibtex: |
   }
 ---
 ---
-title: A $\Sigma^1_4$ wellorder of the reals with $\text{NS}_{\omega_1}$ saturated.
+title: A $\Sigma^1_4$ wellorder of the reals with $\text{NS}_{\omega_1}$ saturated
 authors: Sy-David Friedman and Stefan Hoffelner
 year: 2019
 journal: Journal of Symbolic Logic
