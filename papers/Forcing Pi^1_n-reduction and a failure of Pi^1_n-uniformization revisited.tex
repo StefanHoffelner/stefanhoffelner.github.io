@@ -1,0 +1,1622 @@
+
+   
+    \documentclass[a4paper,11pt]{article}
+    
+    \usepackage[utf8]{inputenc}
+    
+    \usepackage{hyperref}
+    \usepackage{boxedminipage}
+    
+    \usepackage{amsfonts}
+    
+    \usepackage{amsmath} 
+    
+    \usepackage{amssymb}
+    
+    \usepackage{graphicx}
+    
+    \usepackage{amsthm}
+    
+    \usepackage{t1enc}
+    
+    \usepackage{subfig}
+    
+    \usepackage{cancel}
+    
+     \usepackage{textcmds}
+    
+     \usepackage{mathabx}
+    
+    
+    \newtheorem{theorem}{Theorem}[section]
+    
+    \newtheorem{lemma}[theorem]{Lemma}
+    
+    \newtheorem{proposition}[theorem]{Proposition}
+    
+    \newtheorem{corollary}[theorem]{Corollary}
+    
+    \newtheorem{definition}[theorem]{Definition}
+    
+    \newtheorem{example}[theorem]{Example}
+    
+    \newtheorem{fact}[theorem]{Fact}
+    
+    \newtheorem{question}{Question}
+    
+    \newtheorem*{theorem*}{Theorem}
+    
+    \newtheorem{claim}{Claim}
+    
+    
+    \newcommand{\forceP}{\mathbb{P}}
+    
+    \newcommand{\forceQ}{\mathbb{Q}}
+    
+    \newcommand{\forceR}{\mathbb{R}}
+    
+    \newcommand{\forceL}{\mathbb{L}}
+    
+    \newcommand{\ZFC}{\mathsf{ZFC}}
+    
+    \newcommand{\ZF}{\mathsf{ZF}}
+    
+    \newcommand{\ZFP}{\mathsf{ZF}^-}
+    
+    \newcommand{\AC}{\mathsf{AC}}
+    
+    \newcommand{\PFA}{\mathsf{PFA}}
+    
+    \newcommand{\BPFA}{\mathsf{BPFA}}
+    
+    \newcommand{\MRP}{\mathsf{MRP}}
+    
+    \newcommand{\MM}{\mathsf{MM}}
+    
+    \newcommand{\CH}{\mathsf{CH}}
+    
+    \newcommand{\GCH}{\mathsf{GCH}}
+    
+    \newcommand{\MA}{\mathsf{MA}_{\omega_1}}
+    
+    \newcommand{\PD}{\mathsf{PD}}
+    
+    \def\undertilde#1{\mathord{\vtop{\ialign{##\crcr
+    
+    $\hfil\displaystyle{#1}\hfil$\crcr\noalign{\kern1.5pt\nointerlineskip}
+    
+    $\hfil\tilde{}\hfil$\crcr\noalign{\kern1.5pt}}}}}
+    
+    %opening
+    
+    \title{Forcing upper $\Sigma$-uniformization in the presence of lower $\Pi$-reduction or uniformization}
+    
+    \author{ Stefan Hoffelner\footnote{This research was funded in whole by the Austrian Science Fund (FWF) Grant-DOI 10.55776/P37228.}  }
+    
+    \DeclareUnicodeCharacter{FEFF}{}
+    \begin{document}
+
+    
+    \maketitle
+    
+    
+ \begin{abstract}
+ We present a method which allows the combination of forcing uniformization on the $\Pi$- and the $\Sigma$-side of the projective hierarchy to a certain extent. Using this method
+we construct a universe where ${\Pi}^1_3$-reduction holds, $\Pi^1_3$-uniformization fails, yet $\Sigma^1_n$ uniformization is true for $n \ge 4$. We also construct a universe where $\Pi^1_3$-uniformization holds and for every $n \ge 4, $ $ \Sigma^1_4$-uniformization holds, lowering the best known upper bound for this statement from the existence of two Woodin cardinals to $Con(\ZFC)$.
+\end{abstract}
+
+
+\section{Introduction}
+
+
+The problem of finding well-behaved choice functions for families of sets, a core concern in descriptive set theory, is a long-studied subject. Specifically, the uniformization problem, first posed by N. Lusin in 1930, asks whether one can find a choice function (called a uniformization) that has the same complexity (i.e. sits on the same projective level) as the set it is defined from.
+
+
+\begin{definition}
+For a set $A \subset 2^{\omega} \times 2^{\omega}$ (a set of pairs of reals), a partial function $f$ is a uniformization of $A$ if $f$ picks exactly one $y$ for each $x$ such that there is a $y'$ with $(x, y') \in A$. In other words, the graph of $f$ is a subset of $A$, and the domain of $f$ is the projection of $A$ onto its first coordinate. A projective pointclass $\Gamma \in \{ \Sigma^1_n \mid n \in \omega\}$ $ \cup \{\Pi^1_n \mid n \in \omega \}$  has the uniformization property if every set in $\Gamma$ can be uniformized by a function whose graph also belongs to $\Gamma$.
+\end{definition}
+
+
+Closely related to the uniformization property is a second classical regularity property, the reduction property, introduced in 1936 by K. Kuratowski.
+
+
+\begin{definition}
+We say that a projective pointclass $\Gamma \in \{ \Sigma^1_n \mid n \in \omega\} \cup \{\Pi^1_n \mid n \in \omega \}$ satisfies the $\Gamma$-reduction property (or just reduction) if every pair $B_0,B_1$ of $\Gamma$-subsets of the reals can be reduced by a pair of $\Gamma$-sets $R_0,R_1$, which means that $R_0 \subset B_0$, $R_1 \subset B_1$, $R_0 \cap R_1= \emptyset$ and $R_0 \cup R_1=B_0 \cup B_1$.
+\end{definition}
+
+
+It follows immediately from the definitions that $\Gamma$-uniformization implies ${\Gamma}$-reduction.
+
+
+
+
+It is a classical result by M. Kondo that the family of $\Pi^1_1$ sets  possesses the uniformization property, which also implies the property for $\Sigma^1_2$ sets. Standard set theory ($\mathsf{ZFC}$) cannot prove uniformization for any pointclass of higher complexity.
+
+
+To prove uniformization for more complex sets, one must appeal to additional set-theoretic axioms. In the constructible universe $L$, for every $n \ge 2$, $\Sigma^1_{n}$ does have the uniformization property which follows from the existence of a good $\Delta^1_2$-wellorder by an old result of Addison (see \cite{Addison}). Recall that a $\Delta^1_n$-definable wellorder $<$ of the reals is a \emph{good} $\Delta^1_n$-wellorder if $<$ is of ordertype $\omega_1$ and the relation $<_{I} \subset (\omega^{\omega})^2$ defined via
+\[ x <_I y \Leftrightarrow \{(x)_n \, : \, n \in \omega\}= \{z \, : \, z < y\} \]
+where $(x)_n$ is some fixed recursive partition of $x$ into $\omega$-many reals, is a $\Delta^1_n$-definable relation. Addison's observation is that a good $\Delta^1_n$-wellorder implies that the $\Sigma^1_m$-uniformization property is true for every $m \ge n$. It is easy to check that the canonical wellorder of the reals in $L$ is a good $\Delta^1_2$-wellorder so the $\Sigma^1_n$-uniformization property follows for $n \ge 2$. 
+
+
+On the other hand, and more importantly, if we assume the existence of large cardinals or alternatively strong forcing axioms, we obtain a very different picture.
+Due to Moschovakis (see \cite{Moschovakis2} or \cite{Kechris}, Theorem 39.9), the axiom of projective determinacy ($\PD$) implies that $\Pi^1_{2n+1}$ and $\Sigma^1_{2n+2}$-sets have the uniformization property. By the Martin-Steel theorem (see \cite{MS} or \cite{Schindler}, Theorem 13.6.), the assumption of infinitely many Woodin cardinals implies $\PD$, and hence large cardinals fully settle the behaviour of the uniformization property within the projective hierarchy.
+
+
+An old result of Novikov (see \cite{Schindler}, Lemma 7.25) states that $\Gamma$-reduction rules out reduction for the projective pointclass dual to $\Gamma$, denoted by $\check{\Gamma}$ so in particular the two possibilities for the behaviour of uniformization (and hence of reduction) within the projective hierarchy contradict each other.
+
+
+There are set theoretic universes which combine the behaviour of uniformization under $V=L$ and under $\PD$ to some extent. Paradigmatic example are the canonical inner models with $n$-many Woodin cardinals $M_n$. Due to Steel, these models have good $\Sigma^1_{n+2}$-definable well-orders of its reals so in particular $\Sigma^1_{m+2}$ uniformization holds there for $m \ge n$. Yet the presence of the $n$-many Woodin cardinals implies $\bf{\Pi}^1_n$-determinacy, so in particular $\Pi^1_{2m+1}, 2m+1 \le n+1$-uniformization holds for $n$ even and $\Pi^1_{2m+1}$-uniformization holds for $2m < n+1$ for $n$ odd. 
+
+
+ 
+This work is a first attempt to find possibilities to combine the $\Sigma$-uniformization property and the $\Pi$-uniformization property, but using forcing techniques instead of (local forms of) projective determinacy. The articles \cite{Reduction} \cite{Uniformization} and \cite{BPFA and uniformization} deal with forcing $\Pi^1_n$-reduction, $\Pi^1_n$-uniformization for a given, fixed $n \in \omega$, and forcing global $\Sigma^1_m$-uniformization for $m \ge 2$ respectively. 
+The techniques introduced there are however impossible to combine. Indeed, the methods are such that they exclude themselves from each other. Forcing uniformization (or reduction) on the $\Pi$-side of the projective hierarchy currently needs the solution of an associated fixed point problem for sets of forcings first. These fixed point problems can only be solved if we work with iterated coding forcings which are closed under taking products.
+Forcing the uniformization property on the $\Sigma$-side acccording to \cite{BPFA and uniformization}, in stark contrast, needs the iteration of coding forcings which can not be closed under taking products by design (see the footnote 4 on pp. 19). 
+
+
+Hence it becomes a challenging problem to investigate ways to combine forcing constructions for the $\Pi$ and the $\Sigma$-uniformization property. 
+Questions of this type do have a deeper underpinning. Indeed, they can be seen as first test questions for finding constructions which would yield alternative, global, or at least less local patterns for the behaviour of the uniformization property within the projective hierarchy. The latter question is still wide open \footnote{E.g. the problem of finding a universe where $\Pi^1_3$ and $\Pi^1_6$-uniformization holds is wide open and seems to be far out of reach of the current methods.} in general and the current status of available methodology suggests that it is a very hard one. This article adds further difficulties to the picture, as its methods have a degree of limited flexibility and any attempt to force, say, $\Pi^1_5$-uniformization without large cardinals must be such that it can not be combined with these methods.
+
+
+Main goal of this work is the introduction of a new technique which allows the combination of techniques forcing the $\Pi$-uniformization and methods which force the $\Sigma$-uniformization to some extent. This technique allows for a deep investigation of reduction and uniformization as displayed in the following first main theorem. Notably we do not assume anything beyond the consistency of $\mathsf{ZFC}$ for its proof.
+
+
+\begin{theorem}
+There is a generic extension of $L$ which satisfies
+\begin{enumerate}
+\item $\Pi^1_3$-reduction,
+\item a failure of $\Pi^1_3$-uniformization,
+\item $\Sigma^1_n$-uniformization for every $n \ge 4$ simultaneously.
+\end{enumerate}
+\end{theorem}
+
+
+The second main theorem is another application of ideas involved in proving the first main theorem and show that the two Woodin cardinals of $M_2$ are not necessary to obtain the behaviour of uniformization there, instead one can get by with just assuming Con($\mathsf{ZFC})$.
+
+
+\begin{theorem}
+Assume the consistency of $\mathsf{ZFC}$. Then there is a universe where the $\Pi^1_3$-uniformization property is true and the $\Sigma^1_n$-uniformization property is true for all $n \ge 4$ simultaneously.
+\end{theorem}
+
+Due to the specific choice of the coding forcings we use, both theorems can be lifted to the $M_n$'s, the canonical inner models with $n$-many Woodin cardinals. 
+\begin{theorem}
+    Let $M_n$ denote the canonical inner model with $n$-many Woodin cardinals. There is a set-generic extension $M_n [g]$ of $M_n$ which preserves the Woodin cardinals and where additionally
+    \begin{enumerate}
+        \item $\Pi^1_{n+3}$-reduction holds,
+        \item $\Pi^1_{n+3}$-uniformization fails,
+        \item $\Sigma^1_{m+4}$-uniformization holds for every $m \ge n$.
+    \end{enumerate}
+\end{theorem}
+and
+\begin{theorem}
+    There is a set-generic extension $M_n [g]$ of $M_n$ preserving the Woodin cardinals and where additionally
+    \begin{enumerate}
+        \item $\Pi^1_{n+3}$-uniformization holds,
+        \item $\Sigma^1_{m+4}$-uniformization holds for every $m \ge n$.
+    \end{enumerate}
+\end{theorem}
+
+
+Put in a wider context, this work contributes to the project of a detailed investigation of separation, reduction and uniformization in the absence of large cardinals. There is a growing body of work which explores its connections, in various set theoretic contexts (see e.g. \cite{Separation without reduction}, \cite{Forcing axioms and uniformization}, \cite{MA and failure of separation}). 
+
+
+We end the introduction with a short description of the organization of this article.
+The first four sections are devoted to re-introduce the coding machinery we use throughout which is basically the same as in \cite{Reduction} and \cite{Uniformization}. The notion of allowable forcing is introduced, which is a generalization of the according notion from \cite{Reduction}. In the fifth section a carefully defined, generalized version of the thinning out process is presented which will be used to solve a specific fixed point problem on sets of forcings. This solution is employed to force the $\Pi^1_3$-reduction property, or, for the second theorem, is employed to force $\Pi^1_3$-uniformization. At the same time the generalized thinning out process leaves some additional room to work towards $\Sigma^1_4$-uniformization and a good $\Sigma^1_5$-wellorder of the reals. The implementation of  the failure of $\Pi^1_3$-uniformization is tricky and involves the introduction of a $\Sigma^1_3$-definable $\omega$-sequence of reals which serve as markers which indicate potentially dangerous codes we need to ignore in order to have $\Pi^1_3$-reduction in the final universe. The proof of the first main theorem takes up the sixth section which is separated in several subsections to keep the presentation tidy. 
+The proof of the second main theorem is an easier application of the ideas and methods of the proof of the first theorem and is sketched in the seventh section.
+    \section{Preliminaries}
+    ﻿
+    The techniques of this work fully rely on \cite{Reduction}, \cite{Uniformization} and \cite{Separation without reduction}. We shall give a short presentation of these now. We will indicate where the reader can find the proofs in detail.
+    The coding method of our choice utilizes Suslin trees, which can be generically destroyed in an independent way of each other (see \cite{NS saturated and definable}). 
+    ﻿
+    \begin{definition}
+    ﻿
+     Let $\vec{T} = (T_{\alpha} \, : \, \alpha < \kappa)$ be a sequence of Suslin trees. We say that the sequence is an 
+    ﻿
+     independent family of Suslin trees if for every finite set of pairwise distinct indices $e= \{e_0, e_1,...,e_n\} \subset \kappa$ the product $T_{e_0} \times T_{e_1} \times \cdot \cdot \cdot \times T_{e_n}$ 
+    ﻿
+     is a Suslin tree again.
+    ﻿
+    \end{definition}
+    ﻿
+    Note that an independent sequence of Suslin trees $\vec{T} = (T_{\alpha} \, : \, \alpha < \kappa)$ has the property that if $A \subset \kappa$ and we form 
+    ﻿
+    $ \prod_{i \in A} T_i $
+    ﻿
+    with finite support, where each $T_i$ denotes the forcing we obtain if we force with the nodes of the tree  as conditions using the tree order as the partial order, then in the resulting generic extension $V[G]$, for every $\alpha \notin A$, $V[G] \models `` T_{\alpha}$ is a Suslin tree$"$. 
+    ﻿
+    \begin{theorem}\label{DefinitionIndependentSequence}(see \cite{Separation without reduction})
+    ﻿
+    Assume that $\aleph_1= \aleph_1^L$ and $M$ is an uncountable, transitive model of $\ZF^{-} + ``\aleph_1$ exists$"$.  Then there is an independent sequence $\vec{S} = ( S_{\alpha} \mid \alpha < \omega_1)$ of Suslin trees in $L$ and the sequence $\vec{S}$ is uniformly $\Sigma_1 ( \{ \omega_1 \} )$-definable over $M$. To be more precise, there is a $\Sigma_1$-formula $\phi$  with $\omega_1$ as the unique parameter, which does not depend on the model $M$, such that the relation $\{ (t,\gamma) \mid \gamma < \omega_1 \land t \in T^{\gamma}  \}$, where $T^{\gamma}$ denotes the $\gamma$-th level of $T$, is definable over $M$ using $\phi$. 
+    ﻿
+    \end{theorem}
+The trees from $\vec{S}$ will later be used to define several related coding forcings that are the main tool in our proofs.
+    ﻿
+
+We briefly introduce the almost disjoint coding forcing due to R. Jensen and R. Solovay (\cite{JensenSolovay}). We will identify subsets of $\omega$ with their characteristic function and will use the word reals for elements of $2^{\omega}$ and subsets of $\omega$ respectively.
+    ﻿
+    Let $D=\{d_{\alpha} \, : \, \alpha < \aleph_1 \}$ be a family of almost disjoint subsets of $\omega$, i.e. a family such that if $r, s \in D$ then 
+    ﻿
+    $r \cap s$ is finite. Let $X\subset  \omega$  be a set of ordinals. Then there 
+    ﻿
+    is a ccc forcing, the almost disjoint coding $\mathbb{A}_D(X)$ which adds 
+    ﻿
+    a new real $x$ which codes $X$ relative to the family $D$ in the following way
+    ﻿
+    $$\alpha \in X \text{ if and only if } x \cap d_{\alpha} \text{ is finite.}$$
+    ﻿
+    \begin{definition}\label{definitionadcoding}
+    ﻿
+     The almost disjoint coding $\mathbb{A}_D(X)$ relative to an almost disjoint family $D$ consists of
+    ﻿
+     conditions $(r, R) \in [\omega]^{<\omega} \times D^{<\omega}$ and
+    ﻿
+     $(s,S) < (r,R)$ holds if and only if
+    ﻿
+     \begin{enumerate}
+    ﻿
+      \item $r \subset s$ and $R \subset S$.
+    ﻿
+      \item If $\alpha \in X$ and $d_{\alpha} \in R$ then $r \cap d_{\alpha} = s \cap d_{\alpha}$.
+    ﻿
+     \end{enumerate}
+    ﻿
+    \end{definition}
+We shall briefly discuss the $L$-definable, $\aleph_1^L$-sized almost disjoint family of reals $D$  we will use throughout this article. The family $D$ is the canonical almost disjoint family one obtains when recursively adding the $<_L$-least real $x_{\beta}$ not yet chosen and replace it with $d_{\beta} \subset \omega$ where this $d_{\beta}$  is the real which codes the initial segments of $x_{\beta}$ using some recursive bijections between $\omega$ and $\omega^{<\omega}$. The definition of $D$ is uniform over any uncountable, transitive $\ZFP$-models $M$ with, as we can correctly compute $L$ up to $\aleph_1^L$ inside $M$ and then apply the above definition inside $L$'s version of $M$. Even more is true, if $M$ is a countable, transitive model of $\ZFP+``$ $\aleph_1$ exists and $\aleph_1=\aleph_1^L"$, then $M$ will compute $D \upharpoonright \omega_1^M$ in a correct way. The reason is again, that $M$ can define an initial segment of $L$ correctly which suffices to calculate $D \upharpoonright \omega_1^M$.
+    ﻿
+    ﻿
+    
+    \section{Coding machinery}
+    ﻿
+    We continue with the construction of the appropriate notions of forcing which we want to use in our proof. The goal is to first define a coding forcings $\operatorname{Code} (x)$ for reals $x$, which will force for $x$ that a certain $\Sigma^1_3$-formula $\Phi(x)$ becomes true in the resulting generic extension. The coding method is basically the same as in \cite{Reduction} and \cite{Uniformization} and literally the same as in \cite{Separation without reduction}.
+   
+    In a first step we add $\omega_1$-many $\omega_1$-Cohen subsets with a countably supported product, $$\forceP^1:= \prod_{\alpha< \omega_1} \mathbb{C} (\omega_1).$$
+    ﻿
+    Note that this forcing is itself $\sigma$-closed so no reals are added and $\vec{S}$ is still an independent sequence of Suslin trees. In a second step we force over $L^{\forceP^1}$ to destroy all members of $\vec{S}$ via generically adding an $\omega_1$-branch, that is we  form $\forceP^0:=\prod_{\alpha \in \omega_1} S_{\alpha}$ with finite support. Note that this is an $\aleph_1$-sized, ccc forcing over $L$ and also $L^{\forceP^1}$, and the forcing is independent of the actual model in which it is computed. The two step iteration can be thus conceived as a product of two factors $(\prod_{i < \omega_1} \mathbb{C} (\omega_1))^L \times \prod_{\alpha \in \omega_1} S_{\alpha}$.  In the generic extension $\aleph_1$ is preserved and $\CH$ remains to be true.  
+   
+     We use $W$ to denote this generic extension of $L$, that is we let $g^0 \times g^1$ be a $\forceP^0 \times \forceP^1$ generic filter over $L$  where $\forceP^0$ adds cofinal branches to each member of $\vec{S}$ and $\forceP^1$ adds $\aleph_1$-many $\omega_1$-Cohen subsets, then \[W=L[g^0 \times g^1].\]
+
+   
+     Let $x \in W$ be a real,  and let $m,k \in \omega$ and let $\eta <\omega_1$. We simply write $(x,m,k,1)$ for a real $w$ which codes the quadruple $(x,m,k,1)$ in a recursive way. The forcing $\operatorname{Code}(x,m,k,1,\eta)$ \footnote{The other coding forcing,  $\operatorname{Code}(x,m,k,0,\eta)$, which codes quadruples $(x,m,k,0)$ instead is defined in the analogue way}  which codes the quadruple $(x,m,k,1)$ into $\vec{S}$ is defined as the almost disjoint coding forcing of a specific set $Y \subset \omega_1$, that is
+    ﻿
+     \[ \operatorname{Code}(m,k,1,x,\eta) := {\mathbb{A}}({Y}).\]  We will define the crucial set $Y \subset \omega_1$ now.
+
+
+    
+     To ease notation we let $g \subset \omega_1$ be $g^1_{\eta}$ for $\eta < \omega_1$, where $g^1_{\eta}$ is the $\eta$-th coordinate of the $\prod_{\alpha < \omega_1} \mathbb{C}(\omega_1)$-generic filter over $L[g^0]$. We let $\rho: ([\omega_1]^{\omega})^{L} \rightarrow \omega_1$ be some canonically definable, constructible bijection between these two sets. We use $\rho$ and $g$ to define the set $h \subset \omega_1$, which eventually shall be the set of indices of $\omega$-blocks of $\vec{S}$, where we ``code up the characteristic function of the real $(m,k,1,x)"$, the latter slogan will be made precise in a moment. Let \[h:= \{\rho( g \cap \alpha) \,: \, \alpha < \omega_1 \}\] and let
+    ﻿
+    \begin{align*}
+    A:= &\{ \omega \gamma +2n \mid \gamma \in h, n \notin (m,k,1,x) \} \cup \\& \{\omega \gamma + 2n+1 \mid \gamma \in h, n \in (m,k,1,x) \}.
+    \end{align*}
+    ﻿
+    ﻿
+    ﻿
+    ﻿
+    ﻿
+    Let $X \subset \omega_1$ be chosen such that it codes the following objects:
+    ﻿
+    \begin{itemize}
+    ﻿
+    \item The set $A \subset \omega_1$.
+    ﻿
+    \item Some set $\{ b_{\beta} \subset S_{\beta} \mid \beta \in A \}$ of $\omega_1$-branches. We demand that  for every $\beta\in A$,  $b_{\beta}$ is a $L[g^0]$-generic branch for the forcing $S_{\beta} \in \vec{S}$. 
+    ﻿
+    ﻿
+    \end{itemize}
+    ﻿
+    ﻿
+    Note that, when working in $L[X]$ and if $\gamma \in h$ then we can read off $(m,k,1,x)$, and thus  we say that $(m,k,1,x)$ is coded into $\vec{S}$ at the $\omega$-block starting at $\gamma$,  via looking at the $\omega$-block of $\vec{S}$-trees starting at $\gamma$ and determine which tree has an $\omega_1$-branch in $L[X]$.
+    ﻿
+    \begin{itemize}
+    ﻿
+     \item[$(\ast)_{\gamma}$]  $n \in (m,k,1,x)$ if and only if $S_{\omega \cdot \gamma +2n+1}$ has an $\omega_1$-branch, and $n \notin (m,k,1,x)$ if and only if $S_{\omega \cdot \gamma +2n}$ has an $\omega_1$-branch.
+    ﻿
+    \end{itemize}
+    ﻿
+    Indeed if $n \notin (m,k,1,x)$ then we added a cofinal branch through $S_{\omega \cdot \gamma+ 2n}$. If on the other hand $S_{\omega \cdot\gamma +2n}$ does not have an $\omega_1$-branch in $L[X]$ then we must have added an $\omega_1$-branch through $S_{\omega \cdot \gamma +2n+1}$ as we always add an $\omega_1$-branch through either $S_{\omega \cdot \gamma +2n+1}$ or $S_{\omega \cdot \gamma +2n}$ and adding branches through some $S_{\alpha}$'s  will not affect that some $S_{\beta}$ remain Suslin in $L[X]$, as $\vec{S}$ is independent.
+    
+    We note that we can apply an argument resembling David's trick (\cite{David}) in this situation. We rewrite the information of $X \subset \omega_1$ as a subset $Y \subset \omega_1$ using the following line of reasoning. Keeping lemma \ref{DefinitionIndependentSequence} in mind, it is clear that any transitive, $\aleph_1$-sized model $M$ of $\ZFP$ which contains $X$ will be able to first define $\vec{S}$ correctly  and also correctly decode out of $X$ all the information regarding $(m,k,1,x)$ being coded at each $\omega$-block of $\vec{S}$ starting at every $\gamma \in h$. Consequently, if we code the model $(M,\in)$ which contains $X$ as a set $X_M \subset \omega_1$, then for any uncountable $\beta$ such that $L_{\beta}[X_M] \models \ZFP$:
+    
+    \[L_{\beta}[X_M] \models \text{\ldq The model decoded out of }X_M \text{ satisfies $(\ast)_{\gamma}$ for every $\gamma \in h$\rdq.} \]
+    
+    In particular there will be an $\aleph_1$-sized ordinal $\beta$ as above and we can fix a club $C \subset \omega_1$ and a sequence $(M_{\alpha} \, : \, \alpha \in C)$ of countable elementary submodels  of $L_{\beta} [X_M]$ such that
+    
+    \[\forall \alpha \in C (M_{\alpha} \prec L_{\beta}[X_M] \land M_{\alpha} \cap \omega_1 = \alpha)\]
+    
+    Now let the set $Y\subset \omega_1$ code the pair $(C, X_M)$ such that the odd entries of $Y$ should code $X_M$ and if $E(Y)$ denotes  the set of even entries of $Y$ and $\{c_{\alpha} \, : \, \alpha < \omega_1\}$ is the enumeration of $C$ then
+    
+    \begin{enumerate}
+    
+    \item $E(Y) \cap \omega$ codes a well-ordering of type $c_0$.
+    
+    \item $E(Y) \cap [\omega, c_0) = \emptyset$.
+    
+    \item For all $\beta$, $E(Y) \cap [c_{\beta}, c_{\beta} + \omega)$ codes a well-ordering of type $c_{\beta+1}$.
+    
+    \item For all $\beta$, $E(Y) \cap [c_{\beta}+\omega, c_{\beta+1})= \emptyset$.
+    
+    \end{enumerate}
+    
+    We obtain
+    
+    \begin{itemize}
+    
+    \item[$({\ast}{\ast})$] For any countable transitive model $M$ of  ``$\ZFP$ and $\aleph_1$ exists$"$ such that $\omega_1^M=(\omega_1^L)^M$ and $ Y \cap \omega_1^M \in M$, $M$ can construct its version of the universe $L[Y \cap \omega_1^N]$, and the latter will see that there is an $\aleph_1^M$-sized transitive model $N \in L[Y \cap \omega_1^N]$ which models $(\ast)$ for $(m,k,1,x)$ and every $\gamma \in h \cap M$.
+   
+    \end{itemize}
+    
+    Thus we have a local version of the property $(\ast)$. We have finally defined the desired set $Y$ and now we use 
+    
+    \[\operatorname{Code} (m,k,1,x,\eta):= \mathbb{A} (Y) \]
+relative to our previously defined, almost disjoint family of reals $D \in  L $ (see the paragraph after Definition 2.5)  to code the set $Y$ into one real $r$. This forcing only depends on the subset of $\omega_1$ we code, thus $\mathbb{A}_D(Y)$ will be independent of the surrounding universe in which we define it, as long as it has the right $\omega_1$ and contains the set $Y$. The effect of the coding forcing $\operatorname{Code} (m,k,x,1,\eta)$ is that it generically adds a real $r$ such that
+    
+    \begin{itemize}
+    ﻿
+    \item[$({\ast}{\ast}{\ast})$] For any countable, transitive model $M$ of ``$\ZFP$ and $\aleph_1$ exists$"$, such that $\omega_1^M=(\omega_1^L)^M$ and $ r  \in M$, $M$ can construct its version of $L[r]$, denoted by $L[r]^M$, which in turn thinks that there is a transitive $\ZFP$-model $N$ of size $\aleph_1^M$  such that $N$ believes $(\ast)$ for $(m,k,1,x)$ and every $\gamma \in h \cap M$.
+    ﻿
+    \end{itemize}
+    
+    Indeed, if $r$ and $M$ are as above, then $M$ and $L[r]^M$ will compute the almost disjoint family $D$ up to the real indexed with $\omega_1 \cap M$ correctly, as discussed below the definition 2.3. As a consequence, $L[r]^M$ will contain the set $Y \cap \omega_1^M$, where $Y \subset \omega_1$ is as in $(\ast\ast)$. So in $L[Y \cap \omega_1^M]$, there is an $\aleph_1^M$-sized, transitive $N$ which models $(\ast)_{\gamma}$ for every $\gamma \in h \cap M$, as claimed.
+   
+    Note that $({\ast} {\ast} {\ast})$ is a $\Pi^1_2$-formula in the parameters $r$ and $(m,k,1,x)$, as the set $h \cap M \subset \omega_1^M$ is coded into $r$. We say in the above situation that the real $(m,k,1,x)$ \emph{ is written into $\vec{S}$}, or that $(m,k,1,x)$ \emph{is coded into} $\vec{S}$. To summarize our discussion, given an arbitrary real of the form $(m,k,1,x)$, then our forcing $\operatorname{Code} (m,k,1,x)$, when applied over $W$, will add a real $r$ which will turn the $\Pi^1_2$-formula $({\ast} {\ast}{\ast})$ for $r,(m,k,1,x)$ into a true statement in $W^{\operatorname{Code} (m,k,1,x)}$.
+    
+    The coding forcing which codes a given real $(m,k,1,x)$ into the $\vec{S}$, denoted by $\operatorname{Code} {(m,k,0,x)}$ is defined in the same way. The projective and local statement $({\ast} { \ast} {\ast} )$, if true,  will determine how certain inner models of the surrounding universe will look like with respect to branches through $\vec{S}$. That is to say, if we assume that $({\ast} { \ast} {\ast} )$ holds for a real $(m,k,1,x)$ and is the truth of it is witnessed by a real $r$. Then $r$ also witnesses the truth of $({\ast} { \ast} {\ast} )$ for any transitive  model $M$ of  the theory ``$\ZFP+$ $\aleph_1$ exists and $\aleph_1= \aleph_1^L"$,  which contains $r$ (i.e. we can drop the assumption on the countability of $M$). Indeed if we assume that there would be an uncountable, transitive $M$, $r \in M$, which witnesses that $({\ast} { \ast} {\ast} )$ is false. Then by L\"owenheim-Skolem, there would be a countable $N\prec M$, $r\in N$ which we can transitively collapse to obtain the transitive $\bar{N}$. But $\bar{N}$ would witness that $({\ast} { \ast} {\ast} )$ is not true for every countable, transitive model, which is a contradiction. Consequently, the real $r$ carries enough information that the universe $L[r]$ will see that certain trees from $\vec{S}$ have branches in that
+    ﻿
+    \begin{align*}
+    n \in (m,k,1,x) \Rightarrow L[r] \models  ``S_{\omega \gamma + 2n+1} \text{ has an $\omega_1$-branch}".
+    \end{align*}
+    ﻿
+    and
+    ﻿
+    \begin{align*}
+    n \notin (m,k,1,x) \Rightarrow L[r] \models ``S_{\omega \gamma + 2n} \text{ has an $\omega_1$-branch}".
+    \end{align*}
+    ﻿
+    Indeed, the universe $L[r]$ will see that there is a transitive model $N$ of ``$\ZFP+$ $\aleph_1$ exists and $\aleph_1=\aleph_1^L"$ which believes $(\ast)$ for every $\gamma \in h \subset \omega_1$, the latter being coded into $r$. But by upwards $\Sigma_1$-absoluteness, and the fact that $N$ can compute $\vec{S}$ correctly, if $N$ thinks that some tree in $\vec{S}$ has a branch, then $L[r]$ must think so as well.
+    ﻿
+    ﻿
+    \section{Allowable forcings}
+    ﻿
+    ﻿
+    Next we define the set of forcings which we will use in our proof. We aim to iterate the coding forcings we defined in the last section. We need to generalize the notion of allowable, introduced in \cite{Reduction}, as  we  want to force towards 
+\begin{itemize}
+\item $\Pi^1_3$-reduction,
+\item the failure of $\Pi^1_3$-uniformization,
+\item $\Sigma^1_4$-uniformization and
+\item a good $\Sigma^1_5$-well-order.
+\end{itemize}
+These different tasks will be tackled using iterated coding forcings which obey the following definition.
+    ﻿
+    \begin{definition}\label{0-allowable forcing}
+    ﻿
+    Let $W$ be our ground model. Let $\alpha < \omega_1$ and let $F\in W$, $F: \alpha \rightarrow W$ be a bookkeeping function.
+    ﻿
+    A finite support iteration $\forceP=((\forceP_{\beta}, \dot{\forceQ}_{\beta})  \,:\, {\beta< \alpha})$ is called allowable (relative to the bookkeeping function $F$)  if the function $F: \alpha \rightarrow W$  determines $\forceP$ inductively as follows:
+    ﻿
+     \begin{itemize}
+    ﻿
+     \item[(1)] We assume that $\beta \ge 0$ and $\forceP_{\beta}$ is defined. We let $G_{\beta}$ be a $\forceP_{\beta}$-generic filter over $W$ and assume that $F(\beta)=(\dot{m},\dot{k}, \dot{l}, \dot{x},\dot{\eta})$, for a quintuple of $\forceP_{\beta}$-names. We assume that $\dot{x}^{G_{\beta}}=:x$ is a real, $\dot{m}^{G_{\beta}}=:m $ and $\dot{k}^{G_{\beta}}$ are natural numbers which code two $\Pi^1_3$-sets $A_m$ and $A_k$ respectively, $\dot{l}^{G_{\beta}} \in \{0,1\}$ and $\dot{\eta}^{G_{\beta}}$ is an ordinal $< \omega_1$. 
+    ﻿
+     
+    ﻿
+     Then we split into two cases:
+    ﻿
+     \begin{itemize}
+    ﻿
+     \item If there is a $\gamma< \beta$ and a $\forceP_{\gamma}$-name of a triple $( \dot{m'}, \dot{k'}, \dot{l'} ,\dot{a},\dot{\eta}) $ such that $\dot{a}^{G_{\gamma}}= a \in \omega^{\omega}$, $\dot{m'}^{G_{\gamma}}= m' \in \omega ,\dot{k'}^{G_{\gamma}}=k' \in \omega$, $\dot{\eta}^{G_{\gamma}} = \eta$  and
+     $F(\gamma)= ( \dot{m}, \dot{k}, \dot{l} ,\dot{a},\dot{\eta}) $, then we force with the trivial forcing. We say in this situation that $\eta$ has already been used for coding, or $\eta$ is not free.
+    ﻿
+     \item If not, then let \[\dot{\forceQ}_{\beta}^{G_{\beta}}=\forceP(\beta)^{G_{\beta}}:= \operatorname{Code} (m,k,l,x,\eta) .\] We say that in this situation $\eta$ is free or $\eta$ has not been used for coding yet.
+    ﻿
+     \end{itemize}
+    ﻿
+     \item[(2)] If on the other hand, $F(\beta) = (\dot{m},\dot{x}, \dot{y}, \dot{\eta})$ and $\dot{m}$ is the G\"odel number of a $\Pi^1_3$-set in the plane, $\dot{x},\dot{y}$ are both $\forceP_{\beta}$-names of reals, $\dot{\eta}$ a name for a countable ordinal, then we define
+    \[ \dot{\forceQ}_{\beta}^{G_{\beta}} := \operatorname{Code} (0,0,\dot{x}^{G_{\beta}}, \dot{y}^{G_{\beta}}, \eta^{G_{\beta}}) \]
+    provided $\eta$ is free. If $\eta$ is not free we let $\eta'$ be the least ordinal which is free and use $ \dot{\forceQ}_{\beta}^{G_{\beta}} :=\operatorname{Code} (0,0,\dot{x}^{G_{\beta}}, \dot{y}^{G_{\beta}}, \eta^{G_{\beta}})$ instead. To avoid an ambiguity in the definition we also declare that $0$ is not the G\"odel number of any formula. The seemingly redundant information when coding $(0,0,x,y)$ instead of just $(0,x,y)$ is to avoid an ambiguous definition again.
+
+\item[(3)] If $F(\beta)= ( \dot{m}, \dot{x}, \dot{y}\dot{a}_0, \dot{a}_1,\dot{\eta}) $ where $\dot{m}^{G_{\beta}}=m \in \omega$ and $m$ the G\"odel number of a $\Sigma^1_4$-formula, then we use $\operatorname{Code} (m,{x},{y}, a_0,a_1,\eta)$, provided $\eta$ is free. Otherwise we use the least $\eta'$ which is free and code there.
+
+\item[(4)] If $F(\beta)= (  \dot{m},\dot{x},\dot{y}, \dot{\eta} )$ and $\dot{x},\dot{y}$ are both names of reals whereas $\dot{m}$ is the G\"odel number of a $\Sigma^1_5$-formula, then we use $\operatorname{Code} (1,1,x,y,\eta)$, provided $\eta$ is free and use the least $\eta'$ which is free otherwise for coding $(1,1,x,y)$ there. Again to avoid ambiguity we assume that 1 is not the G\"odel number of a formula and code $(1,1,x,y)$ instead of just $(1,x,y)$.
+
+    \item[(5)] Finally if $F(\beta)$ is of the form $( \dot{n},\dot{x},\dot{\eta})$, for $\dot{x}$ a $\forceP_{\beta}$-name of a real, $\dot{n}$ a $\forceP_{\beta}$-name of a natural number and $\dot{\eta}$ the $\forceP_{\beta}$-name of an ordinal $<\omega_1$, then we let
+    \[\dot{\forceQ}_{\beta}^{G_{\beta}}= \forceP (\beta) := \operatorname{Code}(n,x,\eta) \]
+    provided $\eta$ is free for coding. Otherwise we let $\eta'$ be the least ordinal which is free and code at $\eta'$ instead. This item also explain why we coded $(0,0,x,y)$ in item (2) and $(1,1,x,y)$ in item (4).
+    ﻿
+     
+    ﻿
+    ﻿
+     \end{itemize}
+    ﻿
+     
+    ﻿
+    \end{definition}
+ We add as a mildly clarifying remark that the forcings from (1) (2) and (5) are used to work towards a universe where $\Pi^1_3$-reduction holds and $\Pi^1_3$-uniformization fails; and the forcings from (3) and (4) are used to force $\Sigma^1_4$-uniformization and a good $\Sigma^1_5$-well-order of the reals respectively.
+    ﻿
+    
+
+Allowable forcings will form the base set of an inductively defined shrinking process, thus they are also denoted by 0-allowable with respect to $F$ to emphasize this fact.
+    ﻿
+    ﻿
+    Every allowable forcing $\forceP$ can be written over $L$ as\footnote{Here and later we will simply write $\Asterisk \forceP(\alpha)$ for the forcing iteration one obtains when using the $\forceP(\alpha)$'s as a factor. More precisely, if $(\forceP_{\alpha} ,\dot{\forceQ}_{\alpha} \mid \alpha < \kappa )$ is the usual notation for an iteration of length $\kappa$, then $\Asterisk \forceQ_{\alpha}$ simply denotes $\forceP_{\kappa}$ } $\forceP^0 \ast \forceP^1 \ast (\Asterisk_{\alpha < \delta} ( \forceP(\alpha)))$, for $\forceP^0= \prod_{\alpha < \omega_1} \mathbb{C} (\omega_1)$, $\forceP^1= \prod_{\alpha < \omega_1} S_{\alpha}$ and the factors $\forceP({\alpha})=\mathbb{A} (Y_{\alpha})$.
+    ﻿
+    We note that both $\forceP^1$ and $\Asterisk_{\alpha < \delta} (\forceP(\alpha))$ are ccc notions of forcing, and as every instance of almost disjoint coding forcing in our allowable iteration picks exactly one coordinate of the generic of $\forceP^0$ as a coding area, we conclude that for an arbitrary allowable forcing $\forceP$, there is a countable ordinal $\alpha < \omega_1$ such that $\forceP$ only relies on the first $\alpha$-many $\mathbb{C} (\omega_1)$-many coordinates of the $L$-generic filter $G \subset \prod_{\beta < \omega_1} \mathbb{C} (\omega_1)$. Thus if we partition $\forceP^0$ into a part with coordinates below or equal $\alpha$ and a part with coordinates above $\alpha$ and write $\forceP^0= \prod_{i \le \alpha} \mathbb{C} (\omega_1) \times \prod_{i > \alpha} \mathbb{C} (\omega_1)$, then we can re-arrange the allowable $\forceP$ as
+    ﻿
+    \[ \forceP=\forceP^0 \ast \forceP^1 \ast (\Asterisk_{\alpha < \delta}  \forceP(\alpha))=
+    (\prod_{i \le \alpha} \mathbb{C} (\omega_1) ) \ast( ( \forceP^1 \ast (\Asterisk_{\alpha < \delta}  \forceP(\alpha)) \times \prod_{i > \alpha} \mathbb{C} (\omega_1) ). \]
+    ﻿
+    So when working over $L^{\prod_{i \le \alpha} \mathbb{C} (\omega_1) }$, which is an $\omega$-distributive generic extension of $L$, the allowable $\forceP$ can be written as a product of the two factors $\prod_{i > \alpha} \mathbb{C} (\omega_1)$ (evaluated as in $L$ or equivalently evaluated as in $L^{\prod_{i \le \alpha} \mathbb{C} (\omega_1) }$) and $ \forceP^1 \ast (\Asterisk_{\alpha < \delta}  \forceP(\alpha))$.
+    ﻿
+    Thus by Easton's Lemma applied over $V=L^{\prod_{i \le \alpha} \mathbb{C} (\omega_1)}$ (see Lemma 15.19 from \cite{Jech}), every real in $L^{\forceP}$,  is in fact already in the forcing extension over $L$ using the partial order $(\prod_{i < \alpha} \mathbb{C} (\omega_1) ) \ast( ( \forceP^1 \ast (\Asterisk_{\alpha < \delta}  \forceP(\alpha))))$  as $(\prod_{i \ge \alpha} \mathbb{C} (\omega_1))^L$ is still $\omega$-distributive over the universe obtained by forcing over $L$ with the partial order $(\prod_{i < \alpha} \mathbb{C} (\omega_1) ) \ast( ( \forceP^1 \ast (\Asterisk_{\alpha < \delta}  \forceP(\alpha))))$. In particular every  name of a real obtained with an allowable forcing can be written as a name which depends on a countable set of coding areas only.
+
+As a second and related remark we add that any allowable forcing $\forceP \in W$ can  be defined already correctly over a proper inner model of $W$. Indeed, as $\forceP$'s definition depends on the names of reals listed by $F$, we see that $\forceP$ can be defined using a countable list of names of reals for reals in $W$, and additionally the $\aleph_1$-many branches through $L$-Suslin from $\vec{S}$ trees which are used to define the sets $Y \subset \omega_1$ which then get coded using $\mathbb{A}_D (Y)$.
+    ﻿
+    As every real in $W$ in fact belongs to some $L^{\prod_{i <\beta <\omega_1} S_{i}}$, there are always $\aleph_1$-many trees from $\vec{S}$ and $\aleph_1$-many coding areas which are not used when defining $\forceP$ over $W$.
+    If $\forceP \in W$ is a forcing such that there is an $\alpha < \omega_1$ and an $F \in W$, $F: \alpha \rightarrow W$ such that $\forceP$ is allowable with respect to $F$, then we often just drop the $F$ and simply say that $\forceP \in W$ is allowable.
+    As mentioned already informally, every allowable forcing uniquely defines a countable set of coding areas it uses with its coding forcings. 
+    ﻿
+    \begin{definition}
+    ﻿
+    Let $\forceP= ((\forceP_{\alpha}, \dot{\forceQ}_{\alpha}= \forceP({\alpha})) \mid \alpha < \delta)$ be an allowable forcing. Let $G \subset \forceP$ be a generic filter over $W$. Then
+    ﻿
+    \begin{align*}
+    C^G:= \{ \eta < \omega_1\mid \exists \beta < \delta \exists \dot{x},&\dot{m},\dot{k}, \dot{l}, \dot{\eta} \in W^{\forceP_{\beta}}  \\& \dot{\forceQ}_{\beta}^{G_{\beta}} = \operatorname{Code} (\dot{x}^{G_{\beta}},\dot{m}^{G_{\beta}},\dot{k}^{G_{\beta}},\dot{l}^{G_{\beta}},\dot{\eta}^{G_{\beta}}=\eta )\}
+    \end{align*}
+    ﻿
+    is the set of coding areas of $\forceP$ relative to $G$. 
+    ﻿
+    We also let 
+    ﻿
+    \[ C^{\forceP} := \{\eta < \omega_1 \mid \exists p \in \forceP ( p \Vdash \eta  \in C^{\dot{G}} \}. \]
+    ﻿
+    ﻿
+    \end{definition}
+    ﻿
+    As noted already above, $C^G$ and also $C^{\forceP}$ will always be  countable sets for every allowable $\forceP$. We derive some very easy properties of allowable forcings.
+    ﻿
+     \begin{lemma}(see \cite{Separation without reduction})
+    ﻿
+    ﻿
+    ﻿
+    \begin{enumerate}
+    ﻿
+    \item If $\forceP=((\forceP(\beta), \dot{\forceQ}_{\beta}) \, : \, \beta < \delta) \in W$ is allowable then for every $\beta < \delta$, $\forceP_{\beta} \Vdash| \dot{\forceQ}_{\beta}|= \aleph_1$, thus every factor of $\forceP$ is forced to have size $\aleph_1$.
+    ﻿
+    \item Every allowable forcing over $W$ is ccc and thus preserves cardinals.
+    ﻿
+    \item Every allowable forcing over $W$ preserves $\CH$. Furthermore, if $\forceP= (\forceP_{\alpha},\dot{\forceQ}_{\alpha}) \, : \, \alpha < \omega_1) \in W$ is an $\omega_1$-length iteration such that each initial segment of the iteration is allowable over $W$, then $W^{\forceP} \models \CH$.
+    ﻿
+    \item The product of two allowable forcings $\forceP$ and $\forceQ$ can be densely embedded into an allowable forcing provided that $C^{\forceP} \cap C^{\forceQ}=\emptyset$.
+    ﻿
+    \end{enumerate}
+    ﻿
+    \end{lemma}
+    ﻿
+    ﻿
+    ﻿
+    Let $\forceP= ((\forceP_{\beta}, \dot{\forceQ}_{\beta}) \, : \, \beta < \delta)$ be an allowable forcing with respect to some $F \in W$.
+    The set of  (names of) reals which are enumerated by $F$ is dubbed the set of reals which are coded by $\forceP$. That is, for every $\beta$, if we let $\dot{x}_{\beta}$ be the (name) of a real  listed by $F(\beta)$ and if we let $G \subset \forceP$ be a generic filter over $W$ and finally if we let
+    $ \dot{x}_{\beta}^G =:x_{\beta}$,  then we say that
+    $\{ x_{\beta} \, : \, \beta < \alpha \}$ is the set of reals coded by $\forceP$ and $G$ (though we will suppress the $G$).
+
+   
+   A crucial property of 0-allowable forcings is that we are in full control over which reals are coded and which are not. We define
+    \begin{align*}
+    \Phi (x) \equiv \exists r  \forall M (&M \text{ is countable and transitive and } M \models \ZFP \\&\text{ and } \omega_1^M=(\omega_1^L)^M \text{ and }  r, x \in M  \rightarrow M \models \varphi(r,x ))
+    \end{align*}
+    where $\varphi(r,x)$ asserts that in $M$'s version of $L[r]$, there is a transitive, $\aleph_1^M$-sized  model of ``$\ZFP$ and $\aleph_1$ exists$"$ which witnesses that $x$ is coded into $\vec{S}$. 
+
+We know already that for a given real $x$, if we force with $\operatorname{Code} (x,\eta)$ for some $\eta < \omega_1$ then
+$\Phi(x)$ will hold in the generic extension. There is still the possibility that 
+an allowable forcing will add reals $y$ which satisfy $\Phi(y)$ without using a coding forcing of the form $\operatorname{Code} (y,\eta)$. This would be a major problem as we need our coding method to be precise.
+     The next lemma says that an allowable forcing does not accidentally add reals $x$ which satisfy $\Phi$, so allowable forcings are a suitable tool for the things to come.
+    
+    \begin{lemma}\label{nounwantedcodes}(see \cite{Reduction}, \cite{Uniformization})
+    ﻿
+    If $\forceP \in W$ is allowable, $\forceP=((\forceP_{\beta}, \dot{\forceQ}_{\beta} ) \, : \, \beta < \delta)$, $G \subset \forceP$ is generic over $W$ and $\{ x_{\beta} \, : \, \beta < \delta\}$ is the set of reals which are coded by $\forceP$. Let $\Phi(v_0)$ be the distinguished formula from above. Then in $W[G]$, the set of reals which satisfy $\Phi(v_0)$ is exactly 
+    $\{ x_{\beta} \, : \, \beta < \delta\}$.
+    ﻿
+    \end{lemma}
+    ﻿
+    ﻿
+    ﻿
+    \section{Thinning out}
+    ﻿
+    ﻿
+    We define next a derivative of the class of allowable forcings. These derivatives can be applied transfinitely often, yielding smaller and smaller non-empty subsets of the allowable forcings. Eventually the derivative operator will act on a non-empty subset which can not be thinned out further, in other words is  this subset is a fixed point under the operation. Forcings from this set will be called $\infty$-allowable and they are the right set of coding forcings we want to use to force $\Pi^1_3$-reduction. We emphasize that the other tasks, namely forcing $\Sigma^1_n$-uniformization for $n \ge 4$ and the failure of $\Pi^1_3$-uniformization play no role in the definition of the thinning out process. These tasks will be build in later, once we are finished in our definition of the thinning out operator.
+
+
+As there will be several longer definitions, we want to motivate the thinning out process now, providing some intuitions which fuel the constructions. A more detailed discussion can be found in \cite{Reduction}.
+
+
+\subsection{Informal discussion of the idea}
+
+We proceed with an informal discussion of the main ideas of the proof. We consider an   arbitrary pair $A_m$ and $A_k$ of $\Pi^1_3$-sets and want to find reducing sets $D^0_{m,k}$, $D^1_{m,k}$ i.e. sets with the following properties
+\begin{enumerate}
+\item $D^0_{m,k} ,D^1_{m,k}$ are both $\Pi^1_3$,
+\item $D^0_{m,k} \subset A_m$ and $D^1_{m,k} \subset A_k$,
+\item $D^0_{m,k} \cap D^1_{m,k} = \emptyset,$
+\item $D^0_{m,k} \cup D^1_{m,k} = A_m \cup A_k$.
+\end{enumerate}
+
+
+The ansatz is to use the two types of coding forcings $\operatorname{Code} (m,k,0,x,\eta)$ and $\operatorname{Code} (m,k,1,x,\eta)$ to define reducing sets. for the fixed pair of  $\Pi^1_3$-formulas, $\varphi_m,$  $\varphi_k$.
+The two candidates for reducing sets are defined by the $\Pi^1_3$-formulas
+ \begin{align*}
+D^0_{m,k}:= & \{ x \   \, : \, (m,k,x,0) \text{ is  not coded into $\vec{S}$} \}  ,
+\end{align*}
+and 
+ \begin{align*}
+D^1_{m,k}:= & \{ x \ \, : \, (m,k,x,1) \text{ is  not coded into $\vec{S}$} \}  .
+\end{align*}
+
+ As always there will be  a bookkeeping function $F$ which hands us at every stage $\beta< \omega_1$ (names of) reals  $x$ and the task is to decide which one of the two forcings, $\operatorname{Code} (m,k,0,x,\eta)$  or $\operatorname{Code} (m,k,1,x,\eta)$ we want to use  at that stage.  In other words we decide at stage $\beta$ whether we place $x$ into $D^0_{m,k}$ or $D^1_{m,k}$.
+
+We approach this problem as follows. As a first observation we note that if a real $x$ is such that it can not be forced out of $A_m$ with an allowable forcing then we can safely put into $D^0_{m,k}$ via using the forcing $\operatorname{Code} (m,k,1,x,\eta)$ for some $\eta$ and ensure to never put $x$ into $D^1_{m,k}$ later. If $x$ is such that it can be forced out of $A_m$ with an allowable forcing but can not be forced out of $A_k$, then it is safe to place $x$ into $D^1_{m,k}$. In the remaining case, $x$ can be forced out of both $A_m$ and $A_k$, in which situation we just let a bookkeeping function decide where to place $x$. 
+
+This new class of allowable forcings is a first approximation of an iteration which should solve the problem of finding reducing sets $D^0_{m,k}$ and $D^1_{m,k}$ and will be called 1-allowable. We note that when forcing with a 1-allowable forcing we actually ask the wrong questions when trying to place $x$.
+Indeed if we run a 1-allowable iteration, whenever we ask whether some $x$ can be forced out of $A_m$ with an allowable forcing, we better should have asked whether $x$ can be forced out of $A_m$ with a 1-allowable forcing as this is the class our iteration belongs to.
+
+Thus it is reasonable to add a second question at each stage of a 1-allowable forcing: given a real $x$ we ask whether $x$ can be forced out of $A_m$ or $A_k$ with a further allowable forcing and if the answer is yes, then we ask whether $x$
+can be forced out of $A_m$ pr $A_k$ with a 1-allowable forcing. If the answer now is no, we can safely place $x$ into $D^0_{m,k}$ or $D^1_{m,k}$, as the forcing we are about to define will also be 1-allowable. This new set of forcings will be called 2-allowable. But now, again, looking at the definition of 2-allowable forcings we see that we actually ask the wrong questions again. 
+
+These considerations hint at a fixed point problem which is sitting behind the problem of making our ansatz work. The way to solve this fixed point problem is to transfinitely often repeat the above consideration which yields better and better approximations to finding the right set of iterations of coding forcings. Eventually the set of approximations will become stable at a class of forcings we call $\infty$-allowable. These forcings are solutions to the fixed point problem and will be employed to solve the reduction problem.
+
+
+
+\subsection{The derivative operator}
+
+
+
+
+ We work with $W$ as our ground model.  Inductively we assume that for an ordinal $\alpha$ and an arbitrary bookkeeping function $F \in W$ mapping to $H(\omega_2)^2$, we have already defined the notion of $\delta$-allowable with respect to $F$ for every $\delta < \alpha$, and the definition works uniformly for every model $W[G]$, where $G$ is a generic filter for an allowable forcing. Note that these inductive requirements are met for (0-)allowable forcings. Now we aim to define the derivation of the $<\alpha$-allowable forcings which we call $\alpha$-allowable.
+    ﻿
+    ﻿
+    \begin{definition}
+    ﻿
+    Let  $\delta  < \omega_1$ then a $\delta$-length iteration $\forceP$ is called $\alpha$-allowable if it is recursively constructed using a bookkeeping function $F: \delta \rightarrow H(\omega_2)^2$, such that for every $\beta < \delta$, $F(\beta)$ is a pair $(F(\beta)_0, F(\beta)_1)$, and two rules at every stage $\beta < \delta$ of the iteration. We assume inductively that we already created the forcing iteration up to $\beta$, $\forceP_{\beta}$ and we let $G_{\beta}$ denote a hypothetical $\forceP_{\beta}$-generic filter over $W$. We shall now define the next forcing of our iteration $\forceP(\beta)$. Using the bookkeeping $F$ we split into two cases.
+    ﻿
+    \begin{enumerate}
+    ﻿
+    \item[(a)] We assume first that the first coordinate of $F(\beta) ,(F(\beta))_0=(\dot{x},m,k)$, where $\dot{x}$ is the $\forceP_{\beta}$-name of a real and $m<k$ are natural numbers which code two $\Pi^1_3$-formulas $\varphi_m$ and $\varphi_k$ with associated $\Pi^1_3$-sets $A_m$ and $A_k$. Further we assume that $\dot{x}^{G_{\beta}}=x$, and $W[G_{\beta}] \models x \in A_m \cup A_k$. 
+    ﻿
+    We assume that in $W[G_{\beta}]$, the following is true:
+    ﻿
+    \begin{enumerate}
+    ﻿
+    \item[] There is an ordinal $\zeta < \alpha$, which is chosen to be minimal for which
+    ﻿
+    \item[(i)] for every $\zeta$-allowable forcing $\forceQ \in W[G_{\beta}]$  we have that, over $W[G_{\beta}]$:
+    ﻿
+    \begin{align*}
+    \forceQ \Vdash  x \in A_m
+    \end{align*}
+    We assume that $F(\beta)_1= \eta < \omega_1$
+    In this situation we force with $\operatorname{Code} (x,m,k,1,\eta)$ provided, $\eta$ has not been used for coding yet. Otherwise we force with
+    $\operatorname{Code} (x,m,k,1,\zeta)$, for $\zeta$ being the least ordinal which has not been used for coding yet. 
+    ﻿
+    \item[(ii)] If (i) for $\zeta$ is false but the dual situation is true, i.e.
+    ﻿
+    for every $\zeta$-allowable forcing $\forceQ \in W[G_{\beta}]$, we have that $W[G_{\beta}] $ thinks that
+    ﻿
+    \begin{align*}
+    \forceQ \Vdash   x \in A_k
+    \end{align*}
+    ﻿
+    Then we define force with $\operatorname{Code} (x,m,k,0,\eta)$, provided $F(\beta)_1 = \eta$ and $\eta$ has not been used for coding yet. Otherwise we use
+    $\operatorname{Code} (x,m,k,0,\zeta)$ for $\zeta$ the least ordinal which has not been used for coding yet.
+    ﻿
+    \end{enumerate}
+    ﻿
+    If both $(a) (i)$ and $(a) (ii)$ are true for the same $\zeta$, then we give case $(a) (i)$ preference, and suppress case $(a) (ii)$.
+    ﻿
+    ﻿
+    \item[(b)] Else $F$ guesses whether we code $(x,m,k,0)$ or $(x,m,k,1)$, i.e. we code $(x,m,k,F(\beta)_1)$ provided  $F(\beta)_1 \in 2$ (otherwise we decide to code $(x,m,k,0)$ into $\vec{S}$ per default).
+
+\item[(c)] If $F(\beta)_0$ is of the form associated to the cases (2),(3),(4) and (5) in the definition of 0-allowable forcing, we proceed as described there. Thus $\alpha$-allowable forcings only act on case (1)  in the definition of 0-allowable forcings, and leaves the other cases untouched.
+    ﻿
+    \end{enumerate}
+    ﻿
+    ﻿
+    This ends the definition of $\forceP$ being $\alpha$-allowable with respect to $F$ at successor stages $\beta+1$. To define the limit stages $\beta$ of an $\alpha$-allowable forcing,
+    ﻿
+    we assume that we have defined already
+    ﻿
+    $(\forceP_{\gamma} \, : \, \gamma < \beta)$ and let the limit
+    ﻿
+    $\forceP_{\beta}$ be defined as the direct limit as we use finite support. 
+    ﻿
+    \end{definition}
+    ﻿
+    ﻿
+    We finally have finished the definition of an $\alpha$-allowable forcing relative to a perviously fixed bookkeeping function $F$. In the following  we often drop the reference to $F$ and simply say that some forcing $\forceP$ is $\alpha$-allowable, in which case we always mean that there is some $F$ such that $\forceP$ is $\alpha$-allowable relative to $F$.
+    ﻿
+     
+    ﻿
+    We briefly describe a typical run through the cases in the definition of $\alpha$-allowable forcings. Given our bookkeeping $F: \delta \rightarrow H(\omega_2)^2$, the according allowable $\forceP= (\forceP(\beta) \, : \, \beta < \delta)$ forcing is constructed such that at every stage $\beta< \delta$  we ask whether there exists for $\zeta=0$ a $\forceQ$ such that (a)(i) becomes true. If not then we ask the same question for (a)(ii). If both are false, we pass to $\zeta=1$, and so on. If (a) (i) or (a) (ii) never applies for any $\zeta < \alpha$, we pass to (b). It is therefore intuitively clear, and will be proved in a moment, that the notion of $\alpha$-allowable has to satisfy more and more requirements as $\alpha$ increases, hence the classes of $\alpha$-allowable forcings should become smaller and smaller. As a further consequence of this, case (a) in the definition becomes easier and easier to satisfy, which leads in turn to more restrictions of how an $\alpha$-allowable forcing can look like. Next we list the main properties of $\alpha$-allowable forcings, all proof can be found in \cite{Reduction} again.
+    ﻿
+    ﻿
+    ﻿
+    \begin{lemma}
+Let $\beta < \alpha$ be ordinals. 
+\begin{itemize}
+\item The notion $\alpha$-allowable is definable over the universe $W$. 
+\item    If $\forceP$ is $\beta$-allowable then $\forceP$ is also $\alpha$-allowable. Thus the classes of $\alpha$-allowable forcings become smaller with respect to the subset relation, if $\alpha$ increases.
+\item let $F_1, F_2$ be two bookkeeping functions, $F_1: \delta_1 \rightarrow W^2, F_2: \delta_2 \rightarrow W^2$, and let $\forceP^1=(\forceP^1_{\eta} \, : \, \eta < \delta_1)$ and $\forceP^2=(\forceP^2_{\eta} \, : \, \eta < \delta_2)$ be the $\alpha$-allowable forcings one obtains when using $F_1$ and $F_2$ respectively. Assume further that the range of $F_1 (\eta)_1$ and the range of $F_2(\eta)_1$ are disjoint, i.e. $C^{\forceP^1} \cap C^{\forceP^2} = \emptyset$.
+    ﻿
+    ﻿
+    Then $\forceP:=\forceP^1 \times \forceP^2$ is $\alpha$-allowable over $W$, as witnessed by some $F: (\delta_1+\delta_2) \rightarrow W^2$, which is definable from $\{F_1,F_2\}$ .
+\item  For any $\alpha$, the set of $\alpha$-allowable forcings is non-empty.
+    ﻿
+    ﻿
+\end{itemize}
+    ﻿
+    
+    ﻿
+    \end{lemma}
+    
+    ﻿
+    ﻿
+    As a direct consequence of the last two observations we obtain that there must be an ordinal $\alpha$ such that for every $\beta> \alpha$, the set of $\alpha$-allowable forcings must equal the set of $\beta$-allowable forcings. Indeed every allowable forcing is an $\aleph_1$-sized partial order, thus there are only set-many of them, and the classes (which in fact are sets, if we allow ourselves to identify isomorphic forcings) of $\alpha$-allowable forcings must eventually stabilize at a set which also must be non-empty.
+    ﻿
+    ﻿
+    \begin{definition}
+    ﻿
+    Let $\alpha$ be the least ordinal such that for every $\beta> \alpha$, the set of $\alpha$-allowable forcings is equal to the set of $\beta$-allowable forcings. We say that some forcing $\forceP$ is $\infty$-allowable if and only if it is $\alpha$-allowable. Equivalently, a forcing is $\infty$-allowable if it is $\beta$-allowable for every ordinal $\beta$.
+    ﻿
+    \end{definition}
+    ﻿
+    ﻿
+  
+    ﻿
+    ﻿
+    \section{Thinning out while leaving out coding forcings}
+    ﻿
+    ﻿
+    One of the main idea to construct the desired universe is to use the thinning out process detailed above, yet adding further information of which coding forcings must not be used in the thinning out process. This idea will give us a very tight control over a certain $\Pi^1_3$-formula, even in the context of forcing $\Pi^1_3$-reduction, which is a rather fragile one. We will define the eventual iteration in a very careful way such that the mentioned $\Pi^1_3$-formula can not be uniformized by a $\Pi^1_3$-function.
+    ﻿
+    This refined thinning out process will simply replace the set of 0-allowable forcings, which form the basis of the old process with 0-allowable forcings which avoid some fixed set of (names of) reals $B$. 
+    \begin{definition}
+    ﻿
+    Let $B$ be an arbitrary set of  tuples of (forcing names of) reals denoted by $\vec{x}$.  We say that an iteration $\{ (\forceP_{\alpha},\dot{\forceQ}_{\alpha}) \mid \alpha < \delta \}$  is 0-allowable without  using $B$ (or avoiding $B$) if it is allowable and for every $\alpha< \delta$ and every $\forceP_{\alpha}
+$-generic filter $G_{\alpha}$, none of the factors $\dot{\forceQ}_{\alpha}^{G_{\alpha}}$ are of the form $\operatorname{Code} (\vec{x}^{G_{\alpha}}, \eta)$, $\eta < \omega_1$ and $\vec{x} \in B$, where we write $\vec{x}^{G_{\alpha}}$ for the evaluation of the $\forceP_{\alpha}$-names which are elements of $\vec{x}$ with the help of the generic $G_{\alpha}$. 
+    ﻿
+    \end{definition}
+    ﻿
+    ﻿
+    ﻿
+    ﻿
+    We list useful properties of this new notion. The proofs are almost exactly the same as for plain allowable forcings so we skip them.
+    ﻿
+    \begin{lemma}
+    ﻿
+    Let $B$ be a set of pairs of  reals. Let $\delta$ be a countable ordinal and let $F : \delta \rightarrow H(\omega_2)$ be a bookkeeping function. Finally let $\forceP= ((\forceP_{\alpha}, \dot{\forceQ}_{\alpha} ) \mid \alpha < \delta)$ be an allowable forcing avoiding $B$ relative to $F$. Then $\forceP$ has the following properties:
+    ﻿
+    \begin{itemize}
+    ﻿
+    \item $\forceP$ has the ccc.
+    ﻿
+    \item $\forceP$ preserves $\CH$.
+    ﻿
+    \item If $\forceQ$ is a second allowable forcing avoiding $B$ then $\forceP \times \forceQ$ can be densely embedded into an allowable forcing avoiding $B$, provided $C^{\forceP} \cap C^{\forceQ} = \emptyset$.
+    ﻿
+    \end{itemize}
+    ﻿
+    \end{lemma}
+    ﻿
+    ﻿
+    It is straightforward to see that one can repeat the thinning out process detailed above yielding $\infty$-allowable forcings from the base set of 0-allowable forcings in exactly the same way if we start instead  with 0-allowable forcings avoiding $B$  as the base set of our forcings. To be more precise we can form the following.  Inductively we assume that for an ordinal $\alpha$ and an arbitrary bookkeeping function $F \in W$ mapping to $H(\omega_2)^2$, we have already defined the notion of $\delta$-allowable avoiding $B$ with respect to $F$ for every $\delta < \alpha$, and the definition works uniformly for every model $W[G]$, where $G$ is a generic filter for an allowable forcing. Note that these inductive requirements are met for $0$-allowable forcings avoiding $B$. Now we aim to define the derivation of the set of $\delta$-allowable forcings avoiding $B$ for $\delta < \alpha$. This will yield a smaller set of forcings which we call $\alpha$-allowable forcing avoiding $B$. In our iteration, the set $B$ we want to avoid will never contain (names of) reals of the form $(\dot{m},\dot{k},\dot{x})$ for $\dot{m}, \dot{k}$ names for G\"odel numbers of two $\Pi^1_3$-sets $A_m$ and $A_k$ and $\dot{x}$ the name of a real. This will serve as a default assumption from now on which helps us ruling out some degenerate cases. \footnote{Otherwise the situation could arise that the rules of $\alpha$-allowable want us to force with coding a tuple $\vec{x}$ at some $\eta$, which can cause trouble if a name of that tuple happens to belong to $B$. Our assumption rules this possibility out from the very beginning in demanding that no element of $B$ is of a form which would enable such an unwanted situation.}
+    ﻿
+
+ \begin{definition}\label{AlphaAllowableAvoidingB}
+    ﻿
+    Let  $\zeta< \omega_1$ then a $\zeta$-length iteration $\forceP$ is called $\alpha$-allowable avoiding $B$ if it is recursively constructed using a bookkeeping function $F: \delta \rightarrow H(\omega_2)^2$, such that for every $\beta < \zeta$, $F(\beta)$ is a pair $(F(\beta)_0, F(\beta)_1)$, and two rules at every stage $\beta < \zeta$ of the iteration. We assume inductively that we already created the forcing iteration up to $\beta$, $\forceP_{\beta}$ and we let $G_{\beta}$ denote a hypothetical $\forceP_{\beta}$-generic filter over $W$. We shall now define the next forcing of our iteration $\forceP(\beta)=\dot{\forceQ}_{\beta}^{G_{\beta}}$. Using the bookkeeping $F$ we split into two cases.
+    ﻿
+    \begin{enumerate}
+    ﻿
+    \item[(a)] We assume first that the first coordinate of $F(\beta) ,(F(\beta))_0=(m,k,\dot{x})$, where $\dot{x}$ is the $\forceP_{\beta}$-name of a real and $m<k$ are natural numbers. Further we assume that $\dot{x}^{G_{\beta}}=x$, and $W[G_{\beta}] \models x \in A_m \cup A_k$. 
+    ﻿
+    We assume that in $W[G_{\beta}]$, the following is true:
+    ﻿
+    \begin{enumerate}
+    ﻿
+    \item[] There is an ordinal $\zeta $, which is chosen to be minimal for which
+    ﻿
+    \item[(i)] for every $\zeta$-allowable forcing avoiding $B$, dubbed $\forceQ \in W[G_{\beta}]$  we have that, over $W[G_{\beta}]$:
+    ﻿
+    \begin{align*}
+    \forceQ \Vdash  x \in A_m
+    \end{align*}
+    ﻿
+    In this situation we force with $\operatorname{Code} (m,k,1,x,\eta)$ for an ordinal $\eta$ which did not appear yet as a coding area.
+    ﻿
+    ﻿
+    \item[(ii)] If (i) for $\zeta$ is false but the dual situation is true, i.e.
+    ﻿
+    for every $\zeta$-allowable forcing avoiding $B$, called $\forceQ \in W[G_{\beta}]$, we have that $W[G_{\beta}] $ thinks that
+    ﻿
+    \begin{align*}
+      \forceQ \Vdash   x \in A_k
+    \end{align*}
+    ﻿
+    Then we define force with $\operatorname{Code} (m,k,0,x,\eta)$, for a free $\eta$.
+    ﻿
+    \end{enumerate}
+    ﻿
+    If both $(a) (i)$ and $(a) (ii)$ are true for the same $\zeta$, then we give case $(a) (i)$ preference, and suppress case $(a) (ii)$.
+    ﻿
+    ﻿
+    ﻿
+    ﻿
+    \item[(b)] If (a) (i) and (a) (ii) are both false, then $F$ guesses where we  code $(x,m,k)$, i.e. we code $(x,m,k)$ into $\vec{S}^{F(\beta)_1}$, provided  $F(\beta)_1 \in 2$ (otherwise we decide to code $(x,m,k)$ into $\vec{S}^1$ per default).
+    ﻿
+    ﻿
+    ﻿
+    ﻿
+    \end{enumerate}
+    ﻿
+    ﻿
+    This ends the definition of $\forceP$ being $\alpha$-allowable with respect to $F$ avoiding $B$ at successor stages $\beta+1$. To define the limit stages $\beta$ of an $\infty+ \alpha$-allowable forcing avoiding $B$, we assume that we have defined already $(\forceP_{\gamma} \, : \, \gamma < \beta)$ and let the limit $\forceP_{\beta}$ be defined as the direct limit as we use finite support. 
+    ﻿
+    \end{definition}
+
+The properties of $\alpha$-allowable forcings carry over to $\alpha$-allowable forcings avoiding $B$. The proofs are almost the same, all we need to do is to replace every instance of ``$\alpha$-allowable$"$ with ``$\alpha$-allowable avoiding $B"$. 
+      \begin{lemma}
+Let $\beta < \alpha$ be ordinals. 
+\begin{itemize}
+\item The notion $\alpha$-allowable avoiding $B$ is definable over the universe $W$. 
+\item    If $\forceP$ is $\beta$-allowable avoiding $B$ then $\forceP$ is also $\alpha$-allowable avoiding $B$. Thus the classes of $\alpha$-allowable forcings avoiding $B$ become smaller with respect to the subset relation, if $\alpha$ increases.
+\item let $F_1, F_2$ be two bookkeeping functions, $F_1: \delta_1 \rightarrow W^2, F_2: \delta_2 \rightarrow W^2$, and let $\forceP^1=(\forceP^1_{\eta} \, : \, \eta < \delta_1)$ and $\forceP^2=(\forceP^2_{\eta} \, : \, \eta < \delta_2)$ be the $\alpha$-allowable forcings avoiding $B$ one obtains when using $F_1$ and $F_2$ respectively. Assume further that the range of $F_1 (\eta)_1$ and the range of $F_2(\eta)_1$ are disjoint, in other words that $C^{\forceP^1} \cap C^{\forceP^2} = \emptyset$.
+    ﻿
+    ﻿
+    Then $\forceP:=\forceP^1 \times \forceP^2$ is $\alpha$-allowable avoiding $B$ over $W$, as witnessed by some $F: (\delta_1+\delta_2) \rightarrow W^2$, which is definable from $\{F_1,F_2\}$.
+\item  For any $\alpha$, the set of $\alpha$-allowable forcings avoiding $B$ is non-empty.
+    ﻿
+    ﻿
+\end{itemize}
+    ﻿
+    
+    ﻿
+    \end{lemma}
+    
+    ﻿
+    ﻿
+    The set of $\alpha$-allowable forcings avoiding $B$ will stabilize at a non-empty set of forcings, just as before. 
+    \begin{definition}\label{inftallowableAvoidingB}
+    Let $B$ be a set of pairs of reals. The set of $\infty$-allowable forcings avoiding $B$ is the non-empty result of repeating the derivation detailed above until we reach a fixed point, i.e. until we reach an ordinal $\alpha$ such that the notion of $\alpha$-allowable avoiding $B$ coincides with the notion of $\alpha+1$-allowable avoiding $B$. We note that, as there are only set-many partial orders of size $\aleph_1$, modulo isomorphism, such an ordinal $\alpha$ must exist.
+    \end{definition}
+
+Having obtained the fixed point for the thinning out process avoiding $B$, one can argue for forcing $\Pi^1_3$-reduction as follows.
+We will define an $\omega_1$-length iteration such that every initial segment of the iteration is $\infty$-allowable forcings avoiding $B$. Suppose we are at stage $\beta < \omega_1$ of the iteration and the bookkeeping $F$ is considering a real $x$ and two $\Pi^1_3$-set $\varphi_m$ and $\varphi_k$. In order to avoid trivialities we assume that $x$ is an element of $A_m$ and $A_k$ at our current stage of the iteration. There are three cases:
+\begin{itemize}
+\item Our real $x$ can not be forced out of $A_m$ with an $\infty$-allowable forcing avoiding $B$. In this situation we force to put $x$ into $D^0_{m,k}$, the set which should eventually become a subset of $A_m$.
+\item If not, then we assume that our real $x$ can not be forced out of $A_k$ with an $\infty$-allowable forcing avoiding $B$. Then we force to put $x$ into $D^1_{m,k}$ the set which will become a subset of $A_k$.
+\item Finally $x$ can be forced out of $A_m$ with a forcing $\forceP_0$ which is $\infty$-allowable avoiding $B$; and $x$ can also be forced out of $A_k$ with $\forceP_1$ which is $\infty$-allowable avoiding $B$. In this situation we use the product $\forceP_0 \times \forceP_1$ which is $\infty$-allowable avoiding $B$ and which, by upwards absoluteness of $\Sigma^1_3$-formuals, forces $x$ out of $A_m \cup A_k$.
+\end{itemize}
+The so defined iteration results in an $\infty$-allowable forcing avoiding $B$ again, hence all the placements of reals are valid and the $\Pi^1_3$-reduction property holds as soon as we took care of all the reals in our universe, which is the case if we iterate of length $\omega_1$ using a suitable bookkeeping.
+
+We end this section with a brief outlook of how our iteration will look like which will force the main theorem.   
+Having defined $\infty$-allowable forcings avoiding $B$, we will continue in the following fashion: First we force with a countable length iteration of $\infty$-allowable forcings avoiding $B_0$ arriving at some $W[G_0]$. In $W[G_0]$ we will define a new set of tuples $B_1$ we want to avoid. 
+Then, working over $W[G_0]$, we start a new thinning out process with the set of $\infty$-allowable forcings avoiding $B_0 $ and $B_1$ as the base set of our thinning out process. This process will stabilize after infinitely many thinning out stages and yield a class we call for obvious reasons the set of $\infty + \infty= \infty \cdot 2$-allowable forcings avoiding $(B_0,B_1)$. Then we force over $W[G_0]$ with such a $\infty \cdot 2$-allowable forcing which avoids $(B_0,B_1)$ and arrive at a universe $W[G_0][G_1]$. Over this model we single out a set $B_2$ of reals we want to avoid, start a new thinning out process and arrive at the notion of $\infty \cdot 3$-allowable forcings which avoid $(B_0,B_1,B_2)$ and force with such a forcing. This process can be iterated again transfinitely often yielding $\infty \cdot \alpha$ allowable forcings avoiding $(B_{\eta} \mid \eta < \alpha)$  which is what we will do in the proof of the main theorem.
+    ﻿
+\section{Proof of the main theorem}
+
+We will start to define the iteration that will prove the main theorem now. There are four different tasks we have to take care of:
+\begin{enumerate}
+\item Forcing a failure of $\Pi^1_3$-uniformization,
+\item forcing the $\Pi^1_3$-reduction,
+
+\item forcing the $\Sigma^1_4$-uniformization property and
+\item forcing  a good $\Sigma^1_5$-wellorder of the reals.
+\end{enumerate}
+
+The organization of the proof will prioritize establishing the failure of $\Pi^1_3$-uniformization before addressing the remaining three properties. The initial iteration is defined over the ground model $W$; however, we will promptly transition to an intermediate model, $W[G_{\omega}]$. This intermediate model possesses the critical feature that $\Pi^1_3$-uniformization fails within it, and this failure is maintained in certain carefully specified outer models of $W[G_{\omega}]$. Working over the intermediate model $W[G_{\omega}]$, we proceed to construct an $\omega_1$-length iteration, employing the ``stop and go$"$ method detailed at the conclusion of the preceding section. This method involves an alternating sequence of steps: first, a new set of names for reals that must be avoided is defined; second, a thinning-out process is initiated with allowable forcings avoiding additionally this new set of names of reals playing the role of our base set, until a fixed point is attained. Upon reaching this fixed point, a forcing is applied from this fixed point to extend our iteration. Then a new set of names for reals to be additionally avoided is defined, subsequently a new thinning-out process is begun until the next fixed point is reached, again we will use a forcing from this new fixed point, then halt again, and this cycle continues.
+
+ 
+   
+  \subsection{Forcing the failure of \texorpdfstring{$\Pi^1_3$}{Pi13}-uniformization}
+As mentioned already the goal is to create first a universe where the $\Pi^1_3$ uniformization property fails and more importantly continues to fail in all outer models which are obtained using a certain, carefully defined set of forcings. The plan is then to work towards $\Pi^1_3$-reduction, $\Sigma^1_4$-uniformization and a good $\Sigma^1_5$ well-order of the reals with forcings which belong to this carefully defined set of forcings. Hence $\Pi^1_3$-uniformization continues to fail in these outer models. 
+
+The basic first idea is to consider the set 
+    ﻿
+    \[ A:= \{ (x,y) \in (\omega^{\omega})^2 \mid (0,0,x,y) \text{ is not coded into $\vec{S}$} \}\]
+    ﻿
+    which is $\Pi^1_3$.
+
+    We will employ our coding forcings to construct a universe where the set $A$ cannot be uniformized by any $\Pi^1_3$-function, thus demonstrating the failure of $\Pi^1_3$-uniformization. This objective is in considerable tension with the simultaneous goal of achieving $\Pi^1_3$-reduction. This tension, however, can be mitigated if  we use the coding forcings of the form $\operatorname{Code} (n,x,\eta)$ for $n \in \omega$ from case (5) in the definition \ref{0-allowable forcing} of 0-allowable forcings. These forcings will be used as some sort of yardstick which will mark potentially dangerous places for codes. The idea is inspired by a similar construction in \cite{Separation}.
+  \subsubsection{Definition of the first iteration in general}  
+We shall define a general version of the construction now and soon apply it under more specific circumstances. 
+    We let $F: \omega_1 \rightarrow H(\omega_1)$ be some bookkeeping function that should have the property that every element of $H(\omega_1)$ has uncountable preimage. Suppose that
+    we are at stage $\beta < \omega_1$ of our to-be-defined iteration. We further assume that our iteration up to $\beta$, $\forceP_{\beta}$ and a $\forceP_{\beta}$-generic filter $G_{\beta}$ are already defined. We also assume that we have already defined a set $\{ B_m \mid m \le n \}$ where each $B_m$ is a set of names of reals that we want to avoid with our 0-allowable forcing. We look at the $F$'s value at stage $\beta$ 
+    ﻿
+    \[F(\beta) = (m,x), \text{ where }x \in \omega^{\omega} \text{ and }  m \in \omega. \]
+    ﻿
+   
+    ﻿
+    We shall split into two cases.
+
+     \begin{enumerate}
+         \item  We assume first that $x$ has not been considered before by the bookkeeping function. We also assume that
+         \begin{align*}
+       W[G_{\beta}] \models \exists \forceP \exists y \in \omega^{\omega} (&\forceP \text{ is 0-allowable avoiding } \bigcup_{m \le n}  B_m \text{ and }  \\&\ \forall \dot{\eta} \forall \dot{R} (\dot{\operatorname{Code}} (n,\dot{R},\dot{\eta}) \text{ is not a factor of } \forceP ) \text{ and }  \\& \forceP \Vdash (x,y) \notin A_m )
+    \end{align*}
+    In this situation, we first fix the $<$-least such allowable $\forceP$ and use it at stage $\beta$ of our iteration, that is, we let
+    \[ (\dot{\forceQ}^0_{\beta})^{G_{\beta}} = \forceP. \] 
+    
+    
+    In a second step we let $R_{n}$ be a real which codes all the generic reals we have created so far. \footnote{Note that allowable forcings are just a countable length iteration of almost disjoint coding forcings. Hence each allowable extension of $W$ can be written as $W[R]$ for one real $R$ which codes all the a.d. reals added so far.}
+    Then, if $H^0$ denotes a $\forceP$-generic filter over $W[G_{\beta}]$ and working over $W[G_{\beta}] [H^0]$ we force with
+    \[  (\dot{\forceQ}^1_{\beta})^{G_{\beta}}:=\operatorname{Code} ( n,R_{n},\eta) \]
+    for an $\eta$ which is free for coding.
+    We let \[ B_{n+1}:=  \{ \dot{z}, n) \mid \dot{z} \text{ a name of a real} \}  \cup \{ (x,y) \} \] 
+We settle to only use 0-allowable forcings which avoid $\bigcup  \{B_{m} \mid m \le n+1 \}$ from now on.
+in other words we decide to not use a coding forcing of the form $\operatorname{Code} (n,z,\eta)$ ever again and also avoid a coding forcing of the form $\operatorname{Code} (0,0,x,y,\eta)$.
+\item  We assume that case 1 does not apply. In particular there is no allowable forcing  $\forceP$ avoiding $\bigcup \{ B_{m} \mid m \le n \}$  which forces a pair $(x,y)$ out of $A_m$ without having a coding forcing $\operatorname{Code} (n,\dot{R},\eta)$ and without having $\operatorname{Code} (x,y,\eta)$ as a factor. In this situation we opt to never use a coding forcing of the form
+    $ \operatorname{Code} (n,\dot{R},\eta)$  and
+     $\operatorname{Code} (x,y,\eta)$
+    ever again as a factor. That is we form \[B_{n+1} = \{ (n,\dot{R}) \mid \dot{R} \text{ a name for a real } \} \cup \{(x,\dot{y}) \mid \dot{y} \text { a name of a real} ) \} \] and use allowable forcings avoiding $\bigcup \{B_{m} \mid m \le n+1 \}$ from now on. We do not force at this stage.  
+    
+    \item If the real $x$ has already been considered by the bookkeeping function at an earlier stage $\gamma < \beta$, and if at stage $\gamma$ case 1 applied and a real $y$ has been singled out such that $\{(x,y)\}$ is an element of $\bigcup_{m \le n} B_m$, then we pick a real $y' \ne y$, which has not been considered yet and use
+    \[ \dot{\forceQ}_{\beta}^{G_{\beta}} := \operatorname{Code} (x,y',\eta)\]
+    for some $\eta < \omega_1$ which has not been used for coding yet.
+    \item If the real $x$ has been considered earlier in our iteration and case 2 applied there, then we do not force. 
+      \end{enumerate}
+
+If we iterate of length $\omega_1$ following the four rules in a way such that each pair of reals is considered cofinally often by our bookkeeping and let $W[G_{\omega_1}]$ denote the resulting universe and let $B_{\omega}:= \bigcup_{m < \omega} B_m$, then the universe will satisfy the following.
+\begin{lemma}
+    Let $W[G_{\omega_1}]$, $B_{\omega}$ be as just specified. 
+    \begin{enumerate}
+        \item  Then \[ A:= \{ (x,y) \in (\omega^{\omega})^2 \mid (0,0,x,y) \text{ is not coded into $\vec{S}$} \}\] is a $\Pi^1_3$-set which can not be uniformized by any $\Pi^1_3$-graph.
+        \item For any further outer universe $\tilde{W}$ of $W[G_{\omega_1}]$ which is obtained via an allowable forcing avoiding $B_{\omega}$, there is a further allowable forcing avodiding $B_{\omega}$ $\forceQ$ over $\tilde{W}$ such that in $\tilde{W}^{\forceQ}$ the $\Pi^1_3$-uniformization property fails.
+    \end{enumerate}
+    
+   
+\end{lemma}\label{PropertiesOfIntermediateModel}
+
+\begin{proof}
+    To prove the first part we let $m$ be a natural number which is the G\"odel number of a $\Pi^1_3$-formula $\varphi_m$ in two free variables. Let $A_m$ denote the $\Pi^1_3$ set of reals associated with $\varphi_m$. Suppose that $\beta$ is the first stage such that there is a real $x \in W[G_{\omega_1}]$ and $F(\beta) = (m, 
+    \dot{x})$. 
+
+    If case 1 in the definition of our iteration applied at stage $\beta$ and $y$ is the real witnessing this, then $A_m$ will not contain $(x,y)$ by the definition of case 1, yet $(x,y)$ is the unique element of $A$ at its $x$-section as computed in $W[G_{\omega_1}]$ as we assumed that every $(x,y'),y' \ne y$  is coded. So $A_m$ can not uniformize $A$ in $W[G_{\omega_1}]$.
+
+    If case 2 applied at stage $\beta$ then for any real $y \in W[G_{\beta}]$, $(x,y) \in A_m$ as computed in $W[G_{\omega_1}]$, so $A_m$ is not even the graph of a function. 
+
+    So $\Pi^1_3$-uniformization fails in $W[G_{\omega_1}]$ as claimed.
+
+    To prove the second part, starting with an arbitrary $\tilde{W}$, we just need to ensure with an allowable forcing avoiding $B_{\omega}$ $\forceQ$ that eventually every real gets considered by the bookkeeping. This is straightforward to do.
+\end{proof}
+
+
+
+    
+    \subsubsection{A first \texorpdfstring{$\omega$}{omega}-length iteration}
+    ﻿
+    We next will define an $\omega$-length iteration of allowable forcings avoiding more and more sets as we advance in the iteration.
+    The final model will have the property that $\Pi^1_3$-uniformization will fail there. Additionally it will be possible to define an iteration on top of this model which will secure $\Pi^1_3$-reduction while $\Pi^1_3$-uniformization continues to fail.
+    ﻿
+    We start with $W$ as the ground model and start our consideration with the set of allowable forcings. We let $B_0$ be the empty set and assume that we list all $\Pi^1_3$-formulas with two free variables $(\varphi_m \mid m \in \omega)$ in such a way that case 1 and case 2 are alternating, starting with case 1 at the very first stage of our iteration.  Note that such an assumption is harmless, as there are infinitely many formulas where case 1 must always apply and likewise there are infinitely many formulas where case 2 must apply as well, thus we can always re-organize any enumeration $(\varphi_m \mid m \in \omega)$ in a way which meets the requirement.
+    ﻿
+    We proceed in the iteration for $\omega$-many steps as detailed in the definition of the first two cases above and let $W[G_{\omega}]$ be the resulting model. Note that in $W[G_{\omega}]$, all $\Pi^1_3$-formulas with two free variables have been considered at some point by the bookkeeping.
+    \begin{lemma}
+    For a real $R$, let  $(R)_n$ denote the $n$-th part of a recursively definable partition of $R$ into $\omega$-many parts. In $W[G_{\omega}]$ the following $\Pi^1_2$-formula holds true for exactly one real $R$
+    \[\Psi (R) \equiv  (0, (R)_0) \text{ is coded } \land \forall n \in \omega ( 2n, (R)_{2n} ) \text{ is coded } \land (R)_{2n} \notin L[(R)_{2n-2}] ) \] 
+    ﻿
+    \end{lemma}\label{DefinabilityR}
+    \begin{proof}
+    We work in $W[G_{\omega}]$. First we note that there is exactly one real $R_0$ such that $(0,R_0)$ is coded, by the first case of the definition of the iteration. 
+    Now whenever we were at an odd stage of our iteration, we were in case 2 of the definition, thus we did not force at all and just defined a new set $B_{n+1}$ and a new notion of $\infty$-allowable avoiding $(B_{m} \mid m \le n+1)$.
+    Whenever we hit an even stage $2n$ of the iteration, we first kick a pair $(x,y)$ out of the $\Pi^1_3$-set $A_m$ handed to us by the bookkeeping and let $R_{2n}$ be a real which codes the countably many reals which fully determine the iteration so far.  Additionally we use $\operatorname{Code} (2n, R_{2n}, \eta)$ and by definition of the iteration $R_{2n}$ it is the unique real which is not an element of $L[R_{2n-2}]$ and for which $(2n, R_{2n})$ is coded.
+    ﻿
+    To summarize, the real $R$ which codes the sequence $(R_{2n} \mid n \in \omega)$ is the unique real satisfying the $\Pi^1_2$-formula as desired.
+    \end{proof}
+    ﻿
+\subsection{Preliminary remarks for the second iteration}
+
+
+We shall work now towards the three other properties our universe eventually should satisfy.  This will be achieved using an $\omega_1$-length iteration over the ground model $W[G_{\omega}]$. We note that $W[G_{\omega}]$ has a set of reals $B_{\omega}$ associated which we must not use. As $B_{\omega}$ will be the first in an infinite sequence of sets of (names of reals) we re-index and let \[B_0:= B_{\omega}\] from now on and hope that it will not confuse the reader.  At each stage of the iteration we refine additionally the notion of allowable forcings we currently have. The iteration is defined by induction. It will have the crucial property that no matter what generic extension it will eventually produce, the $\Pi^1_3$-uniformization property will continue to fail there using the second item of lemma \ref{PropertiesOfIntermediateModel}.  We let $F: \omega_1 \rightarrow H(\omega_1)$ be the bookkeeping function which organizes the iteration. The choice of $F$ does not matter as long as every element of $H(\omega_1)$ has an uncountable pre-image under $F$ (this assumption is more than enough for our needs).
+We detail our assumptions for the inductive definition of the iteration. Assume  we are at stage $\beta$ of our iteration, let $G_{\beta}$ be the $\forceP_{\beta}$-generic filter and we work over the universe $W[G_{\omega}] [G_{\beta}]$. We also assume that for every $\delta \le \beta$ we  have defined a notion of $\infty \cdot \delta$-allowable forcings avoiding $(B_{\eta} \mid \eta \le \delta) $. The base case of the induction is the notion of (0)-allowable avoiding $B_0$, a notion we have defined over $W[G_{\omega}]$. We also set $B_1:= B_0$ and  define the notion of $\infty \cdot 1 $-allowable avoiding $(B_0)$ as detailed in Definition \ref{inftallowableAvoidingB}.  We distinguish three cases and will work through them in the next three subsections.
+
+
+    \subsection{Forcing \texorpdfstring{$\Pi^1_3$}{Pi13}-reduction}
+    We first assume that $F(\beta)= (\beta_1,\beta_2) $ and that the $\beta_1$-th (in some previously fixed well-order $<$ of $H(\omega_2))$ $\forceP_{\beta_0}$-name of a triple of the form $(\dot{n}, \dot{l}, \dot{a})$, where $\dot{a}$ is a nice $\forceP_{\beta_0}$-name of a real, and $\dot{n}, \dot{l}$ are nice $\forceP_{\beta_0}$-names of natural numbers, is the triple $(\dot{m},\dot{k},\dot{x})$. We let $m = \dot{m}^{G_{\beta}}, k = \dot{k}^{G_{\beta}}$ and assume that $m,k$ are both G\"odel numbers of $\Pi^1_3$-formulas and $x= \dot{x}^{G_{\beta}}$ is a real. ﻿In this situation we work towards $\Pi^1_3$-reduction. We work over $W[G_{\omega}][G_{\beta}]$ as the ground model.
+This model has associated a sequence of sets of tuples of (names of) reals
+\[ B:= (B_{\eta} \mid  \eta < \beta)  \]
+and, for every $\eta \le \beta$, the notion of $\infty \cdot \eta$-allowable avoiding $(B_i \mid i < \eta)$ as detailed earlier. 
+
+
+%Moreover, if $\beta$ is a limit ordinal, we can use the
+%notions of $\infty \cdot \eta$-allowable avoiding $(B_{i} \mid i < \eta)$ to let $\infty \cdot (<\beta)$-allowable avoiding $(B_i \mid i < \beta)$ be just $\bigcap_{\eta < \beta} \{ \forceP \mid \forceP \text{ is $\infty \cdot \eta$- allowable avoiding $(B_i \mid i < \eta)$} \}$. It will become clear after finishing the definition that this will always result in a non-empty set of forcings. For $\beta$ a successor ordinal, we define $\infty \cdot (<\beta)$-allowable avoiding $(B_i \mid i < \beta)$ as just $\infty \cdot (\beta-1)$-allowable avoiding $(B_i \mid i < \beta-1)$
+   We distinguish several cases.
+
+\subsubsection{Forcing \texorpdfstring{$\Pi^1_3$}{Pi13}-reduction, case 1} 
+ We assume that in the universe $W[G_{\omega}] [G_{\beta}]$
+it is true that 
+ \begin{align*} 
+W[G_{\omega}] [G_{\beta}] \models & \forall \forceQ (\forceQ \text{ is $\infty \cdot  \beta $-allowable avoiding }  \\& (B_i \mid i <\beta) \rightarrow \forceQ \Vdash x \in A_m),
+\end{align*}
+ then force with \[\dot{\forceQ}_{\beta}^{G_{\beta}} := \operatorname{Code} (m,k,1,x,\eta).\] Note that this has the direct consequence that if we restrict ourselves from now on to forcings $\forceQ \in W[G_{\omega}] [G_{\beta+1}]$ such that $ \forceQ$ is $\infty \cdot \zeta_0$-allowable avoiding $(B_i \mid i < \zeta_0)$, for $\zeta_0 >\beta$, then $x$ will remain an element of $A_m$. In particular, the pathological situation that $x \notin A_m$, $x \in A_k$ while $x$ is coded into $\vec{S^1}$ is ruled out for $(m,k,x)$.
+    
+\subsubsection{Forcing \texorpdfstring{$\Pi^1_3$}{Pi13}-reduction, case 2}
+We assume that case 1 does not hold however we assume that  in the universe $W[G_{\omega}] [G_{\beta}]$,
+\begin{align*} 
+W[G_{\omega}] [G_{\beta}] \models & \forall \forceQ (\forceQ \text{ is $\infty \cdot \beta $-allowable avoiding }  \\& (B_i \mid i <\beta) \rightarrow \forceQ \Vdash x \in A_k),
+\end{align*}    
+    ﻿
+    then force with \[ \dot{\forceQ}_{\beta}^{G_{\beta}}:=\operatorname{Code} (m,k,0,x,\eta).\]
+
+
+\subsubsection{Forcing \texorpdfstring{$\Pi^1_3$}{Pi13}-reduction, case 3}
+
+ In the final case we assume that  neither case 1 nor case 2 applies. We obtain that  there is a  forcing $\forceQ$ with
+    ﻿
+    \begin{align*}
+    W[G_{\omega}] [G_{\beta}] \models \forceQ \text{ is } &\infty \cdot \beta \text{-allowable avoiding $(B_i \mid i <\beta)$ and } \\& \forceQ \Vdash x \notin A_m.
+    \end{align*}
+    ﻿
+    Likewise we also obtain that  there is a $\forceR$
+    
+    \begin{align*}
+    W[G_{\omega}][G_{\beta}] \models   \forceR \text{ is }& \infty \cdot \beta \text{-allowable avoiding $(B_i \mid i <\beta)$ and } \\&  \forceR \Vdash x \notin A_k.
+    \end{align*}
+    ﻿In particular there are $\infty \cdot \beta $-allowable forcings avoiding $(B_i \mid i < \beta)$ which kick $x$ out of $A_m$ and $A_k$ respectively. We do want to force $x$ out of $A_m$ and $A_k$ but have to be a bit careful. 
+
+Given an $\infty \cdot \beta$-allowable forcing avoiding $(B_{\eta} \mid \eta < \beta)$  $\forceR= (\forceR_{\eta}, \dot{\forceQ}_{\eta})$
+We define an $\infty \cdot \beta$-allowable forcing avoiding $(B_{\eta} \mid \eta < \beta)$ $C^{\omega} (\forceR)$, which we call the closure of $\forceR$ in the following way. Whenever $\beta$ is a stage of $\forceR= (\forceR_{\eta}, \dot{\forceQ}_{\eta})$ where a real $a$ and $A_m$, $A_k$ are considered by the bookkeeping associated with $\forceR$, and $a$ can always be kicked out of $A_m$ and $A_k$ with an $\infty \cdot \beta$-allowable forcing $\forceR'$ avoiding $(B_{\eta} \mid \eta < \beta)$ we use 
+\[C^1(\dot{\forceQ}_{\beta}):=  \dot{\forceQ}_{\beta} \times\mathbb{R'}  \] 
+instead of just $\dot{\forceQ}_{\beta}$ at this stage of the iteration. Iterating the $C^1(\dot{\forceQ}_{\beta})$'s with finite support results in  the first step of the closure procedure we call $C^1(\forceR):= \Asterisk \quad C^1(\dot{\forceQ}_{\beta} ) $. We now iterate this $\omega$-often, that is we form $C^{n+1}(\forceR):= C(C^n(\forceR))$ and let $C^{\omega} (\forceR)$ be the direct limit of these forcings.
+The result $C^{\omega} (\forceR)$ is the closure of $\forceR$. We state some properties which follow immediately from its definition.
+
+\begin{lemma}
+Let $\forceR$ be an $\infty \cdot \beta$-allowable forcing avoiding $(B_{\eta} \mid \eta < \beta)$ relative to the bookkeeping $F'$ and let $C^{\omega} (\forceR)$ be its closure. Then $C^{\omega} (\forceR)$ is itself $\infty \cdot \beta$-allowable avoiding $(B_{\eta} \mid \eta < \beta)$relative to some $F''$ and 
+will have the property that whenever there is an $\eta$ such that $F''(\eta) = (m,k,a)$ and $a$ can both be forced out of $A_m$ and $A_k$ with an $\infty \cdot \beta$-allowable forcing, then $C^{\omega} (\forceR) \Vdash x \notin A_m \cup A_k$.
+
+\end{lemma}
+    Returning to our iteration at stage $\beta$, we now let $C^{\omega} (\forceQ)$ and $C^{\omega} (\forceR)$  be the closure of the $<$-least $\infty \cdot \beta$-allowable forcings avoiding $(B_i \mid i <\beta)$ as above and use
+    ﻿
+    \[ \dot{\forceQ}^{G_{\beta}} :=C^{\omega} (\forceQ) \times C^{\omega} (\forceR) \]
+which is an $\infty \cdot  \beta $-allowable forcing avoiding $(B_i \mid i <\beta)$ over $W[G_{\omega}][G_{\beta}]$ and which forces that $x \notin A_m \cup A_k$.
+    ﻿
+
+
+For all three cases above we finally let $B_{\beta}:= \emptyset$
+and define $\infty \cdot (\beta+1)$-allowable avoiding $(B_{\eta} \mid \eta < \beta+1)$  as being just the same notion as $\infty \cdot \beta$ avoiding $(B_{\eta} \mid \eta < \beta)$.
+    ﻿
+    This ends the definition of the iteration in this case and we shall show that, if $G_{\omega_1}$ denotes a generic filter for the forcing $\forceP_{\omega_1}$, which is defined as the direct limit of the forcings $\forceP_{\beta}$, then the resulting universe $W'[G_{\omega_1}]$ satisfies the $\Pi^1_3$-reduction property.
+    ﻿
+
+    ﻿
+    \subsection{Forcing \texorpdfstring{$\Sigma^1_4$}{Sigma14}-uniformization}
+    ﻿
+    ﻿
+  This section deals with forcing the $\Sigma^1_4$-uniformization property. First we note that we need to define how to force $\Sigma^1_4$-uniformization in a different way to \cite{BPFA and uniformization}. This is necessary, as the latter machinery can not be combined with forcing $\Pi^1_3$-reduction. Indeed both methods exclude themselves and so something new is in demand.
+For every integer $n \in \omega$ we define the set 
+\[ f_n:= \{ (x,y) \mid \exists a_0 \forall a_1 ((n,x,y,a_0,a_1) \text{ is not coded into $\vec{S} $ }) \} \]
+and will work towards a universe where for every $n \in \omega$, if $n$ is the G\"odel number of a $\Sigma^1_4$-set $A_n$ in the plane then $f_n$ uniformizes $A_n$. Note that $f_n$ is a $\Sigma^1_4$-formula, hence $\Sigma^1_4$-uniformization would hold.
+
+Assume that $F(\beta)$ hands us a G\"odel number $m$ of a $\Sigma^1_4$-formula \[\varphi_m= \exists a_0 \forall a_1 \psi_m (x,y,a_0,a_1)\] where $\psi_m$ is a $\Sigma^1_2$-formula, hence absolute by Shoenfield's theorem. Also assume that $F(\beta)$ determines reals $x,y',a'_0$. We assume that our uniformizing function $f_m$ for $\varphi_m$ is not yet defined at $x$. Additionally we assume that inductively we have defined  for every $\eta \le \beta$ a notion of $\infty \cdot \eta$-allowable avoiding $(B_{\gamma} \mid  \gamma < \eta)$. Let $G_{\beta}$ be a $\forceP_{\beta}$-generic filter over $W[G_{\omega}]$. We work in $W[G_{\omega}] [G_{\beta}]$.
+    ﻿
+
+    ﻿
+       \subsubsection{Case 1}
+    ﻿
+    We ask at this stage whether there is a real $y$ and a $\infty \cdot \beta$-allowable forcing $\forceR= ((\forceR_{\eta},\dot{\forceQ}_{\eta}) \mid \eta < \beta )$ avoiding $(B_{\eta} \mid \eta < \beta)$  which adds a real $a_0$ such that for all further $\infty \cdot \beta$-allowable forcings $\forceR'$ avoiding $(B_{\eta} \mid \eta < \beta)$  it is true that
+    ﻿
+    \[ \forceR' \Vdash \forall a_1 \psi_m (x,y,a_0,a_1). \]
+    ﻿
+In this situation we fix the $<$-least such real $y=f_m(x)$ as the value of our eventual uniformizing function at $x$. 
+We would want to add such a real $a_0$ with such a forcing $\forceR$ but we need to be careful. 
+We also have to ensure that our work towards $\Pi^1_3$-reduction will not cause problems.
+
+%There is a subtle point which we want to discuss now. The forcing $\forceR$, being $\infty \cdot \beta$-allowable avoiding $(B_{\eta} \mid \eta \le \beta)$ could have stages where the third case in its definition (see item 2 of the definition in section \ref{DefinitionForcingPi13Reduction}) applies, resulting in the use of two $\infty \cdot \beta$-allowable forcings avoiding $(B_{\eta} \mid \eta \le \beta)$, called there $\forceP \times \forceQ$, in order to force some real $z$, obtained with the bookkeeping, out of two $\Pi^1_3$-sets. We note that  $\forceP$ (and $\forceQ$)  being $\infty \cdot \beta$-allowable avoiding $(B_{\eta} \mid \eta \le \beta)$, will have stages where a real $a$ and two sets $A_m, A_k$ are considered and, as $a$ can be kicked out of $A_m$  with an $\infty \cdot \beta$-allowable forcing, $\forceP$ will let its bookkeeping function guess whether to code $(a,m,k,0)$ or $(a,m,k,1)$ (that is case (b) in the Definition \ref{AlphaAllowableAvoidingB} applies at this stage). If we do not give this situation treatment, it could be that this guess of the bookkeeping will contradict the choice a later, finer version of $\infty \cdot \alpha$-allowable forcing would make. That is it could be that for an $\infty \cdot \gamma$-allowable forcing, $\gamma >  \beta$, the real $(a,m,k,0)$ should be coded, whereas $\forceP$ actually coded $(a,m,k,1)$. This causes problems when we want to argue that eventually $\Pi^1_3$-reduction holds, in that this wrong choice can not be undone. Hence $\Pi^1_3$-reduction might fail in the final model.
+
+In order to circumvent this difficulty we  again ``close the forcing $\forceR$ off$"$. So instead of using a forcing $\forceR$ which introduces the real $a_0$ at stage $\beta$ of our iteration, we force with its closure \[ \dot{\forceQ}_{\beta}^{G_{\beta}} := C^{\omega} (\forceR). \] Note that $C^{\omega} (\forceR)$ also adds the real $a_0$, but, as already discussed, circumvents potential difficulties when dealing with $\Pi^1_3$-reduction.
+
+
+%We add the remark that the above problem of forcing with $\operatorname{Code}$-forcings whose decision turns out to be the wrong one once we further thin out our class of allowable coding forcings, has now vanished. Indeed an $\infty \cdot \beta$-allowable forcing which has been closed off will, by definition, back up every decision of whether to use $\operatorname{Code} (x,m,k,1)$ or $\operatorname{Code} (x,m,k,0)$ by kicking the reals considered out of $A_m$ and $A_k$ whenever possible. 
+
+
+
+
+
+ Last we generically add a fresh real $c_0 (x,y,m)$ via using a coding forcing which codes some harmless information \footnote{For example, if $l$ is the G\"odel number of a $\Sigma^1_4$-set which is always empty then we do not need to uniformize $A_l$, yet we can use coding forcings of the form $\operatorname{Code} (l,a,b) $ for arbitrary reals $a,b$ which would produce such a desired fresh real. } and define
+\[ B_{\beta} :=  \{ (m,x,y,c_0 (x,y,m),\dot{z}) \mid \dot{z} \text{ some name of a real}  \} \]
+and let the notion of $\infty \cdot (\beta+1)$-allowable avoiding $(B_{\eta} \mid < \le \beta+1)$ be defined as starting the infinite thinning out process with the base set of $\infty \cdot \beta$-allowable forcings which avoid $(B_{\eta} \mid \eta < \beta) $ which additionally avoid $B_{\beta}$. The resulting fixed point will be dubbed $\infty \cdot (\beta+1)$-allowable forcings avoiding $(B_{\eta} \mid \eta < \beta+1)$.
+This definition implies that we must not use a forcing of the form $\operatorname{Code} (m,x,y,c_0 (x,y,m), z, \eta)$ for any $\eta$ and any real $z$ which will ensure that throughout our iteration \[``(m,x,y,c_0(x,y,m), z) \text{ is not coded$"$} \] will remain true. Note that this is a $\Pi^1_3$-property in the parameters $(m,$ $x,y,$ $c_0(m,x,y),$ $z)$, hence asserting that there is a  real $c_0 (m,x,y)$ which witnesses that ``$(m,x,y,c_0(x,y,m), z)$ is not coded$"$ becomes a $\Sigma^1_4$-property in the parameters $(x,y)$, as we can define the integer $m$. 
+
+
+We finally demand that from now on, whenever we visit $x$ and $\varphi_m$ again in our iteration, we use a coding forcing $\operatorname{Code} (m,x,y',a_0,a_1)$. This will ensure that eventually all other reals $y'\ne y=f_m(x)$ will satisfy
+    ﻿
+    $``\exists a_0 \forall a_1 ((m,x,y',a_0,a_1)$ is coded$"$. So $y$ will become the unique real which satisfies the $\Sigma^1_4$-formula
+\[ \exists a_0 \forall a_1 ((x,y,a_0,a_1) \text{ is not coded } ) \]
+hence we produce a uniformizing function at $x$.
+    ﻿
+    \subsubsection{Case 2}
+    ﻿
+    If on the other hand, for any real $y$ we add with an $\infty \cdot \beta$-allowable forcing avoiding $(B_{\eta} \mid \eta < \beta)$ and any real $a_0$ there is a further $\infty \cdot \beta$-allowable forcing avoiding $(B_{\eta} \mid \eta < \beta)$,  $\forceQ'$ such that
+    ﻿
+    \[ \forceQ' \Vdash \exists a_1 \lnot \psi_m (x,y',a'_0,a_1) \]
+    ﻿then we let $F$ hand us the reals $y'$ and $a'_0$ and use the closure $C^{\omega} (\forceQ')$ of such a suitable forcing $\forceQ'$ at stage $\beta$ of our iteration.
+To be more precise we let
+\[ \dot{\forceQ}_{\beta}^{G_{\beta}} := C^{\omega} (\forceQ').\]  As a result $\exists a_1 \lnot \psi_m (x,y',a'_0,a_1)$ becomes true. Note that this is a $\Sigma^1_3$-formula, hence it remains true in all further generic extensions we will produce in our iteration.  
+
+We also keep our old notion of allowable, in other words we let $B_{\beta}:= \emptyset$ and let $\infty \cdot \beta+1$-allowable avoiding $(B_{\eta} \mid \eta < \beta+1)$ be just our old $\infty \cdot \beta$-allowable avoiding $(B_{\eta} \mid \eta < \beta)$.
+
+
+This ends the definition of our method of forcing the $\Sigma^1_4$-uniformization property.
+    ﻿
+    ﻿
+  
+    ﻿
+    \subsection{Forcing  a good \texorpdfstring{$\Sigma^1_5$}{Sigma15}-well-order}
+   Our methods allow for an additional layer of complexity  which we can use to force a good $\Sigma^1_5$-well-order of the reals.
+We single out coding forcings of the form
+\[ \operatorname{Code} (1,1,x,y,\eta) \]
+to be our tool which eventually should yield the good $\Sigma^1_5$-well-order.
+The idea is to use the coding forcing $\operatorname{Code} (1,1,x,z,\eta)$ in such a way that 
+
+\begin{align*}
+(1,1,x,z) &\text{ is coded ``cofinally often$"$ }  \Leftrightarrow \\& \text{ ``$z$ codes the initial segment of the well-order below $x"$ }
+\end{align*}
+Here being coded ``cofinally often$"$ is just an abbreviation for the formula $``\exists r_0  ( r_0$ codes the pair $(x,z)$ and $\forall r_1 \exists r_2 ( r_2 \notin L[r_1] \land r_2$ witnesses that $(1,1,x,z)$ is coded$")$. Note that the latter formula is of the form $\exists r_0  (\Delta_1^1  \land \forall r_1 \exists r_2 (\Pi^1_2 \rightarrow \Pi^1_2))$ which is $\Sigma^1_5$.
+Thus the well-order we shall define will become a good $\Sigma^1_5$-well-order.
+
+
+We once more detail our default assumptions for the inductive definition of the iteration. That is  we are at stage $\beta$ of our iteration, let $G_{\beta}$ be the $\forceP_{\beta}$-generic filter and we work over the universe $W[G_{\omega}] [G_{\beta}]$. We also assume that for every $\eta \le \beta$ we  have defined a notion of $\infty \cdot \eta$-allowable forcings avoiding $(B_{\eta} \mid \eta < \beta)$ and a countable partial well-order $<_{\beta}$ of the reals, i.e. a partial order which is a well-order on its domain.
+Let the bookkeeping function $F$ at $\beta$ hand us $(\dot{m},\dot{x})$. Let $x$ be $\dot{x}^{G_{\beta}}$, $m= \dot{m}^{G_{\beta}}$ and assume that $m$ is the G\"odel number of a $\Sigma^1_5$-formula.  In $W[G_{\omega}][G_{\beta}]$ we pick countable partial well-order $<$ which extends our order $<_{\beta}$ and which contains $x$.
+
+We will face two cases which we need to discuss. The first case is that $x$ is an element of the field of $<_{\beta}$. In this case we let $z$ a code for be the set of $<_{\beta}$-predecessors of $x$ and force with
+\[ \dot{\forceQ}_{\beta}^{G_{\beta}} := \operatorname{Code} (1,1,x,z,\eta) \]
+for an $\eta$ which has not been used for coding yet.
+
+In the second case $x$ will be an element of $<$ but not of $<_{\beta}$. In this situation we consider the countable set of $<$-predecessors of $x$, code it with a real $z$. We set $<_{\beta+1} := < \upharpoonright x$, that  is  we say that $<_{\beta+1}$ is just the order $<$ restricted to elements which are $\le x$  and
+force with
+\[ \dot{\forceQ}_{\beta}^{G_{\beta}}:= \operatorname{Code} (1,1,x,z,\eta) \]
+for the least $\eta$ which is free.
+
+Moreover we ensure that we will not add codes which code a wrong well-order up to $x$ anymore. That is, whenever $y$ is a real coding $\omega$-many reals which corresponds to an initial segment of a good well-order of the reals, and $x' \le_{\beta+1} x$ appears as one of the elements coded by $y$, and the well-order coded by $y$ below $x'$ does not coincide with $<_{\beta+1}$ then we must not use $\operatorname{Code} (1,1,x',y,\eta)$ as a forcing. Thus we let 
+\begin{align*}
+B:= \{ (1,1,x',\dot{y}) \mid &\text{ $\dot{y}$ is the name of a real which codes a well-order} \\& \text{ below $x'$ which is forced to  not coincide with $<_{\beta+1}$ } \}
+\end{align*}
+\[  \]
+and define
+\[B_{\beta} :=  B. \]
+
+Then define the notion of $\infty \cdot (\beta+1)$-allowable avoiding $(B_{\eta} \mid \eta <\beta+1)$ as the fixed point of the infinite thinning out process with the set of $\infty \cdot \beta$-allowable forcings avoiding $(B_{\eta} \mid \eta < \beta)$ which additionally avodid the set $B_{\beta}$ as the base set. 
+
+
+
+
+    ﻿
+    ﻿
+  \section{Discussion of the universe}
+
+In this section we show that the just defined universe has the desired properties.
+Let $G_{\omega_1}$ denote a generic filter over $W[G_{\omega}]$ for the just defined iteration. We argue in $W[G_{\omega}][G_{\omega_1}]$ from now on.
+
+\subsection{\texorpdfstring{$\Pi^1_3$}{Pi13}-reduction holds in our universe}
+We first argue why $\Pi^1_3$-reduction holds in  $W[G_{\omega}][G_{\omega_1}]$.
+
+    For every pair $(m,k) \in \omega^2$, we define in a first step
+    ﻿
+    \[D^0_{m,k}:= \{ x \in \omega^{\omega} \, : \, (m,k,0,x)\text{ is  not coded into the } \vec{S}\text{-sequence}\}\]
+    ﻿
+    and 
+    ﻿
+    \[D^1_{m,k}:= \{ x \in \omega^{\omega} \, : \,(m,k,1,x) \text{ is not coded into the } \vec{S}\text{-sequence}\}.\]
+    ﻿Now both sets will not necessarily reduce $A_m$ and $A_k$, as we do have potentially wrong codes that we created when passing from $W$ to $W[G_{\omega}]$ while working towards a failure of $\Pi^1_3$-uniformization. There is a $\Sigma^1_3$-definition of the real $R$ that codes all these potentially wrong codes however. This $\Sigma^1_3$-definition still works over the bigger universe $W[G_{\omega}][G_{\omega_1}]$ and we can use it to define the reducing sets in the following way. For the following we use the phrase ``$(m,k,0,x)$ is not coded outside of $L[R]"$ as an abbreviation of the assertion
+``$\lnot \exists r ( r$ witnesses that $(m,k,0,x)$ is coded into $\vec{S}$ and $r \notin L[R]"$.
+We define
+ \[E^0_{m,k}:= \{ x \in \omega^{\omega} \, : \, (m,k,0,x)\text{ is  not coded into } \vec{S}\text{ outside of $L[R]$}\}\]
+and
+   \[E^1_{m,k}:= \{ x \in \omega^{\omega} \, : \,(m,k,1,x) \text{ is not coded into } \vec{S}\text{ outside of $L[R]$}\}.\]
+Note that both $E^0_{m,k}$ and $E^1_{m,k}$ are $\Pi^1_3$-definable over $W[G_{\omega}][G_{\omega_1}]$. Indeed  \ref{DefinabilityR} shows that
+\begin{align*}
+\forall x (x \in E^0_{m,k} \Leftrightarrow \forall R (& ((R)_0,0,0) \text{ is coded} \land \forall n \in \omega ( ((R)_{n+1},n+1,n+1) \\& \text{is coded }
+ \land (R)_{n+1} \notin L[ (R)_n ]) \Rightarrow \lnot \exists r (r \notin L[R] \land \\& r \text{ witnesses that }
+ (m,k,0,x) \text{ is coded into } \vec{S})))
+\end{align*}
+Note that right hand of the above statement is of the form $\forall R (\Sigma^1_3 \land \Sigma^1_3 \land  \Sigma^1_3 \rightarrow \lnot \exists ( \Pi^1_2 \land \Pi^1_2))$, hence $\Pi^1_3$ as desired.
+
+Our goal is to show that for every pair $(m,k)$ the sets $E^0_{m,k} \cap A_m$ and $E^1_{m,k} \cap A_k$ reduce the pair of $\Pi^1_3$-sets $A_m$ and $A_k$.
+    ﻿
+    ﻿
+    \begin{lemma}
+    ﻿
+    In $W[G_{\omega}] [G_{\omega_1}]$, for every pair $(m,k)$, $m,k \in \omega$ and corresponding $\Pi^1_3$-sets $A_m$ and $A_k$:
+    ﻿
+    \begin{enumerate}
+    ﻿
+    ﻿
+    ﻿
+    \item[(a)] $E^0_{m,k} \cap A_m$ and $E^1_{m,k} \cap A_k$ are disjoint.
+    ﻿
+    \item[(b)] $(E^0_{m,k} \cap A_m) \cup (E^1_{m,k} \cap A_k)= A_m \cup A_k$.
+    ﻿
+    \item[(c)] $E^0_{m,k} \cap A_m$ and $E^1_{m,k} \cap A_k$ are $\Pi^1_3$-definable.
+    ﻿
+    \end{enumerate}
+    ﻿
+    \end{lemma}
+
+\begin{proof}
+
+We prove (a) first. We argue in $W[G_{\omega}][G_{\omega_1}]$ but ignore the codes created in $W[G_{\omega}]$. This is justified by the above discussion. If $x$ is an arbitrary real in $A_m \cap A_k$ there will be a least stage $\beta$ above $\omega$, such that $F$ at stage $\beta$ considers a triple of names which itself corresponds to the triple  $(m,k,x)$. As $x \in A_m \cap A_k$, we know that case 1 or case 2  in the definition of our iteration in the case where we force towards $\Pi^1_3$-reduction, must have applied. We argue for case 1 as case 2 is similar. In case 1  the application of $\operatorname{Code} {(m,k,0,x,\eta)}$ codes $(m,k,x,0)$ into $\vec{S}$, while ensuring that for all future  extensions, $x $ will remain an element of $A_m$.  The rules of the iteration also tell us that $(m,k,x,1)$ will never be coded into $\vec{S}$ by a later factor of the iteration. Thus $x \in E^0_{m,k} \cap A_m$. It follows that $x \notin E^1_{m,k}$ and $E^0_{m,k} \cap A_m$ and $E^1_{m,k} \cap A_k$ are disjoint.
+
+
+To prove (b), let $x$ be an arbitrary element of $A_m \cup A_k$. Let $\beta> \omega$ be the stage of the iteration beyond $W[G_{\omega}]$ where the triple $(m,k,x)$ is considered first. As $x \in A_m \cup A_k$, either case 1 or case 2 in the the definiton of the forcing for the $\Pi^1_3$-reduction were applied at stage $\gamma$.
+
+Assume first that it was case 1. Then, as argued above, $x \in  A_m$ will remain true for the rest of the iteration,  and we will never code $(m,k,1,x)$ into $\vec{S}$ at a later stage of our iteration. Hence $x \in A_m \cap D^0_{m,k}$. If at stage $\beta$ case 2 applied, then $x \in E^1_{m,k} \cap A_k$, and again, we will never code $(m,k,0,x)$ into $\vec{S}$ at a later stage of our iteration. Thus,either $x \in E^0_{m,k} \cap A_m$ or $x \in E^1_{m,k} \cap A_k$ and we are finished.
+
+
+Proving (c) is a straightforward calculation.
+
+\end{proof}
+
+
+
+
+
+
+
+    ﻿  \subsection{Proof of \texorpdfstring{$\Sigma^1_4$}{Sigma14}-uniformization}
+    ﻿
+    We claim that adding the two cases to our definition of the iteration will force $\Sigma^1_4$-uniformization in the final model.
+    ﻿
+    \begin{theorem}
+    ﻿
+    Let $G_{\omega_1}$ be a $\forceP_{\omega_1}$-generic filter, where $\forceP_{\omega_1}$ should denote the limit of the iteration $(\forceP_{\alpha}, \forceQ_{\beta} \mid \beta < \omega_1, \alpha \le \omega_1)$.
+    ﻿
+    Then in $W[G_{\omega}] [G_{\omega_1}]$ the $\Sigma^1_4$-uniformization property holds, the $\Pi^1_3$-reduction property holds and the $\Pi^1_3$-uniformization property fails.
+    ﻿
+    \end{theorem}
+    ﻿
+    \begin{proof}
+    ﻿
+ We start arguing for the $\Sigma^1_4$-uniformization property.   Let $m$ be the G\"odel number of a $\Sigma^1_4$-formula in two free variables $\varphi_m \equiv \exists a_0 \forall a_1 \psi_m (x,y,a_0,a_1)$. Let $x$ be an arbitrary real. We assume first that we stay in case 2 throughout the iteration. Then, by definition of the iteration, we force for every $y'$ and $a_0$ a real $a_1$ such that
+    ﻿
+    \[ \lnot \psi_m (x,y',a_0,a_1) \]
+so the $x$-section of the set defined by $\varphi_m$ is empty in $W[G_{\omega}][G_{\omega_1}]$. 
+
+
+If on the other hand we encounter a stage $\beta$ in our iteration where we are in the first case of the definition, then there must be a least such stage. At this stage we add a real $a_0$ which witnesses that all further $\infty \cdot \beta$-allowable forcings avoiding $(B_{\eta} \mid \eta < \beta)$ $\forceQ'$ will
+    ﻿
+    force $\forall a_1 \psi_m (x,y,a_0,a_1)$. Then we added a real $c$ and ensured that
+    ﻿
+    eventually  
+    ﻿
+    \[ \forall a_1 ((m,x,y,c,a_1) \text{ is not coded}). \]
+    ﻿
+    As a consequence
+    ﻿
+    \[\exists a_0 \forall a_1 ((m,x,y,c,a_1) \text{ is not coded}). \] is true which is a $\Sigma^1_4$-property for the reals $x,y$.
+    ﻿
+    ﻿
+    On the other hand, the definition of the iteration ensures that after $\omega_1$-many stages, for any real $y' \ne y=f_m(x)$
+    ﻿
+    \[ \forall a_0 \exists a_1 ((m,x,y',c,a_1) \text{ is coded)}, \] thus $(x,y)$ is the unique pair which satisfies a $\Sigma^1_4$-property. As the arguments did not depend on $m$ or $x$, this shows that every $\Sigma^1_4$-set in the plane can be uniformized by a function whose graph is a $\Sigma^1_4$-set, as desired.
+   ﻿
+    ﻿
+    \end{proof}
+
+\subsection{Proof of the good \texorpdfstring{$\Sigma^1_5$}{Sigma15}-wellorder}
+
+
+\begin{lemma}
+Let $W[G_{\omega}] [G_{\omega_1}]$ be the result if we run our definition of the iteration for $\omega_1$-many steps over $W[G_{\omega}]$.
+Then the reals of $W[G_{\omega}] [G_{\omega_1}]$ have a good $\Sigma^1_5$-well-order of the reals. Hence $\Sigma^1_m$-uniformization holds for every $m \ge 5$.
+
+\end{lemma}
+\begin{proof}
+In $W[G_{\omega}][G_{\omega_1}]$ define \[ < :=\bigcup_{\beta < \omega_1} <_{\beta}. \]
+Then $<$ is a well-order of the reals of ordertype $\omega_1$ by definition.  By construction, if $x$ is a real and $z$ a real coding the $<$-predecessors of $x$, then $(x,z)$ will satisfy the $\Sigma^1_5$-formula
+``$(1,1,x,z)$ is coded cofinally often$"$. 
+
+
+What is left is to show the converse. That is for any real $x$, if $z$ is a real which does not code a $<$-initial segment below $x$, then $(1,1,x,z)$ is \emph{not} coded cofinally often. This is true, as if $z$ is such a real then there will be a least stage $\beta <\omega_1$ such that
+$z$ does not coincide with $<_{\beta}$ below $x$. But from stage $\beta$ on $(1,1,x,z)$ will belong to $B$, the set of reals we want to avoid as we put it into $B_{\beta+1}$ by defintion. In particular there is a real $r$ such that $(1,1,x,z)$ is not coded outside of $L[r]$ in other words, there $r$ is such that for no real $s$, $ s \notin L[r]$ and $s$ witnesses that $(1,1,x,z)$ is coded into $\vec{S}$. Thus $r$ witnesses that $(1,1,x,z)$ is not coded cofinally often as desired.
+
+
+
+\end{proof}
+    ﻿
+    ﻿\section{The second main theorem}
+In this section we want to sketch a proof of the second main theorem. Its proof can be seen as an easier variant of the proof from the first main theorem.
+Recall what we are aiming for:
+\begin{theorem}
+There is a generic extension of $L$ where the
+$\Pi^1_3$-uniformization property holds and where $\Sigma^1_n$-uniformization holds for $n \ge 4$.
+\end{theorem}
+The theorem is proved using an $\omega_1$-length iteration of allowable forcings; the notion of allowable needs to altered though for our new task. It should accomodate the following tasks:
+\begin{enumerate}
+\item Forcing $\Pi^1_3$-uniformization
+
+\item Forcing a good $\Sigma^1_5$ well-order of the reals.
+\end{enumerate}
+
+Hence we define a new variant of 0-allowable forcings designed to carry out such  a proof.
+
+
+\begin{definition}
+    ﻿
+    Let $W$ be our ground model. Let $\alpha < \omega_1$ and let $F\in W$, $F: \alpha \rightarrow W$ be a bookkeeping function.
+    ﻿
+    A finite support iteration $\forceP=(\forceP_{\beta}\,:\, {\beta< \alpha})$ is called allowable (relative to the bookkeeping function $F$)  if the function $F: \alpha \rightarrow W$  determines $\forceP$ inductively as follows:
+    ﻿
+     \begin{itemize}
+    ﻿
+     \item[(1)] We assume that $\beta \ge 0$ and $\forceP_{\beta}$ is defined. We let $G_{\beta}$ be a $\forceP_{\beta}$-generic filter over $W$ and assume that $F(\beta)=(\dot{m}, \dot{x}, \dot{y},\dot{\eta})$, for a quadruple of $\forceP_{\beta}$-names. We assume that $\dot{x}^{G_{\beta}}=:x$, $\dot{y}^{G_{\beta}}=y$ are reals, $\dot{m}^{G_{\beta}}=:m $ is a natural number which codes a $\Pi^1_3$-set $A_m$ and $\dot{\eta}^{G_{\beta}}$ is an ordinal $< \omega_1$. 
+    ﻿
+     
+    ﻿
+     Then we split into two cases:
+    ﻿
+     \begin{itemize}
+    ﻿
+     \item If there is a $\gamma< \beta$ and a $\forceP_{\gamma}$-name of a triple $( \dot{m'}, \dot{a} ,\dot{b},\dot{\eta}) $ such that $\dot{a}^{G_{\gamma}}= a \in \omega^{\omega}$, $\dot{b}^{G_{\gamma}}=b$, $\dot{m'}^{G_{\gamma}}= m' \in \omega$,  $\dot{\eta}^{G_{\gamma}} = \eta$  and
+     $F(\gamma)= ( \dot{m}, \dot{a}, \dot{b} ,\dot{\eta}) $, then we force with the trivial forcing. We say in this situation that $\eta$ has already been used for coding, or $\eta$ is not free.
+    ﻿
+     \item If not, then let \[\dot{\forceQ}_{\beta}^{G_{\beta}}=\forceP(\beta)^{G_{\beta}}:= \operatorname{Code} (m,x,y,\eta) .\] We say that in this situation $\eta$ is free or $\eta$ has not been used for coding yet.
+    ﻿
+     \end{itemize}
+    ﻿
+   
+
+
+\item[(2)] If $F(\beta)= (  \dot{m},\dot{x},\dot{y}, \dot{\eta} )$ and $\dot{x},\dot{y}$ are both names of reals whereas $\dot{m}$ is the G\"odel number of a $\Sigma^1_5$-formula, then we use $\operatorname{Code} (1,1,x,y,\eta)$, provided $\eta$ is free and use the least $\eta'$ which is free otherwise for coding $(1,x,y)$ there. Again to avoid ambiguity we assume that 1 is not the G\"odel number of a formula and code $(1,1,x,y)$ instead of just $(1,x,y)$.
+
+     \end{itemize}
+    ﻿
+     
+    ﻿    \end{definition}
+
+ This version of ``allowable$"$ is less complicated than the version we needed for the proof of the first theorem. The reason is that we just have two tasks we need to take care of, and that the most tricky case, namely forcing reduction and a failure of unifomization is not existing. 
+
+We proceed now in a very similar way to the proof of the first main theorem, but the thinning out process is tailored to finally obtain a universe where the $\Pi^1_3$-uniformization property is true. We employ the thinning out process as detailed in  \cite{Uniformization} or \cite{Uniformization with wellorder}. Then define a version of ``thinning out while leaving out codes$"$ which is a straightforward adaption of the construction present in this paper.
+
+Equipped with these notions, we start to prove the second main theorem following closely the proof of the first one. As we only have to deal with the $\Pi^1_3$-uniformization and a $\Sigma^1_5$-good wellorder, the proof is shorter.
+
+\subsection{Thinning out for uniformization}
+We define the derivative acting on the set of allowable forcings over \( W \). Inductively, for an ordinal \( \alpha \) and any bookkeeping function \( F \in W \), we assume that the notion of \( \zeta \)-allowable with respect to \( F \) has already been defined for every \( \zeta < \alpha \). Specifically, this means that for each \( \zeta < \alpha \), we have already defined a set of rules that, in conjunction with a bookkeeping function \( F \in W \), produces the following over \( W \):
+
+\begin{itemize}
+\item An allowable forcing \( \forceP = \forceP_{\delta} = ((\forceP_{\beta}, \dot{\forceQ})_{\beta} \, : \, \beta < \delta) \in W \), which is the actual forcing used in the iteration. Let \( G_{\delta} \) denote a \( \forceP_{\delta} \)-generic filter over \( W \).
+  
+\item A set
+\begin{align*}
+    I = \dot{I}_{\delta}^{G_{\delta}} =  \{ (\dot{x}^{G_{\delta}}, \dot{y}^{G_{\delta}}, \dot{m}^{G_{\delta}}, \dot{\gamma}^{G_{\delta}}) : & \dot{m} , \dot{x}, \dot{y}, \dot{\gamma} \text{ are } \\& \forceP \text{-names for elements of } \omega, 2^{\omega}, \omega_1 \}.
+\end{align*}
+    
+
+ The set \( I \in W[G_{\delta}] \) contains potential values for the uniformizing function \( f \) that we want to define. Note that for a given \( x \) and \( m \), there may be several values \( (x, y_1, m, \xi_1), \dots, (x, y_n, m, \xi_n) \). We say that \( (x, y, m) \) has rank \( \xi \) if \( (x, y, m, \xi) \in I \). There can be multiple ranks for a given \( (x, y, m) \). The goal is to use the \( (x, y, m) \)'s with the minimal rank, and among those, choose the one with the least name according to the fixed well-order of $L$ in the background, ensuring the well-definedness of our choice.
+\end{itemize}
+
+Following our established terminology, if applying the rules for \( \eta \)-allowable forcings over \( W \) and \( F \in W \) results in the pair \( (\forceP, I) \in W \), we say that \( \forceP \) is \( \eta \)-allowable with respect to \( F \) (over \( W \)), or simply that \( \forceP \) is \( \eta \)-allowable if there exists an \( F \) and an \( I \) such that \( \forceP \) is \( \eta \)-allowable with respect to \( F \).
+
+
+We now define the derivation of the \( <\alpha \)-allowable forcings over \( W \), which we call \( \alpha \)-allowable (again over \( W \)). The definition is a uniform extension of 0-allowability. 
+
+A \( \delta < \omega_1 \)-length iteration \( \forceP = (\forceP_{\beta} : \beta < \delta) \in W \) is called \( \alpha \)-allowable over \( W \) (or relative to \( W \)) if it is recursively constructed using two ingredients. First, a bookkeeping function \( F \in W \), \( F : \delta \to W^3 \), where for each \( \beta < \delta \), we write \( F(\beta) = ((F(\beta)_0, F(\beta)_1, F(\beta)_2)) \) for the corresponding values of the coordinates. Second, a set of rules similar to those for 0-allowability, with two additional rules added at each step of the derivative, which determine, along with \( F \), how the iteration \( \forceP \) and the set of \( f \)-values \( I \) are constructed.
+
+The infinite set of rules is defined as follows. Fix a bookkeeping function \( F \in W \), \( F : \delta \to W^3 \), for \( \delta < \omega_1 \). Assume we are at stage \( \beta \) of our construction and that, inductively, we have already created the following list of objects:
+
+\begin{itemize}
+\item The forcing \( \forceP_{\beta} \in W \) up to stage \( \beta \), along with a \( \forceP_{\beta} \)-generic filter \( G_{\beta} \) over \( W \).
+  
+\item The set
+\begin{align*}
+    I = \dot{I}_{\delta}^{G_{\delta}} =  \{ (\dot{x}^{G_{\delta}}, \dot{y}^{G_{\delta}}, \dot{m}^{G_{\delta}}, \dot{\gamma}^{G_{\delta}}) : & \dot{m} , \dot{x}, \dot{y}, \dot{\gamma} \text{ are } \\& \forceP \text{-names for elements of } \omega, 2^{\omega}, \omega_1 \},
+\end{align*}
+ containing potential values for the uniformizing function \( \dot{f}^{G_{\beta}}(m, \cdot) \). Initially, we set \( I_0 = \emptyset \).
+\end{itemize}
+
+The set of possible \( f \)-values will change as the iteration progresses. Specifically, values for \( f \) must be added when a new, lower-ranked value of \( \dot{f}^{G_{\beta}}(m, x) \) is encountered. 
+
+Now, working in \( W[G_{\beta}] \), we define the next forcing \( \dot{\forceQ}^{G_{\beta}} \) and possibly update the set of possible values for the uniformizing function \( f(m, x) \). Assume that \( F(\beta)_0 = (\dot{x}, \dot{y}, \dot{m}) \), and let \( A \subset \beta \), \( A \in W \), be such that \( \dot{x}, \dot{y}, \dot{m} \) are \( \forceP_A = \ast_{\eta \in A} \forceP(\eta) \)-names, where we require that \( \forceP_A \in W \) is a subforcing of \( \forceP_{\beta} \) (e.g., if \( A = \gamma < \beta \) and \( F(\beta)_0 \) lists \( \forceP_{\gamma} \)-names). Let \( G_A := G_{\beta} \upharpoonright A \). We then set \( x = \dot{x}^{G_A}, y = \dot{y}^{G_A} \), and \(m= \dot{m}^{G_A} \), and proceed as follows:
+
+\begin{enumerate}
+\item[(a)]  
+  \begin{itemize}
+  \item[] There exists an ordinal \( \zeta < \alpha+1 \), chosen to be minimal, such that:
+  \item[] First, we collect all \( \forceP_A \)-names for reals \( \dot{a} \). For each \( \forceP_A \)-name \( \dot{a} \), we pick the \( < \)-least nice name \( \dot{b} \) such that \( \dot{a}^{G_{\beta}} = \dot{b}^{G_{\beta}} \), and collect these names \( \dot{b} \) into a set \( C \). We assume that there is a \( < \)-least nice \( \forceP_A \)-name \( \dot{y_0} \) in \( C \) such that \( \dot{y_0}^{G_A} = y_0 \), 
+  \[
+  W[G_{\beta}] \models (x, y_0) \in A_m
+  \]
+  and there is no \( \zeta \)-allowable forcing \( \forceR  \), \( \forceR \in W \), extending \( \forceP_{\beta} \) such that 
+  \[
+  W[G_{\beta}] \models \forceR / G_{\beta} \Vdash (x, y_0) \notin A_m.
+  \]
+  If this condition holds, we proceed as follows:
+  \end{itemize}
+
+  \begin{itemize}
+  \item Assume that \( F(\beta)_2 = (\dot{x}, \dot{z}, \dot{m}) \) is a triple of \( \forceP_A \)-names, with \( \dot{x}^{G_A} = x \), \( \dot{z}^{G_A} = z \neq y_0 \), and \( \dot{m}^{G_A} = m \). We define:
+  \[
+  \dot{\forceQ}_{\beta}^{G_{\beta}} := \text{Code}(m,x,z,\eta).
+  \]
+  If the bookkeeping function does not have the desired form, we choose the \( < \)-least names of the desired objects and use them to define the forcing. In this case, we pick the \( < \)-
+
+least \( \forceP_A \)-name for a countable ordinal \( \dot{\eta} \), and let \( \dot{z} \) be the \( < \)-least \( \forceP_A \)-name of a real such that \( \dot{z}^{G_A} \neq y_0 \). Then:
+  \[
+  \dot{\forceQ}_{\beta}^{G_{\beta}} := \text{Code}(m,x,z,\eta).
+  \]
+  We also set \( \forceP_{\beta+1} = \forceP_{\beta} \ast \dot{\forceQ}_{\beta} \) and let \( G_{\beta+1} = G_{\beta} \ast G(\beta) \) be its generic filter.
+
+  \item We assign a new value to \( f \), i.e., set \( f(m, x) := y_0 \) and assign the rank \( \zeta \) to the value \( (x, y_0, m) \) in \( W[G_{\beta+1}] \). We update \( I_{\beta+1}^{G_{\beta+1}} := I_{\beta}^{G_{\beta}} \cup \{ (x, y_0,m, \zeta) \} \).
+  \end{itemize}
+
+\item[(b)] If case (a) does not apply, i.e., for each \( \zeta < \alpha \) and each pair of reals, the pair can be forced out of \( A_m \) by a \( \zeta \)-allowable forcing extending the current one, we let the bookkeeping function \( F \) fully determine what to force. We assume that \( F(\beta)_1 \) is a \( \forceP_A \)-name for a countable ordinal \( \dot{\eta} \), and let \( \dot{\eta}^{G_A} = \eta \). We assume that \( F(\beta)_2 \) is a nice \( \forceP_A \)-name for a pair of reals \( (\dot{x'}, \dot{y_0}) \) such that \( \dot{x'}^{G_A} = x \). We define:
+  \[
+  \dot{\forceQ}_{\beta}^{G_{\beta}} := \text{Code}(m,x,y_0,\eta).
+  \]
+  Let \( G(\beta) \) be a \( \dot{\forceQ}_{\beta} \)-generic filter over \( W[G_{\beta}] \) and set \( G_{\beta+1} = G_{\beta} \ast G(\beta) \).
+
+  We do not update the set \( I_{\beta} \) of preliminary values for \( f \), i.e., we set \( I_{\beta+1} := I_{\beta} \).
+
+  Otherwise, we choose the \( < \)-least \( \forceP_A \)-names for the desired objects \( g_{\eta} \) and \( (x, z, m) \), and force with:
+  \[
+  \dot{\forceQ}_{\beta}^{G_{\beta}} := \text{Code}(m,x,z,\eta)
+  .
+  \]
+
+\item[(c)] If \( F(\beta) = (\dot{m},\dot{x},\dot{y},\dot{\eta}) \) for $\dot{m}$ a \( \forceP_{\beta} \)-name of an integer, $\dot{x},\dot{y}$ tow names of reals and $\dot{\eta}$ the name of a countable ordinals then we force with:
+
+  \begin{itemize}
+  \item[] \( \dot{\forceQ}_{\beta}^{G_{\beta}} := \text{Code}(1,1,x,y,\eta)  \), provided \(\eta \) is free
+  \item[] or \( \dot{\forceQ}_{\beta}^{G_{\beta}} := \text{Code}(1,1,x,y,
+\eta')  \), for $\eta'$ least that is free for coding.
+  \end{itemize}
+
+\end{enumerate}
+
+At limit stages \( \eta \) of \( \alpha + 1 \)-allowable forcings, we use finite support:
+\[
+\forceP_{\eta} := \text{dir} \, \lim (\forceP_{\nu} : \nu < \eta).
+\]
+Finally, we set:
+\[
+I_{\eta}^{G_{\eta}} := \{ (m, x, y, \zeta) : \exists \xi < \eta \, ((m, x, y, \zeta) \in I_{\xi}^{G_{\xi}}) \}.
+\]
+This concludes the definition of the rules for \( \alpha + 1 \)-allowability over the ground model \( W \). To summarize:
+
+
+\begin{definition}
+Assume that $F \in W$, $F: \eta \rightarrow W^3$ is a bookkeeping function and that $\forceP=(\forceP_{\beta} \, : \, \beta < \eta)$ and $I=(I_{\beta} \, : \, \beta < \eta)$ is the result of applying the above defined rules together with $F$ over $W$. Then we say that $(\forceP,I)$ is $\alpha+1$-allowable with respect to $F$ (over $W$). Often, $I$ is clear from context, and we will just say $\forceP$ is $\alpha+1$-allowable with respect to $F$. We also say that $\forceP$ is $\alpha+1$-allowable over $W$ if there is an $F$ such that $\forceP$ is $\alpha+1$-allowable with respect to $F$.
+\end{definition}
+
+\subsection{Thinning out while leaving out codes for uniformization}
+As in the proof of the first main theorem, we shall define the notion of an allowable forcing which avoids a set $B$ of names of reals. 
+\begin{definition}
+    ﻿
+    Let $B$ be an arbitrary set of  tuples of (forcing names of) reals denoted by $\vec{x}$.  We say that an iteration $\{ (\forceP_{\alpha},\dot{\forceQ}_{\alpha}) \mid \alpha < \delta \}$  is 0-allowable without  using $B$ (or avoiding $B$) if it is allowable and for every $\alpha< \delta$ and every $\forceP_{\alpha}
+$-generic filter $G_{\alpha}$, none of the factors $\dot{\forceQ}_{\alpha}^{G_{\alpha}}$ are of the form $\operatorname{Code} (1,1,\vec{x}^{G_{\alpha}}, \eta)$, $\eta < \omega_1$ and $\vec{x} \in B$, where we write $\vec{x}^{G_{\alpha}}$ for the evaluation of the $\forceP_{\alpha}$-names which are elements of $\vec{x}$ with the help of the generic $G_{\alpha}$. 
+    ﻿
+    \end{definition}
+
+\subsection{Proof of the second main theorem}
+  We first assume that $F(\beta)= (\beta_1,\beta_2) $ and that the $\beta_1$-th (in some previously fixed well-order $<$ of $H(\omega_2))$ $\forceP_{\beta_0}$-name of a triple of the form $(\dot{n}, \dot{l}, \dot{a})$, where $\dot{a}$ is a nice $\forceP_{\beta_0}$-name of a real, and $\dot{n}, \dot{l}$ are nice $\forceP_{\beta_0}$-names of natural numbers, is the triple $(\dot{m},\dot{k},\dot{x})$. We let $m = \dot{m}^{G_{\beta}}, k = \dot{k}^{G_{\beta}}$ and assume that $m,k$ are both G\"odel numbers of $\Pi^1_3$-formulas and $x= \dot{x}^{G_{\beta}}$ is a real. In this situation we work towards $\Pi^1_3$-uniformization. We work over $W[G_{\beta}]$ as the ground model.
+This model comes along with a sequence of sets of tuples of (names of) reals
+\[ B:= (B_{\zeta_0} \mid  \zeta_0 < \beta)  \]
+and  the notion of $\infty \cdot \zeta_0+ \zeta_1$-allowable avoiding $(B_i \mid i < \zeta_0)$ for $\zeta_0 < \beta, \zeta_1\in Ord$.
+   We distinguish several according to the thinning out process for uniformization.
+   \begin{enumerate}
+\item[(a)]  
+  \begin{itemize}
+  \item[] There exist two ordinals  \(\zeta_0< \beta, \zeta_1 \in Ord\) chosen to be lexicographically minimal such that:
+  \item[] First, we collect all \( \forceP_A \)-names for reals \( \dot{a} \). For each \( \forceP_A \)-name \( \dot{a} \), we pick the \( < \)-least nice name \( \dot{b} \) such that \( \dot{a}^{G_{\beta}} = \dot{b}^{G_{\beta}} \), and collect these names \( \dot{b} \) into a set \( C \). We assume that there is a \( < \)-least nice \( \forceP_A \)-name \( \dot{y_0} \) in \( C \) such that \( \dot{y_0}^{G_A} = y_0 \), 
+  \[
+  W[G_{\beta}] \models (x, y_0) \in A_m
+  \]
+  and there is no \( \infty \cdot \zeta_0 + \zeta_1\) \-allowable forcing avoiding $B$ denoted by \( \forceR \), extending \( \forceP_{\beta} \)  such that 
+  \[
+  W[G_{\beta}] \models \forceR / G_{\beta} \Vdash (x, y_0) \notin A_m.
+  \]
+  If this condition holds, we proceed as follows:
+  \end{itemize}
+
+  \begin{itemize}
+  \item Assume that \( F(\beta)_2 = (\dot{x}, \dot{z}, \dot{m}) \) is a triple of \( \forceP_A \)-names, with \( \dot{x}^{G_A} = x \), \( \dot{z}^{G_A} = z \neq y_0 \), and \( \dot{m}^{G_A} = m \). We define:
+  \[
+  \dot{\forceQ}_{\beta}^{G_{\beta}} := \text{Code}(m,x,z,\eta).
+  \]
+  If the value of bookkeeping function at $\beta$ does not have the desired form, we choose the \( < \)-least names of the desired objects and use them to define the forcing. In this case, we pick the \( < \)-
+
+least \( \forceP_A \)-name for a countable ordinal \( \dot{\eta} \), and let \( \dot{z} \) be the \( < \)-least \( \forceP_A \)-name of a real such that \( \dot{z}^{G_A} \neq y_0 \). Then:
+  \[
+  \dot{\forceQ}_{\beta}^{G_{\beta}} := \text{Code}(m,x,z,\eta).
+  \]
+  We also set \( \forceP_{\beta+1} = \forceP_{\beta} \ast \dot{\forceQ}_{\beta} \) and let \( G_{\beta+1} = G_{\beta} \ast G(\beta) \) be its generic filter.
+
+  \item We assign a new value to \( f \), i.e., set \( f(m, x) := y_0 \) and assign the rank \( \zeta \) to the value \( (x, y_0, m) \) in \( W[G_{\beta+1}] \). We update \( I_{\beta+1}^{G_{\beta+1}} := I_{\beta}^{G_{\beta}} \cup \{ (x, y_0,m, \zeta) \} \).
+  \end{itemize}
+
+\item[(b)] If case (a) does not apply, i.e., for each \( \zeta_0 < \beta,\zeta_1 \in Ord \) and each pair of reals $(x,y) \in W[G_{\beta}],$ the pair can be forced out of \( A_m \) by a \( \infty \cdot\zeta_0 +\zeta_1 \)-allowable forcing $\forceP_{\zeta_0,\zeta_1}$ extending the current one.
+Then we decide to pick one such pair $(x,y)$ using the bookkeeping $F$ and fix the $<$-least such forcing $\forceP_{\infty \cdot \beta} (x.y)$, which is $\infty \cdot \beta$-allowable avoiding $B_{\beta}$
+and let $C^{\omega}( \forceP)(x,y)$ denote, as before, the closure of $\forceP$, which is defined in the analogous way to the notion of closure we defined for the reduction property.
+Then, at stage $\beta$, we force with
+\[ \dot{\forceQ}_{\beta}^{G_{\beta}}:= C^{\omega} (\forceP_{\infty \cdot \beta}(x,y)).\]
+We note that this forcing forces $(x,y)$ out of $A_m$.
+
+We define the set $I_{\beta+1}$ in the obvious way. 
+We do not add a new set $B_{\beta}$ we need to avoid, that is we let $B_{\beta}= \emptyset$, define the new 
+$B:= (B_{\zeta} \mid \zeta < \beta+1)$, and keep the notions of $\infty \cdot \zeta_0 + \zeta_1$-allowable avoiding $(B_{\eta} \mid \eta < \zeta_0)$ for each $\zeta_0 < \beta+1$, $\zeta_1 \in Ord$.
+
+\item[(c)] We assume here that $F(\beta)=(\dot{m},\dot{x})$. Let $x$ be $\dot{x}^{G_{\beta}}$, $m= \dot{m}^{G_{\beta}}$ and assume that $m$ is the G\"odel number of a $\Sigma^1_5$-formula.  In $W[G_{\omega}][G_{\beta}]$ we pick countable partial well-order $<$ which extends our order $<_{\beta}$ and which contains $x$.
+
+We will face two cases which we need to discuss. The first case is that $x$ is an element of the field of $<_{\beta}$. In this case we let $z$ a code for be the set of $<_{\beta}$-predecessors of $x$ and force with
+\[ \dot{\forceQ}_{\beta}^{G_{\beta}} := \operatorname{Code} (1,1,x,z,\eta) \]
+for an $\eta$ which has not been used for coding yet.
+
+In the second case $x$ will be an element of $<$ but not of $<_{\beta}$. In this situation we consider the countable set of $<$-predecessors of $x$, code it with a real $z$. We set $<_{\beta+1} := < \upharpoonright x$, that  is  we say that $<_{\beta+1}$ is just the order $<$ restricted to elements which are $\le x$  and
+force with
+\[ \dot{\forceQ}_{\beta}^{G_{\beta}}:= \operatorname{Code} (1,1,x,z,\eta) \]
+for the least $\eta$ which is free.
+
+Moreover we ensure that we will not add codes which code a wrong well-order up to $x$ anymore. That is, whenever $y$ is a real coding $\omega$-many reals which corresponds to an initial segment of a good well-order of the reals, and $x' \le_{\beta+1} x$ appears as one of the elements coded by $y$, and the well-order coded by $y$ below $x'$ does not coincide with $<_{\beta+1}$ then we must not use $\operatorname{Code} (1,1,x',y,\eta)$ as a forcing. Thus we let 
+\begin{align*}
+B:= \{ (1,1,x',\dot{y}) \mid &\text{ $\dot{y}$ is the name of a real which codes a well-order} \\& \text{ below $x'$ which is forced to  not coincide with $<_{\beta+1}$ } \}
+\end{align*}
+\[  \]
+and define
+\[B_{\beta+1} := B_{\beta} \cup  B. \]
+
+At limit stages \( \eta \) of \( \alpha + 1 \)-allowable forcings, we use finite support:
+\[
+\forceP_{\eta} := \text{dir} \, \lim (\forceP_{\nu} : \nu < \eta).
+\]
+Finally, we set:
+\[
+I_{\eta}^{G_{\eta}} := \{ (m, x, y, \zeta) : \exists \xi < \eta \, ((m, x, y, \zeta) \in I_{\xi}^{G_{\xi}}) \}.
+\]
+\end{enumerate}
+
+\subsection{Proof of the second main theorem}
+
+We iterate the just defined forcing $\omega_1$-many times using a bookkeeping $F: \omega_1 \rightarrow H(\omega_1)$ which satisfies that every $x\in H(\omega_1)$ has uncountable pre-image under $F$. This assumption ensures that we consider every tuple of reals cofinally often. The resulting partial order will be denoted by $\forceP_{\omega_1}$ and is the desired forcing.
+\begin{theorem}
+    Let $G_{\omega_1}$ be a $\forceP_{\omega_1}$-generic filter over $W$.
+    In $W[G_{\omega_1}]$ $\Pi^1_3$-uniformization holds, and there is a $\Sigma^1_5$-definable good wellorder of the reals.
+\end{theorem}
+\begin{proof}
+    We shall sktech the proof of $\Pi^1_3$-unformization first, which is basically the same as in \cite{Uniformization} or \cite{Uniformization with wellorder} and the reader can find all the details there.
+    For $m$ the G\"odel number of an arbitrary $\Pi^1_3$-set in the plane, we define its uniformization
+\begin{align*}
+    f_m (x)=y \Leftrightarrow \lnot \exists r ( \forall &M (\text{If M is countable and transitive and} \\& M \models \ZFP+`` \text{$\aleph_1$ exists}"   \text{ and }  \omega_1^M=(\omega_1^L)^M  \text{ and } \\& r, (m,x,y) \in M  )
+    \\& \text{then}
+    \\& M \models ``L[r] \text{ decodes out of $r$ an $\aleph_1$-sized, transitive } \\&\text{$\ZFP$-model $N$ which }
+    \text{witnesses that } \\& \text{$(m,x,y)$ got coded into $\vec{S}"$}).
+\end{align*}
+By definition, in our iteration, for every real $x$, there will be at most one $y$
+    which satisfies $f_m(x)=y$, and this only happens if the $x$-section of $A_m$ is non-empty in $W[G_{\omega_1}]$. 
+
+    The proof that $W[G_{\omega_1}]$ can define a good $\Sigma^1_5$-wellorder of the reals is exactly as in the first main theorem.
+\end{proof}
+   
+\section{Lifting to \texorpdfstring{$M_n$}{Mn}}
+We just state here that the proofs of the two main theorems are such that they can be lifted with some care to canonical inner models with Woodin cardinals. The interested reader can consult \cite{Uniformization} for a detailed proof of how one can lift the proof of $\Pi^1_3$-uniformization. The adaptions one has to undertake in order to lift the proofs of the two results above are rather straightforward then.
+
+\begin{theorem}
+    Let $M_n$ denote the canonical inner model with $n$-many Woodin cardinals. There is a set-generic extension $M_n [g]$ of $M_n$ which preserves the Woodin cardinals and where additionally
+    \begin{enumerate}
+        \item $\Pi^1_{n+3}$-reduction holds,
+        \item $\Pi^1_{n+3}$-uniformization fails,
+        \item $\Sigma^1_{m+4}$-uniformization holds for every $m \ge n$.
+    \end{enumerate}
+\end{theorem}
+and
+\begin{theorem}
+    There is a set-generic extension $M_n [g]$ of $M_n$ preserving the Woodin cardinals and where additionally
+    \begin{enumerate}
+        \item $\Pi^1_{n+3}$-uniformization holds,
+        \item $\Sigma^1_{m+4}$-uniformization holds for every $m \ge n$.
+    \end{enumerate}
+\end{theorem}
+
+    \section{Open questions}
+    ﻿
+    We end with several questions which are related to this article.
+    The first observation is concerned with a hypothetical forcing $\forceP$ which would force the $\Pi^1_5$-uniformization property over $L$.
+    The construction of such a forcing $\forceP$ necessarily cannot be combined with the methods presented here, as $\Sigma^1_5$ and $\Pi^1_5$-uniformization contradict each other. Given the flexibility of the way the good $\Sigma^1_5$-wellorder is forced here, which can even be arranged such that one can force towards $\Pi^1_3$-uniformization, it is not clear at all how such a hypothetical forcing would look like. The present work seems to suggest that, if it can be done at all, a very new approach is in need.
+    \begin{question}
+   Can one force $\Pi^1_5$-uniformization over just $L$?
+    \end{question}
+    A second question concerns patterns of the $\Sigma$-uniformization property. 
+        \begin{question}
+    Given a real $r \in 2^{\omega}$, can one force a universe where $\Sigma^1_n$-uniformzation is true whenever $r(n)=1$ and $\Sigma^1_n$-uniformization fails whenever $r(n)=0$?
+    \end{question}
+    ﻿
+    ﻿
+    By a classical result of Novikov, for any projective pointclass $\Gamma$, it is impossible to have $\Gamma$ and $\check{\Gamma}$-reduction simultaneously. The case  for separation is still unknown.
+    ﻿
+    \begin{question}
+    ﻿
+    Can one force a universe where $\Sigma^1_3$- and $\Pi^1_3$-separation hold simultaneously?
+    ﻿
+    \end{question}
+    ﻿
+    ﻿\section{Acknowledgment}
+ 
+ To the one whose very short life prompted this work. Your family loves you.
+ This research was funded in whole by the Austrian Science Fund (FWF) Grant-DOI 10.55776/P37228.
+    
+    
+    \begin{thebibliography}{12}
+    
+    
+    \bibitem{Addison} J. Addison \textit{Some consequences of the axiom of constructibility}, Fundamenta Mathematica, vol. 46 (1959), pp. 337–357.
+    
+    
+    
+    \bibitem{David}
+    
+    R. David \textit{A very absolute $\Pi^1_2$-real singleton}. Annals of Mathematical Logic 23, pp. 101-120, 1982.
+    
+    \bibitem{NS saturated and definable} S. Hoffelner \textit{$\hbox{NS}_{\omega_1}$ $\Delta_1$-definable and saturated.}  Journal of Symbolic Logic 86 (1), pp. 25 - 59, 2021.
+   
+  
+    \bibitem{Separation} S. Hoffelner \textit{Forcing the $\Sigma^1_3$-separation property}. Journal of Mathematical Logic 22, No. 2, 2022.
+    
+
+     \bibitem{Reduction} S. Hoffelner \textit{Forcing the $\Pi^1_3$-Reduction Property and a Failure of $\Pi^1_3$-Uniformization},  Annals of Pure and Applied Logic 174 (8), 2023.
+      
+    \bibitem{Forcing axioms and uniformization} S. Hoffelner \textit{Forcing Axioms and the Uniformization Property} Annals of Pure and Applied Logic 175 (10), 2024.
+    
+    
+     \bibitem{BPFA and uniformization} S. Hoffelner \textit{The global $\Sigma^1_{n+2}$-Uniformization Property and $\BPFA$} Advances in Mathematics 470, 2025.
+
+     \bibitem{MA and failure of separation} S. Hoffelner \textit{$\mathsf{MA} (\mathcal{I})$ and a Failure of Separation on the third Level }. Annals of Pure and Applied Logic 176 (3), 2026.
+
+ 
+    \bibitem{Uniformization} S. Hoffelner \textit{Forcing the $\Pi^1_n$-Uniformization Property}, Arxiv preprint. DOI: https://doi.org/10.48550/arXiv.2103.11748
+    
+    
+   \bibitem{Uniformization with wellorder} S. Hoffelner \textit{A Universe with a $\Delta^1_n$-definable Well-order of the Reals, $\mathsf{CH}$ and $\Pi^1_n$-Uniformization}. Arxiv preprint. DOI: https://doi.org/10.48550/arXiv.2506.21778
+    
+    
+    \bibitem{Separation without reduction} S. Hoffelner \textit{A Failure of $\Pi^1_{n+3}$-Reduction in the Presence of $\Sigma^1_{n+3}$-Separation}, Arxiv preprint. DOI: https://doi.org/10.48550/arXiv.2312.02540
+
+     
+
+   
+
+   
+   
+    \bibitem{Jech} T. Jech \textit{Set Theory. Third Millenium Edition.} Springer 2006.
+    ﻿
+    ﻿
+    \bibitem{JensenSolovay}
+    ﻿
+    R. Jensen and R. Solovay \textit{Some Applications of Almost Disjoint Sets.}
+    ﻿
+    Studies in Logic and the Foundations of Mathematics
+    ﻿
+    Volume 59, pp. 84-104, 1970.
+    ﻿
+    ﻿
+     \bibitem{Kechris} 
+A. Kechris 
+\textit{Classical Descriptive Set Theory}.  
+Springer 1995.
+    ﻿
+    ﻿
+    ﻿
+   
+     
+    ﻿
+     \bibitem{MS} D. Martin and J. Steel \textit{A Proof of Projective Determinacy.} Journal of the American Mathematical Society (2), pp.71-125, 1989.
+    ﻿
+    ﻿
+    \bibitem{Moschovakis}
+    ﻿
+    Y. Moschovakis \textit{Descriptive Set Theory.} Mathematical Surveys and Monographs 155, AMS.
+    ﻿
+    ﻿
+    \bibitem{Moschovakis2}
+    ﻿
+    Y. Moschovakis \textit{Uniformization in a playful Universe.}  Bulletin of the  American Mathematical Society 77, no. 5, 731-736, 1971.
+
+
+   \bibitem{Schindler}
+   R. Schindler \textit{Set Theory: Exploring Independece and Truth}. Springer 2014.
+    \end{thebibliography}
+    ﻿
+    \end{document} 
+    ﻿
+   
