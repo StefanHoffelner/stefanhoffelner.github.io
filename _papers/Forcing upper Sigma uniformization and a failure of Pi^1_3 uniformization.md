@@ -2,4 +2,4 @@ layout: paper
 title: "Forcing upper $\Sigma$-uniformization in the presence of lower $\Pi$-reduction or uniformization"
 authors: "S. Hoffelner"
 year: 2025
-pdf: "/Forcing Pi^1_n-reduction and a failure of Pi^1_n-uniformization revisited.pdf"
+pdf: "/papers/Forcing Pi^1_n-reduction and a failure of Pi^1_n-uniformization revisited.pdf"
