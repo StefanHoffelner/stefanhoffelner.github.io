@@ -3,7 +3,7 @@ title: A $\Sigma^1_4$ wellorder of the reals with $\text{NS}_{\omega_1}$ saturat
 authors: Sy-David Friedman and Stefan Hoffelner
 year: 2019
 journal: Journal of Symbolic Logic
-pdf: "/papers/sample-paper.pdf"
+pdf: "/papers/.pdf"
 abstract: >
  We show that, assuming the existence of the canonical inner model with one Woodin cardinal $M_1$, there is a model of $\mathsf{ZFC}$ in which the nonstationary ideal on $\omega_1$ is 
  $\aleph_2$-saturated and whose reals admit a $\Sigma^1_4$-wellorder.
