@@ -42,16 +42,19 @@ Mathematical Logic, Set Theory, Forcing, Definability, Large Cardinals, Inner Mo
 * Forcing Axioms and the Uniformization Property, Annals of Pure and Applied Logic 175 (10), 2024.
 * PFA and the definability of the nonstationary ideal (with P. Larson, R. Schindler and L. Wu), Journal of Symbolic Logic, accepted manuscript, 2025.
 * The global $\Sigma_{n+2}^{1}$-Uniformization Property and BPFA, Advances in Mathematics, 2025.
+* $\text{MA}(\mathcal{I})$ and a Failure of Separation on the third Level. Annals of Pure and Applied Logic 2026.
 
 ---
 
 ## Submitted Publications & Preprints
-* Forcing the $\Pi_{n}^{1}$-Uniformization Property (submitted to Journal of Mathematical Logic).
-* A Failure of $\Pi_{n+3}^{1}$ Reduction in the Presence of $\Sigma_{n+3}^{1}$-Separation (submitted to Annals of Pure and Applied Logic).
-* $\text{MA}(\mathcal{I})$ and a Failure of Separation on the third Level (submitted to Annals of Pure and Applied Logic).
-* A Universe with a $\Delta_{n}^{1}$-definable well-order of the reals $\text{CH}$ and $\Pi_{n}^{1}$-Uniformization (submitted to Journal of Symbolic Logic).
-* A Universe with large Continuum, global Uniformization and a projective Well-Order of its Reals (submitted to Annals of Pure and Applied Logic).
-* $\text{NS}_{\omega_{1}}$ saturated, $\Delta_{1}(\{\omega_{1}\})$-definable and a $\Delta_{4}^{1}$ definable well-order of the reals (submitted to Journal of Symbolic Logic).
+* Forcing the $\Pi_{n}^{1}$-Uniformization Property.
+* A Failure of $\Pi_{n+3}^{1}$ Reduction in the Presence of $\Sigma_{n+3}^{1}$-Separation.
+* A Universe with a $\Delta_{n}^{1}$-definable well-order of the reals $\text{CH}$ and $\Pi_{n}^{1}$-Uniformization.
+* A Universe with large Continuum, global Uniformization and a projective Well-Order of its Reals.
+* $\text{NS}_{\omega_{1}}$ saturated, $\Delta_{1}(\{\omega_{1}\})$-definable and a $\Delta_{4}^{1}$ definable well-order of the reals.
+* Forcing upper $\Sigma$-uniformization in the presence of lower $\Pi$-reduction or uniformization.
+* On a local variant of the 12th Delfino problem. Joint with S. Mueller
+* On $\bf{\Sigma}^1_3$- and $\Sigma^1_4$ uniformization.
 
 ---
 
