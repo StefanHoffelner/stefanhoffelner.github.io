@@ -6,11 +6,59 @@ permalink: /cv/
 
 # Curriculum Vitae
 
-**Stefan Hoffelner**
+**Stefan Hoffelner**[cite: 1]
+Technische Universität Wien[cite: 1]
+Email: stefan.hoffelner@gmx.at[cite: 1]
+Webpage: [Link](https://www.uni-muenster.de/IVV5WS/WebHop/user/hoffelne)[cite: 1]
+ORCID: [0000-0003-0434-6554](https://orcid.org/0000-0003-0434-6554)[cite: 1]
 
-## Education / Akademischer Werdegang
-* **[Jahr] - [Jahr]:** [Deine Universität / Position]
-* **[Jahr] - [Jahr]:** [Deine Universität / Position]
+## Research Interests
+Mathematical Logic, Set Theory, Forcing, Definability, Large Cardinals, Inner Model Theory.[cite: 1]
 
-## Selected Talks / Vorträge
-* **[Jahr]:** [Titel des Vortrags], [Ort]
+---
+
+## Education & Professional Appointments
+* **Since Nov 2024:** Project leader of the FWF Standalone Project P 37228-N situated at the Technical University of Vienna[cite: 1].
+* **Jan 2025:** Habilitation at the University of Münster[cite: 1]. Thesis: Separation, Reduction, Uniformization and Forcing[cite: 1].
+* **Jan 2018 - Aug 2024:** Assistant at the Instiut für Mathematische Logik und Grundlagenforschung under Prof. R. D. Schindler, University of Münster[cite: 1].
+* **Jun 2017 - Dec 2017:** Postdoctoral Fellow at the Charles University Prague[cite: 1].
+* **Mar 2011 - Jun 2017:** PhD Student, then Postdoctoral Fellow at the Kurt Gödel Research Center, University of Vienna[cite: 1].
+* **Sep 2016:** Doctoral degree in mathematical logic with distinction (1,0), University of Vienna[cite: 1]. Thesis: Projective Wellorders and the Nonstationary Ideal[cite: 1].
+* **2011:** Masters degree in mathematics with distinction (1,0)[cite: 1]. Thesis: On the Saturation of the Nonstationary Ideal[cite: 1].
+
+---
+
+## Grants Awarded
+* **2024 - 2028:** FWF Einzelprojekt P 37228 "Investigating separation, reduction and uniformization"; 356,024 €[cite: 1].
+
+---
+
+## Selected Publications
+* A $\Sigma_{4}^{1}$ wellorder of the reals with $\text{NS}$ saturated (with S. D. Friedman), Journal of Symbolic Logic 84 (4), 1466-1483, 2019[cite: 1].
+* A model where $\text{NS}$ is saturated and $\Delta_{1}$-definable, Journal of Symbolic Logic 86 (1), 25-59, 2021[cite: 1].
+* Forcing the $\Sigma_{3}^{1}$ separation property, Journal of Mathematical Logic 22 (2), 2022[cite: 1].
+* Forcing the $\Pi_{3}^{1}$ Reduction Property and a Failure of $\Pi_{3}^{1}$-Uniformization, Annals of Pure and Applied Logic 174 (8), 2023[cite: 1].
+* Forcing Axioms and the Definabilty of the nonstationary Ideal on the first Uncountable (with P. Larson, R. Schindler and L. Wu), Journal of Symbolic Logic, 2023[cite: 1].
+* Forcing Axioms and the Uniformization Property, Annals of Pure and Applied Logic 175 (10), 2024[cite: 1].
+* PFA and the definability of the nonstationary ideal (with P. Larson, R. Schindler and L. Wu), Journal of Symbolic Logic, accepted manuscript, 2025[cite: 1].
+* The global $\Sigma_{n+2}^{1}$-Uniformization Property and BPFA, Advances in Mathematics, 2025[cite: 1].
+
+---
+
+## Submitted Publications & Preprints
+* Forcing the $\Pi_{n}^{1}$-Uniformization Property (submitted to Journal of Mathematical Logic)[cite: 1].
+* A Failure of $\Pi_{n+3}^{1}$ Reduction in the Presence of $\Sigma_{n+3}^{1}$-Separation (submitted to Annals of Pure and Applied Logic)[cite: 1].
+* $\text{MA}(\mathcal{I})$ and a Failure of Separation on the third Level (submitted to Annals of Pure and Applied Logic)[cite: 1].
+* A Universe with a $\Delta_{n}^{1}$-definable well-order of the reals $\text{CH}$ and $\Pi_{n}^{1}$-Uniformization (submitted to Journal of Symbolic Logic)[cite: 1].
+* A Universe with large Continuum, global Uniformization and a projective Well-Order of its Reals (submitted to Annals of Pure and Applied Logic)[cite: 1].
+* $\text{NS}_{\omega_{1}}$ saturated, $\Delta_{1}(\{\omega_{1}\})$-definable and a $\Delta_{4}^{1}$ definable well-order of the reals (submitted to Journal of Symbolic Logic)[cite: 1].
+
+---
+
+## Selected Talks & Conferences
+* **Apr 2025:** The Global $\Sigma_{n+2}^{1}$-Uniformization property and BPFA, Baltic Set Theory Seminar, Gdansk[cite: 1].
+* **Mar 2025:** The Global $\Sigma_{n+2}^{1}$ Uniformization property and BPFA, New York Set Theory Seminar[cite: 1].
+* **Sep 2023:** Separation, Reduction and Uniformization, new results on old notions (Invited speaker), Jahrestagung der DMV, TU Ilmenau[cite: 1].
+* **Jun 2022:** Forcing the $\Pi_{n}^{1}$ uniformization property (Invited speaker), Fifth Inner Model Theory Conference, Münster[cite: 1].
+* **Mar 2022:** Forcing and the Separation, the Reduction and the Uniformization Property (Invited speaker), Logic colloquium KGRC, Vienna[cite: 1].
+* **Nov 2021:** Forcing and the Separation, Reduction and Uniformization Property (Invited speaker), Fields Institute, Toronto, Canada[cite: 1].
