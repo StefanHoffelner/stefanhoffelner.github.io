@@ -4,7 +4,7 @@ title: "Home"
 ---
 
 # Stefan Hoffelner — Research
-
+<img src="/assets/Profilbild-Stefan.jpg" alt="Stefan Hoffelner" width="220" style="float: right; margin-left: 20px; border-radius: 5%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 Welcome. Below are my research papers.
 
 <ul>
