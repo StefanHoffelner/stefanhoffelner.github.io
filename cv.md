@@ -33,7 +33,7 @@ Mathematical Logic, Set Theory, Forcing, Definability, Large Cardinals, Inner Mo
 
 ---
 
-## Selected Publications
+## Publications
 * A $\Sigma_{4}^{1}$ wellorder of the reals with $\text{NS}$ saturated (with S. D. Friedman), Journal of Symbolic Logic 84 (4), 1466-1483, 2019.
 * A model where $\text{NS}$ is saturated and $\Delta_{1}$-definable, Journal of Symbolic Logic 86 (1), 25-59, 2021.
 * Forcing the $\Sigma_{3}^{1}$ separation property, Journal of Mathematical Logic 22 (2), 2022.
