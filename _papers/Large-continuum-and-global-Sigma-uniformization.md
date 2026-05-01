@@ -4,4 +4,4 @@ authors: "S. Hoffelner"
 year: 2025
 journal:
 
-pdf: "/papers/Large Continuum and Global Sigma Uniformization.pdf"
+pdf: "/papers/Large-Continuum-and-Global-Sigma-Uniformization.pdf"
