@@ -16,18 +16,18 @@ I am a project leader and senior postdoc in the Set Theory group at TU Wien. My 
 **TU Wien**  
 Research Unit Set Theory  
 Institute of Discrete Mathematics and Geometry  
-Email: <stefan.hoffelner@tuwien.ac.at>  
-ORCID: [0000-0003-0434-6554](https://orcid.org/0000-0003-0434-6554)
 
-## Recent and selected papers
+Email: stefan.hoffelner@tuwien.ac.at
 
-{% assign selected = site.papers | where: "selected", true | sort: "sort_key" | reverse %}
-{% for paper in selected limit:6 %}
-### [{{ paper.title }}]({{ paper.url | relative_url }})
+## Selected papers
 
-{{ paper.authors }}{% if paper.venue %}, {{ paper.venue }}{% endif %}{% if paper.year %}, {{ paper.year }}{% endif %}.
+- *Large Continuum and Global Sigma Uniformization*.  
+  [PDF]({{ '/papers/Large-Continuum-and-Global-Sigma-Uniformization.pdf' | relative_url }})
 
-{% if paper.pdf %}[PDF]({{ paper.pdf | relative_url }}){% endif %}{% if paper.arxiv %} · [arXiv]({{ paper.arxiv }}){% endif %}{% if paper.doi %} · [DOI]({{ paper.doi }}){% endif %}
-{% endfor %}
+- *Forcing \(\Pi^1_n\)-reduction and a failure of \(\Pi^1_n\)-uniformization revisited*.  
+  [PDF]({{ '/papers/Forcing-Pi^1_n-reduction-and-a-failure-of-Pi^1_n-uniformization-revisited.pdf' | relative_url }})
+
+- *NS saturated and a \(\Delta_1\)-definable \(\Sigma^1_4\)-wellorder*.  
+  [PDF]({{ '/papers/NS-saturated-and-Delta_1-definable-and-Sigma^1_4-wellorder.pdf' | relative_url }})
 
 See the full [publications list]({{ '/publications/' | relative_url }}).

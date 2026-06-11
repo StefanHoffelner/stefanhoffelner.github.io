@@ -6,26 +6,9 @@ url: "https://stefanhoffelner.github.io"
 lang: "en"
 
 markdown: kramdown
-kramdown:
-  math_engine: mathjax
-
-collections:
-  papers:
-    output: true
-    permalink: /papers/:name/
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "papers"
-    values:
-      layout: "paper"
 
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - _papers

@@ -5,15 +5,15 @@ permalink: /research/
 
 # Research
 
-My research is in set theory and mathematical logic, especially forcing, descriptive set theory, inner model theory, and forcing axioms.
+My research lies in set theory, forcing, descriptive set theory, and inner model theory.
 
-A recurring theme is the construction of models in which regularity, definable well-ordering, separation, reduction, and uniformization principles can be arranged independently of their classical determinacy-driven explanations. Much of my recent work studies projective uniformization and reduction, definable well-orders of the reals, and forcing constructions over canonical inner models with finitely many Woodin cardinals.
+I am especially interested in forcing constructions which separate regularity, definable choice, reduction, separation, and uniformization phenomena in the projective hierarchy. A recurring theme is the comparison between determinacy-based explanations of projective regularity and forcing models in which fragments of regularity coexist with definable well-orders or uniformization principles.
 
-## Selected topics
+Topics include:
 
-- projective uniformization, reduction and separation;
+- projective uniformization, reduction, and separation;
 - definable well-orders of the reals;
 - forcing axioms and definability;
-- almost-disjoint coding and Suslin-tree coding;
-- inner models with Woodin cardinals;
+- coding methods in forcing;
+- canonical inner models with finitely many Woodin cardinals;
 - regularity properties of projective sets.
