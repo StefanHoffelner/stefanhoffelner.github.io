@@ -4,9 +4,7 @@ description: "Academic webpage of Stefan Hoffelner, set theory and mathematical 
 baseurl: ""
 url: "https://stefanhoffelner.github.io"
 lang: "en"
-
 markdown: kramdown
-
 exclude:
   - README.md
   - Gemfile
