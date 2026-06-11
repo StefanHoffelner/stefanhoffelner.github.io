@@ -1,11 +1,9 @@
 ---
-title: 'Forcing upper $\Sigma$-uniformization in the presence of lower $\Pi$-reduction or uniformization'
-authors: 'Stefan Hoffelner'
-year: 2025
-sort_key: 2025-11
+title: "Forcing upper Sigma uniformization and a failure of Pi^1_3 uniformization"
+authors: "Stefan Hoffelner"
+year: 2026
+sort_key: 2026-05-30
 status: preprint
 selected: true
-arxiv: 'https://arxiv.org/abs/2511.05081'
-abstract: >-
-  This preprint studies forcing constructions in which upper projective $\Sigma$-uniformization is obtained in the presence of lower $\Pi$-reduction or uniformization principles.
+abstract: "A forcing construction separating upper projective Sigma-uniformization from Pi^1_3 uniformization."
 ---

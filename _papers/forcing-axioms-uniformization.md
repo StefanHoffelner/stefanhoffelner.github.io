@@ -1,11 +1,9 @@
 ---
-title: 'Forcing axioms and the uniformization property'
-authors: 'Stefan Hoffelner'
-year: 2024
-sort_key: 2024-10
-status: published
+title: "Forcing axioms and projective uniformization"
+authors: "Stefan Hoffelner"
+year: 2026
+sort_key: 2026-04-01
+status: preprint
 selected: false
-venue: 'Annals of Pure and Applied Logic 175(10)'
-abstract: >-
-  A study of forcing axioms and projective uniformization principles.
+abstract: "A study of projective uniformization phenomena under forcing axioms."
 ---

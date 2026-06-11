@@ -1,11 +1,9 @@
 ---
-title: 'Forcing the $\Pi^1_n$-uniformization property'
-authors: 'Stefan Hoffelner'
-year: 2021
-sort_key: 2021-03
+title: "Forcing Pi^1_n uniformization"
+authors: "Stefan Hoffelner"
+year: 2026
+sort_key: 2026-04-20
 status: preprint
-selected: false
-arxiv: 'https://arxiv.org/abs/2103.11748'
-abstract: >-
-  We generically construct a model in which $\Pi^1_3$-uniformization holds, and the construction can be adapted over canonical inner models with Woodin cardinals.
+selected: true
+abstract: "A forcing construction for projective Pi-uniformization principles at finite projective levels."
 ---

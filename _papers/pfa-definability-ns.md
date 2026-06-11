@@ -1,12 +1,9 @@
 ---
-title: 'PFA and the definability of the nonstationary ideal'
-authors: 'Stefan Hoffelner, Paul Larson, Ralf Schindler and Liuzhen Wu'
-year: 2025
-sort_key: 2025-05
-status: published
+title: "PFA, definability, and the nonstationary ideal"
+authors: "Stefan Hoffelner"
+year: 2026
+sort_key: 2026-04-25
+status: preprint
 selected: false
-venue: 'Journal of Symbolic Logic'
-doi: '10.1017/jsl.2025.31'
-abstract: >-
-  A study of the Proper Forcing Axiom and definability properties of the nonstationary ideal on $\omega_1$.
+abstract: "A paper on forcing axioms, definability, and the nonstationary ideal on omega_1."
 ---

@@ -7,7 +7,7 @@ permalink: /cv/
 
 **Stefan Hoffelner**  
 TU Wien, Institute of Discrete Mathematics and Geometry, Research Unit Set Theory  
-Email: <a href="mailto:stefan.hoffelner@tuwien.ac.at">stefan.hoffelner@tuwien.ac.at</a>  
+Email: <stefan.hoffelner@tuwien.ac.at>  
 ORCID: [0000-0003-0434-6554](https://orcid.org/0000-0003-0434-6554)
 
 ## Research interests
@@ -30,10 +30,10 @@ Mathematical logic, set theory, forcing, descriptive set theory, definability, l
 
 ## Selected talks
 
-- **2025:** *The global $\Sigma^1_{n+2}$-uniformization property and BPFA*, Baltic Set Theory Seminar, Gdańsk.
-- **2025:** *The global $\Sigma^1_{n+2}$-uniformization property and BPFA*, New York Set Theory Seminar.
+- **2025:** *The global \(\Sigma^1_{n+2}\)-uniformization property and BPFA*, Baltic Set Theory Seminar, Gdańsk.
+- **2025:** *The global \(\Sigma^1_{n+2}\)-uniformization property and BPFA*, New York Set Theory Seminar.
 - **2023:** *Separation, Reduction and Uniformization: new results on old notions*, DMV Annual Meeting, TU Ilmenau.
-- **2022:** *Forcing the $\Pi^1_n$-uniformization property*, Fifth Inner Model Theory Conference, Münster.
+- **2022:** *Forcing the \(\Pi^1_n\)-uniformization property*, Fifth Inner Model Theory Conference, Münster.
 - **2022:** *Forcing and the Separation, Reduction and Uniformization Property*, Logic Colloquium, KGRC Vienna.
 - **2021:** *Forcing and the Separation, Reduction and Uniformization Property*, Fields Institute, Toronto.
 

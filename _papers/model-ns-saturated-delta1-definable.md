@@ -1,11 +1,9 @@
 ---
-title: 'A model where $\mathrm{NS}$ is saturated and $\Delta_1$-definable'
-authors: 'Stefan Hoffelner'
-year: 2021
-sort_key: 2021-01
-status: published
+title: "A model with NS saturated and Delta^1-definability"
+authors: "Stefan Hoffelner"
+year: 2026
+sort_key: 2026-03-25
+status: preprint
 selected: false
-venue: 'Journal of Symbolic Logic 86(1), 25--59'
-abstract: >-
-  A forcing construction of a model in which the nonstationary ideal has both saturation and definability properties.
+abstract: "A forcing construction involving the nonstationary ideal and projective definability."
 ---

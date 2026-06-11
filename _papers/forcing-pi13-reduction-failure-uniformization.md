@@ -1,11 +1,9 @@
 ---
-title: 'Forcing the $\Pi^1_3$-reduction property and a failure of $\Pi^1_3$-uniformization'
-authors: 'Stefan Hoffelner'
-year: 2023
-sort_key: 2023-05
-status: published
+title: "Forcing Pi^1_3 reduction and failure of uniformization"
+authors: "Stefan Hoffelner"
+year: 2026
+sort_key: 2026-04-05
+status: preprint
 selected: false
-venue: 'Annals of Pure and Applied Logic 174(8)'
-abstract: >-
-  We generically construct a model in which $\Pi^1_3$-reduction holds while $\Pi^1_3$-uniformization fails.
+abstract: "A forcing construction concerning Pi^1_3 reduction and the failure of projective uniformization."
 ---
