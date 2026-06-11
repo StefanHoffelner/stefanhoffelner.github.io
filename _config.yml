@@ -1,21 +1,31 @@
----
-title: "Stefan Hoffelner — Research"
-email: ""
-description: "Personal site for research papers"
-baseurl: "" # leave empty for username.github.io
-url: "https://stefanhoffe.github.io"
-theme: minima
+title: "Stefan Hoffelner"
+email: "stefan.hoffelner@tuwien.ac.at"
+description: "Academic webpage of Stefan Hoffelner, set theory and mathematical logic."
+baseurl: ""
+url: "https://stefanhoffelner.github.io"
+lang: "en"
 
-# Collections: each paper is a markdown file under _papers, outputs HTML
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
 collections:
   papers:
     output: true
     permalink: /papers/:name/
 
-# Defaults for paper layout
 defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
   - scope:
       path: ""
       type: "papers"
     values:
       layout: "paper"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
