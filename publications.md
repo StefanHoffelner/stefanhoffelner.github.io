@@ -5,14 +5,18 @@ permalink: /publications/
 
 # Publications and preprints
 
-This page lists selected publications and preprints. PDF links and arXiv links can be added and updated as the page is maintained.
+## Published and accepted papers
 
-## Selected papers
+Entries will be added here.
 
-- *Large Continuum and Global Sigma Uniformization*.
-- *Forcing Pi^1_n-reduction and a failure of Pi^1_n-uniformization revisited*.
-- *NS saturated and a Delta_1-definable Sigma^1_4-wellorder*.
+## Submitted papers
 
-## Further manuscripts
+Entries will be added here.
 
-Further manuscripts and updated versions will be added here.
+## Preprints
+
+Entries will be added here.
+
+## PhD thesis
+
+- **Forcing over models of determinacy**. PhD thesis, University of Münster, 2016.
