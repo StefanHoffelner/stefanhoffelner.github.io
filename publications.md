@@ -29,4 +29,4 @@ Entries will be added here.
 
 ## PhD thesis
 
-- **Forcing over models of determinacy**. PhD thesis, University of Münster, 2016.
+- **Projective Wellorders and the Nonstationary Ideal**. PhD thesis, Kurt Gödel Research Center, Vienna, 2016.
