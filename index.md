@@ -5,6 +5,8 @@ permalink: /
 
 # Stefan Hoffelner
 
+<img src="/assets/Profilbild-Stefan.jpg" alt="Stefan Hoffelner" class="profile-photo">
+
 Set theory, forcing, descriptive set theory, and inner model theory.
 
 I am a project leader and senior postdoc in the Set Theory group at TU Wien. My research concerns definability and forcing, with a focus on separation, reduction and uniformization principles for projective sets of reals, definable well-orders, forcing axioms, and canonical inner models with Woodin cardinals.
