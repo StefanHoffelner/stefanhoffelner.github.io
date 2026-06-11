@@ -1,9 +1,10 @@
 ---
-title: "PFA, definability, and the nonstationary ideal"
-authors: "Stefan Hoffelner"
+title: 'PFA, definability, and the nonstationary ideal'
+authors: 'Stefan Hoffelner'
 year: 2026
-sort_key: 2026-04-25
-status: preprint
+sort_key: '2026-02-20'
+status: 'preprint'
 selected: false
-abstract: "A paper on forcing axioms, definability, and the nonstationary ideal on omega_1."
+abstract: 'A paper on definability phenomena around forcing axioms and the nonstationary ideal.'
 ---
+

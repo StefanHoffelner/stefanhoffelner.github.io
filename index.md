@@ -3,29 +3,13 @@ title: Home
 permalink: /
 ---
 
-<div class="hero">
-  <div>
-    <h1>Stefan Hoffelner</h1>
-    <p class="lead">Set theory, forcing, descriptive set theory, and inner model theory.</p>
+# Stefan Hoffelner
 
-    <p>
-      I am a project leader and senior postdoc in the Set Theory group at TU Wien.
-      My research concerns definability and forcing, with a focus on separation,
-      reduction and uniformization principles for projective sets of reals,
-      definable well-orders, forcing axioms, and canonical inner models with
-      Woodin cardinals.
-    </p>
+Set theory, forcing, descriptive set theory, and inner model theory.
 
-    <p class="button-row">
-      <a class="button" href="{{ '/publications/' | relative_url }}">Publications</a>
-      <a class="button" href="{{ '/research/' | relative_url }}">Research</a>
-      <a class="button" href="{{ '/cv/' | relative_url }}">CV</a>
-    </p>
-  </div>
-  <div class="hero-photo">
-    <img src="{{ '/assets/Profilbild-Stefan.jpg' | relative_url }}" alt="Stefan Hoffelner">
-  </div>
-</div>
+I am a project leader and senior postdoc in the Set Theory group at TU Wien. My research concerns definability and forcing, with a focus on separation, reduction and uniformization principles for projective sets of reals, definable well-orders, forcing axioms, and canonical inner models with Woodin cardinals.
+
+[Publications]({{ '/publications/' | relative_url }}) · [Research]({{ '/research/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }})
 
 ## Contact
 
@@ -39,17 +23,11 @@ ORCID: [0000-0003-0434-6554](https://orcid.org/0000-0003-0434-6554)
 
 {% assign selected = site.papers | where: "selected", true | sort: "sort_key" | reverse %}
 {% for paper in selected limit:6 %}
-<div class="paper-item">
-  <h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
-  <p class="paper-line">
-    {{ paper.authors }}{% if paper.venue %}, {{ paper.venue }}{% endif %}{% if paper.year %}, {{ paper.year }}{% endif %}.
-  </p>
-  <p class="link-list">
-    {% if paper.pdf %}<a href="{{ paper.pdf | relative_url }}">PDF</a>{% endif %}
-    {% if paper.arxiv %}<a href="{{ paper.arxiv }}">arXiv</a>{% endif %}
-    {% if paper.doi %}<a href="{{ paper.doi }}">DOI</a>{% endif %}
-  </p>
-</div>
+### [{{ paper.title }}]({{ paper.url | relative_url }})
+
+{{ paper.authors }}{% if paper.venue %}, {{ paper.venue }}{% endif %}{% if paper.year %}, {{ paper.year }}{% endif %}.
+
+{% if paper.pdf %}[PDF]({{ paper.pdf | relative_url }}){% endif %}{% if paper.arxiv %} · [arXiv]({{ paper.arxiv }}){% endif %}{% if paper.doi %} · [DOI]({{ paper.doi }}){% endif %}
 {% endfor %}
 
 See the full [publications list]({{ '/publications/' | relative_url }}).

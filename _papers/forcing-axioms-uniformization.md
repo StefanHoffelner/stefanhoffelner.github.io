@@ -1,9 +1,10 @@
 ---
-title: "Forcing axioms and projective uniformization"
-authors: "Stefan Hoffelner"
+title: 'Forcing axioms and uniformization'
+authors: 'Stefan Hoffelner'
 year: 2026
-sort_key: 2026-04-01
-status: preprint
+sort_key: '2026-02-10'
+status: 'preprint'
 selected: false
-abstract: "A study of projective uniformization phenomena under forcing axioms."
+abstract: 'A paper on the interaction between forcing axioms and projective uniformization principles.'
 ---
+

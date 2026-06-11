@@ -1,56 +1,28 @@
-<!doctype html>
-<html lang="{{ site.lang | default: 'en' }}">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} — {{ site.title }}</title>
-  <meta name="description" content="{{ page.abstract | strip_html | truncate: 160 }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-      svg: { fontCache: 'global' }
-    };
-  </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-</head>
-<body>
-  <div class="page">
-    <header class="site-header">
-      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/research/' | relative_url }}">Research</a>
-        <a href="{{ '/publications/' | relative_url }}">Publications</a>
-        <a href="{{ '/cv/' | relative_url }}">CV</a>
-      </nav>
-    </header>
+---
+layout: default
+---
 
-    <main class="content paper-page">
-      <p class="back-link"><a href="{{ '/publications/' | relative_url }}">← Publications</a></p>
-      <h1>{{ page.title }}</h1>
-      <dl class="paper-meta">
-        <dt>Author</dt>
-        <dd>{{ page.authors }}</dd>
-        {% if page.venue %}<dt>Venue</dt><dd>{{ page.venue }}</dd>{% endif %}
-        {% if page.year %}<dt>Year</dt><dd>{{ page.year }}</dd>{% endif %}
-        {% if page.status %}<dt>Status</dt><dd>{{ page.status | capitalize }}</dd>{% endif %}
-      </dl>
-      <p class="link-list">
-        {% if page.pdf %}<a href="{{ page.pdf | relative_url }}">PDF</a>{% endif %}
-        {% if page.arxiv %}<a href="{{ page.arxiv }}">arXiv</a>{% endif %}
-        {% if page.doi %}<a href="{{ page.doi }}">DOI</a>{% endif %}
-      </p>
-      {% if page.abstract %}
-      <h2>Abstract</h2>
-      <p>{{ page.abstract }}</p>
-      {% endif %}
-      {{ content }}
-    </main>
+<article class="paper-page">
+  <h1>{{ page.title }}</h1>
 
-    <footer class="site-footer">
-      © {{ 'now' | date: '%Y' }} Stefan Hoffelner. Built with GitHub Pages.
-    </footer>
-  </div>
-</body>
-</html>
+  <p class="paper-meta">
+    {{ page.authors }}{% if page.venue %}, {{ page.venue }}{% endif %}{% if page.year %}, {{ page.year }}{% endif %}.
+  </p>
+
+  {% if page.status %}
+  <p><strong>Status:</strong> {{ page.status }}</p>
+  {% endif %}
+
+  <p>
+    {% if page.pdf %}<a href="{{ page.pdf | relative_url }}">PDF</a>{% endif %}
+    {% if page.arxiv %}{% if page.pdf %} · {% endif %}<a href="{{ page.arxiv }}">arXiv</a>{% endif %}
+    {% if page.doi %} · <a href="{{ page.doi }}">DOI</a>{% endif %}
+  </p>
+
+  {% if page.abstract %}
+  <h2>Abstract</h2>
+  <p>{{ page.abstract }}</p>
+  {% endif %}
+
+  {{ content }}
+</article>

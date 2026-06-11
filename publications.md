@@ -5,54 +5,15 @@ permalink: /publications/
 
 # Publications and preprints
 
-{% assign published = site.papers | where: "status", "published" | sort: "sort_key" | reverse %}
-{% assign preprints = site.papers | where: "status", "preprint" | sort: "sort_key" | reverse %}
-{% assign theses = site.papers | where: "status", "thesis" | sort: "sort_key" | reverse %}
+{% assign papers = site.papers | sort: "sort_key" | reverse %}
+{% for paper in papers %}
+## [{{ paper.title }}]({{ paper.url | relative_url }})
 
-## Published and accepted papers
+{{ paper.authors }}{% if paper.venue %}, {{ paper.venue }}{% endif %}{% if paper.year %}, {{ paper.year }}{% endif %}.
 
-{% for paper in published %}
-<div class="paper-item">
-  <h2><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h2>
-  <p class="paper-line">
-    {{ paper.authors }}{% if paper.venue %}, {{ paper.venue }}{% endif %}{% if paper.year %}, {{ paper.year }}{% endif %}.
-  </p>
-  <p class="link-list">
-    {% if paper.pdf %}<a href="{{ paper.pdf | relative_url }}">PDF</a>{% endif %}
-    {% if paper.arxiv %}<a href="{{ paper.arxiv }}">arXiv</a>{% endif %}
-    {% if paper.doi %}<a href="{{ paper.doi }}">DOI</a>{% endif %}
-  </p>
-</div>
-{% endfor %}
+{% if paper.status %}**Status:** {{ paper.status }}.  
+{% endif %}{% if paper.pdf %}[PDF]({{ paper.pdf | relative_url }}){% endif %}{% if paper.arxiv %}{% if paper.pdf %} · {% endif %}[arXiv]({{ paper.arxiv }}){% endif %}{% if paper.doi %} · [DOI]({{ paper.doi }}){% endif %}
 
-## Preprints and manuscripts
+{% if paper.abstract %}{{ paper.abstract }}{% endif %}
 
-{% for paper in preprints %}
-<div class="paper-item">
-  <h2><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h2>
-  <p class="paper-line">
-    {{ paper.authors }}{% if paper.venue %}, {{ paper.venue }}{% endif %}{% if paper.year %}, {{ paper.year }}{% endif %}.
-  </p>
-  <p class="link-list">
-    {% if paper.pdf %}<a href="{{ paper.pdf | relative_url }}">PDF</a>{% endif %}
-    {% if paper.arxiv %}<a href="{{ paper.arxiv }}">arXiv</a>{% endif %}
-    {% if paper.doi %}<a href="{{ paper.doi }}">DOI</a>{% endif %}
-  </p>
-</div>
-{% endfor %}
-
-## Thesis
-
-{% for paper in theses %}
-<div class="paper-item">
-  <h2><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h2>
-  <p class="paper-line">
-    {{ paper.authors }}{% if paper.venue %}, {{ paper.venue }}{% endif %}{% if paper.year %}, {{ paper.year }}{% endif %}.
-  </p>
-  <p class="link-list">
-    {% if paper.pdf %}<a href="{{ paper.pdf | relative_url }}">PDF</a>{% endif %}
-    {% if paper.arxiv %}<a href="{{ paper.arxiv }}">arXiv</a>{% endif %}
-    {% if paper.doi %}<a href="{{ paper.doi }}">DOI</a>{% endif %}
-  </p>
-</div>
 {% endfor %}

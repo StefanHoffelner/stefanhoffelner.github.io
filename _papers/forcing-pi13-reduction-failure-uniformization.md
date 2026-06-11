@@ -1,9 +1,11 @@
 ---
-title: "Forcing Pi^1_3 reduction and failure of uniformization"
-authors: "Stefan Hoffelner"
+title: 'Forcing Pi^1_3 reduction and a failure of Pi^1_3 uniformization revisited'
+authors: 'Stefan Hoffelner'
 year: 2026
-sort_key: 2026-04-05
-status: preprint
+sort_key: '2026-03-10'
+status: 'preprint'
 selected: false
-abstract: "A forcing construction concerning Pi^1_3 reduction and the failure of projective uniformization."
+pdf: '/papers/Forcing-Pi^1_n-reduction-and-a-failure-of-Pi^1_n-uniformization-revisited.pdf'
+abstract: 'A revisiting of forcing Pi^1_3 reduction while arranging failure of Pi^1_3 uniformization.'
 ---
+

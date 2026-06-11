@@ -5,18 +5,15 @@ permalink: /research/
 
 # Research
 
-My work is in mathematical logic, especially set theory, forcing, descriptive set theory and inner model theory. A central theme is the interaction between definability and forcing constructions for projective sets of reals.
+My research is in set theory and mathematical logic, especially forcing, descriptive set theory, inner model theory, and forcing axioms.
 
-More specifically, I study separation, reduction and uniformization principles, projective well-orders of the reals, forcing axioms, the nonstationary ideal on \(\omega_1\), and constructions over canonical inner models with finitely many Woodin cardinals.
+A recurring theme is the construction of models in which regularity, definable well-ordering, separation, reduction, and uniformization principles can be arranged independently of their classical determinacy-driven explanations. Much of my recent work studies projective uniformization and reduction, definable well-orders of the reals, and forcing constructions over canonical inner models with finitely many Woodin cardinals.
 
-## Current research themes
+## Selected topics
 
-- Forcing projective uniformization, separation and reduction principles.
-- Definable well-orders of the reals and their interaction with regularity phenomena.
-- Forcing axioms, especially BPFA/PFA-type principles, and definability of the nonstationary ideal.
-- Local variants of determinacy-inspired projective patterns over canonical inner models.
-- Generalizations of classical descriptive-set-theoretic phenomena to higher and mixed contexts.
-
-## Project
-
-I am the project leader of the FWF project **Investigating separation, reduction and uniformization** at TU Wien.
+- projective uniformization, reduction and separation;
+- definable well-orders of the reals;
+- forcing axioms and definability;
+- almost-disjoint coding and Suslin-tree coding;
+- inner models with Woodin cardinals;
+- regularity properties of projective sets.

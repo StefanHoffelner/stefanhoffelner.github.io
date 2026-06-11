@@ -1,9 +1,10 @@
 ---
-title: "A model with NS saturated and Delta^1-definability"
-authors: "Stefan Hoffelner"
+title: 'A model with NS saturated and a Delta-definable well-order'
+authors: 'Stefan Hoffelner'
 year: 2026
-sort_key: 2026-03-25
-status: preprint
+sort_key: '2026-01-20'
+status: 'preprint'
 selected: false
-abstract: "A forcing construction involving the nonstationary ideal and projective definability."
+abstract: 'A forcing construction producing a saturated nonstationary ideal together with a definable well-order.'
 ---
+
