@@ -5,7 +5,7 @@ permalink: /cv/
 
 # Curriculum Vitae
 
-A PDF version of my CV will be added here.
+[Download CV as PDF](/assets/cv-stefan-hoffelner.pdf)
 
 ## Stefan Hoffelner
 
