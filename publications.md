@@ -7,26 +7,82 @@ permalink: /publications/
 
 ## Published and accepted papers
 
-Entries will be added here.
+1. **A Sigma^1_4 wellorder of the reals with NS saturated**, with S. D. Friedman.  
+   *Journal of Symbolic Logic* 84, no. 4, 1466–1483, 2019.  
+   [DOI](https://doi.org/10.1017/jsl.2019.43)
+
+2. **A model where NS is saturated and Delta_1-definable**.  
+   *Journal of Symbolic Logic* 86, no. 1, 25–59, 2021.  
+   [DOI](https://doi.org/10.1017/jsl.2021.23)
+
+3. **Forcing the Sigma^1_3-separation property**.  
+   *Journal of Mathematical Logic* 22, no. 2, Article ID 2250008, 38 pp., 2022.  
+   [DOI](https://doi.org/10.1142/S0219061322500088)
+
+4. **Forcing the Pi^1_3-Reduction Property and a Failure of Pi^1_3-Uniformization**.  
+   *Annals of Pure and Applied Logic* 174, no. 8, 2023.  
+   [DOI](https://doi.org/10.1016/j.apal.2023.103292)
+
+5. **Forcing Axioms and the Definability of the nonstationary Ideal on the first Uncountable**, with P. Larson, R. Schindler and L. Wu.  
+   *Journal of Symbolic Logic*, 2023.  
+   [DOI](https://doi.org/10.1017/jsl.2023.40)
+
+6. **Forcing Axioms and the Uniformization Property**.  
+   *Annals of Pure and Applied Logic* 175, no. 10, 2024.  
+   [DOI](https://doi.org/10.1016/j.apal.2024.103466)
+
+7. **PFA and the definability of the nonstationary ideal**, with P. Larson, R. Schindler and L. Wu.  
+   *Journal of Symbolic Logic*, accepted manuscript, 2025.  
+   [DOI](https://doi.org/10.1017/jsl.2025.31)
+
+8. **The global Sigma^1_{n+2}-Uniformization Property and BPFA**.  
+   *Advances in Mathematics*, 2025.  
+   [DOI](https://doi.org/10.1016/j.aim.2025.110272)
+
+9. **MA(I) and a Failure of Separation on the third Level**.  
+   *Annals of Pure and Applied Logic*, 2026.  
+   [arXiv](https://doi.org/10.48550/arXiv.2507.01187)
 
 ## Submitted papers
 
-- **Forcing upper Sigma uniformization in the presence of lower Pi-reduction or uniformization**. Submitted manuscript.  
-  [PDF](/papers/forcing-upper-sigma-uniformization.pdf)
+1. **Forcing the Pi^1_n-Uniformization Property**. Submitted.  
+   [arXiv](https://doi.org/10.48550/arXiv.2103.11748)
 
-- **On graphs of total projective functions**. Submitted manuscript.  
-  [PDF](/papers/on-graphs-of-total-projective-functions.pdf)
+2. **A Failure of Pi^1_{n+3}-Reduction in the Presence of Sigma^1_{n+3}-Separation**. Submitted.  
+   [arXiv](https://doi.org/10.48550/arXiv.2312.02540)
 
-- **Forcing Sigma^1_1-separation on omega_1^{omega_1}**. Submitted manuscript.  
-  [PDF](/papers/forcing-sigma11-separation-omega1omega1.pdf)
+3. **A Universe with a Delta^1_n-definable well-order of the reals, CH and Pi^1_n-Uniformization**. Submitted.  
+   [arXiv](https://doi.org/10.48550/arXiv.2506.21778)
 
-- **Forcing Pi^1_3-uniformization and a Delta^1_3-wellorder**. Submitted manuscript.  
-  [PDF](/papers/forcing-pi13-uniformization-delta13-wellorder.pdf)
+4. **A Universe with large Continuum, global Sigma-Uniformization and a projective Well-Order of its Reals**. Submitted.  
+   [arXiv](https://doi.org/10.48550/arXiv.2506.12393)
+
+5. **NS_{omega_1} saturated, Delta_1({omega_1})-definable and a Delta^1_4-definable well-order of the reals**. Submitted.  
+   [arXiv](https://doi.org/10.48550/arXiv.2507.01183)
+
+6. **Forcing upper Sigma-uniformization in the presence of lower Pi-reduction or uniformization**. Submitted.  
+   [PDF](/papers/forcing-upper-sigma-uniformization.pdf)
+
+7. **On Sigma^1_3- and Sigma^1_4 uniformization**. Submitted.
+
+8. **On a local variant of the 12th Delfino Problem — the Sigma-side**, with Sandra Müller. Submitted.
+
+9. **On a local variant of the 12th Delfino problem — the Pi-side**. Submitted.
+
+10. **Generalized Separation**. Submitted.  
+    [PDF](/papers/forcing-sigma11-separation-omega1omega1.pdf)
+
+11. **On total graphs of projective functions**. Submitted.  
+    [PDF](/papers/on-graphs-of-total-projective-functions.pdf)
+
+12. **Martin's Axiom, large continuum and global Sigma^1_n-uniformization**. Submitted.
+
+13. **Projective maximal families of orthogonal measures and global Sigma-uniformization**. Submitted.
 
 ## Preprints
 
-Entries will be added here.
+Further preprints and updated versions will be added here.
 
 ## PhD thesis
 
-- **Projective Wellorders and the Nonstationary Ideal**. PhD thesis, Kurt Gödel Research Center, Vienna, 2016.
+- **Projective Wellorders and the Nonstationary Ideal**. PhD thesis, Kurt Gödel Research Center, University of Vienna, 2016.
