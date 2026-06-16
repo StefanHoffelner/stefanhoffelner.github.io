@@ -9,6 +9,8 @@ permalink: /
 
 Set theory, forcing, descriptive set theory, and inner model theory.
 
+I received my PhD from the Kurt Gödel Research Center in Vienna in 2016 under the supervision of S. D. Friedman. I was a postdoctoral researcher at Charles University Prague in 2017, working with J. Verner. From 2018 to 2024 I was an Assistant Professor at the University of Münster, working in R. D. Schindler's group, and I obtained my Habilitation there in 2025.
+
 I am a project leader and senior postdoc in the Set Theory group at TU Wien, where I lead the FWF Einzelprojekt P 37228, *Investigating separation, reduction and uniformization*, 2024–2028. My research concerns definability and forcing, with a focus on separation, reduction and uniformization principles for projective sets of reals, definable well-orders, forcing axioms, and canonical inner models with Woodin cardinals.
 
 [Publications](/publications/) · [Research](/research/) · [CV](/cv/)
