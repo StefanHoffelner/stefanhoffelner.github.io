@@ -88,7 +88,7 @@ permalink: /publications/
 
 - **Higher projectively definable maximal orthogonal families**  
   Short note / draft.  
-  [PDF](/assets/papers/higher_projectively_definable_mofs.pdf)
+  [PDF](/papers/higher-projectively-definable-mofs.pdf)
 
 ## PhD thesis
 
