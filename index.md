@@ -37,8 +37,8 @@ Email: stefan.hoffelner@tuwien.ac.at
   This paper studies the interaction between projective reduction and uniformization, producing a model in which \(\Pi^1_3\)-reduction holds while \(\Pi^1_3\)-uniformization fails.  
   [DOI](https://doi.org/10.1016/j.apal.2023.103292)
 
-- **Local forms of Woodin's 12th Delfino problem**.  
-  A pair of papers resolving finite-level versions of the Delfino problem by combining projective regularity, uniformization principles, and definable well-orders. The \(\Pi\)-side gives the sharper construction; the \(\Sigma\)-side gives the complementary global-\(\Sigma\) picture.  
+- **Local forms of Woodin's 12th Delfino problem**, including joint work with Sandra Müller.  
+  A pair of papers resolving finite-level versions of the Delfino problem by combining projective regularity, uniformization principles, and definable well-orders. The \(\Pi\)-side gives the sharper construction; the \(\Sigma\)-side, joint with Sandra Müller, gives the complementary global-\(\Sigma\) picture.  
   [\(\Pi\)-side arXiv](https://doi.org/10.48550/arXiv.2606.13210) · [\(\Pi\)-side PDF](/papers/local-delfino-pi-side.pdf)  
   [\(\Sigma\)-side arXiv](https://doi.org/10.48550/arXiv.2606.13199) · [\(\Sigma\)-side PDF](/papers/local-delfino-sigma-side.pdf)
 
