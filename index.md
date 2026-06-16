@@ -9,7 +9,7 @@ permalink: /
 
 Set theory, forcing, descriptive set theory, and inner model theory.
 
-I am a project leader and senior postdoc in the Set Theory group at TU Wien. My research concerns definability and forcing, with a focus on separation, reduction and uniformization principles for projective sets of reals, definable well-orders, forcing axioms, and canonical inner models with Woodin cardinals.
+I am a project leader and senior postdoc in the Set Theory group at TU Wien, where I lead the FWF Einzelprojekt P 37228, *Investigating separation, reduction and uniformization*, 2024–2028. My research concerns definability and forcing, with a focus on separation, reduction and uniformization principles for projective sets of reals, definable well-orders, forcing axioms, and canonical inner models with Woodin cardinals.
 
 [Publications](/publications/) · [Research](/research/) · [CV](/cv/)
 

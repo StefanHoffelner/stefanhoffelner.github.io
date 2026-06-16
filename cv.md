@@ -11,6 +11,8 @@ permalink: /cv/
 
 Project leader and senior postdoc
 
+FWF Einzelprojekt P 37228, *Investigating separation, reduction and uniformization*, 2024–2028
+
 Research Unit Set Theory
 
 Institute of Discrete Mathematics and Geometry
