@@ -84,9 +84,11 @@ permalink: /publications/
 13. **Projective maximal families of orthogonal measures and global \(\Sigma\)-uniformization**. Submitted.  
     [PDF](/papers/projective-maximal-families-orthogonal-measures-global-sigma-uniformization.pdf)
 
-## Preprints
+## Preprints/Notes
 
-Further preprints and updated versions will be added here.
+- **Higher projectively definable maximal orthogonal families**  
+  Short note / draft.  
+  [PDF](/assets/papers/higher_projectively_definable_mofs.pdf)
 
 ## PhD thesis
 
