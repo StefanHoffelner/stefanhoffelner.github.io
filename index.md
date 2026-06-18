@@ -24,28 +24,27 @@ Research Unit Set Theory
 Institute of Discrete Mathematics and Geometry
 
 Email: stefan.hoffelner@tuwien.ac.at
-
 ## Selected works
 
 - **The global \(\Sigma^1_{n+2}\)-Uniformization Property and BPFA**.  
-  This paper connects forcing axioms with global projective uniformization and is one of the central published outputs of my uniformization program.  
+  This paper shows that global projective uniformization can be forced together with BPFA, separating uniformization from the classical route through good projective wellorders.  
   [DOI](https://doi.org/10.1016/j.aim.2025.110272)
 
 - **Forcing the \(\Sigma^1_3\)-separation property**.  
-  This paper concerns forcing constructions for projective separation and represents one of my earlier works on separating regularity and definability phenomena at low projective levels.  
+  This paper gives an early forcing construction in which projective separation phenomena are isolated at the \(\Sigma^1_3\) level.  
   [DOI](https://doi.org/10.1142/S0219061322500088)
 
 - **Forcing the \(\Pi^1_3\)-Reduction Property and a Failure of \(\Pi^1_3\)-Uniformization**.  
-  This paper studies the interaction between projective reduction and uniformization, producing a model in which \(\Pi^1_3\)-reduction holds while \(\Pi^1_3\)-uniformization fails.  
+  This paper separates projective reduction from projective uniformization by producing a model where \(\Pi^1_3\)-reduction holds but \(\Pi^1_3\)-uniformization fails.  
   [DOI](https://doi.org/10.1016/j.apal.2023.103292)
 
 - **Local forms of Woodin's 12th Delfino problem**, including joint work with Sandra Müller.  
-  A pair of papers resolving finite-level versions of the Delfino problem by combining projective regularity, uniformization principles, and definable well-orders. The \(\Pi\)-side gives the sharper construction; the \(\Sigma\)-side, joint with Sandra Müller, gives the complementary global-\(\Sigma\) picture.  
+  These companion papers prove finite-level local versions of Woodin's 12th Delfino problem, with complementary \(\Pi\)-side and \(\Sigma\)-side constructions.  
   [\(\Pi\)-side arXiv](https://doi.org/10.48550/arXiv.2606.13210) · [\(\Pi\)-side PDF](/papers/local-delfino-pi-side.pdf)  
   [\(\Sigma\)-side arXiv](https://doi.org/10.48550/arXiv.2606.13199) · [\(\Sigma\)-side PDF](/papers/local-delfino-sigma-side.pdf)
 
 - **PFA and the definability of the nonstationary ideal**, with P. Larson, R. Schindler and L. Wu.  
-  This paper belongs to my work on forcing axioms and definability, studying the interaction of PFA with the definability of the nonstationary ideal.  
+  This paper studies how forcing axioms interact with definability questions around the nonstationary ideal.  
   [DOI](https://doi.org/10.1017/jsl.2025.31)
 
-See the full [publications list](/publications/).
+See the full [publications list](/publications/). 
