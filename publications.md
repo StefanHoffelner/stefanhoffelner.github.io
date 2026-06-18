@@ -89,7 +89,9 @@ permalink: /publications/
 - **Higher projectively definable maximal orthogonal families**  
   Short note / draft.  
   [PDF](/papers/higher-projectively-definable-mofs.pdf)
-
+- **Coanalytic MAD families and global \(\Sigma\)-uniformization**.  
+  Preprint.  
+  [PDF](/papers/coanalytic-mad-families-global-sigma-uniformization.pdf)
 ## PhD thesis
 
 - **Projective Wellorders and the Nonstationary Ideal**. PhD thesis, Kurt Gödel Research Center, University of Vienna, 2016.
