@@ -87,7 +87,7 @@ permalink: /publications/
 ## Preprints/Notes
 
 - **Higher projectively definable maximal orthogonal families**  
-  Short note / draft.  
+  Preprint.  
   [PDF](/papers/higher-projectively-definable-mofs.pdf)
 - **Coanalytic MAD families and global \(\Sigma\)-uniformization**.  
   Preprint.  
