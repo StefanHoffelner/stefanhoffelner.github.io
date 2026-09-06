@@ -84,6 +84,12 @@ permalink: /publications/
 13. **Projective maximal families of orthogonal measures and global \(\Sigma\)-uniformization**. Submitted.  
     [PDF](/papers/projective-maximal-families-orthogonal-measures-global-sigma-uniformization.pdf)
 
+## Drafts
+
+- **Separating \(\Pi^1_{n+2}\) and \(\Sigma^1_{n+2}\) Maximal Almost Disjoint Families**.  
+  Draft, 6 September 2026.  
+  [PDF](/papers/separating-pi1nplus2-sigma1nplus2-mad-families.pdf)
+
 ## Preprints/Notes
 
 - **Higher projectively definable maximal orthogonal families**  
