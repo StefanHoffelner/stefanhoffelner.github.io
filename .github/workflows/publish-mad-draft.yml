@@ -17,8 +17,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Reassemble source
+        shell: bash
         run: |
-          cat .publish/part-* > manuscript.tex
+          cat .publish/part-* > manuscript.tex.gz.b64
+          base64 -d manuscript.tex.gz.b64 > manuscript.tex.gz
+          gzip -dc manuscript.tex.gz > manuscript.tex
 
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
@@ -48,7 +51,7 @@ jobs:
       - name: Remove temporary build inputs and publish commit
         shell: bash
         run: |
-          rm -rf .publish manuscript.tex manuscript.aux manuscript.fdb_latexmk manuscript.fls manuscript.log manuscript.out manuscript.pdf
+          rm -rf .publish manuscript.tex manuscript.tex.gz manuscript.tex.gz.b64 manuscript.aux manuscript.fdb_latexmk manuscript.fls manuscript.log manuscript.out manuscript.pdf
           rm -f .github/workflows/publish-mad-draft.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
