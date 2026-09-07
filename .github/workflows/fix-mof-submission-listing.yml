@@ -1,0 +1,45 @@
+name: Restore submitted MOF listing
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-mof-submission-listing.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore submitted entry and remove preprint duplicate
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('publications.md')
+          text = p.read_text(encoding='utf-8')
+
+          preprint = '''\n- **Projective maximal families of orthogonal measures and global \\(\\Sigma\\)-uniformization**.  \n  Preprint.  \n  [PDF](/papers/projective-maximal-families-orthogonal-measures-global-sigma-uniformization.pdf)\n'''
+          text = text.replace(preprint, '', 1)
+
+          submitted = '''\n13. **Projective maximal families of orthogonal measures and global \\(\\Sigma\\)-uniformization**. Submitted.  \n    [PDF](/papers/projective-maximal-families-orthogonal-measures-global-sigma-uniformization.pdf)\n'''
+          marker = '\n## Drafts\n'
+          if submitted.strip() not in text:
+              if marker not in text:
+                  raise SystemExit('Drafts marker not found')
+              text = text.replace(marker, submitted + marker, 1)
+
+          p.write_text(text, encoding='utf-8')
+          PY
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/fix-mof-submission-listing.yml
+          git add publications.md
+          git commit -m 'Restore global Sigma MOF paper to submitted section'
+          git push origin HEAD:main
