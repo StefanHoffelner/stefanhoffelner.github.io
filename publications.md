@@ -86,6 +86,10 @@ permalink: /publications/
 
 ## Drafts
 
+- **\(\boldsymbol{\Delta}^1_3\) regularity and failure of definable uniformization**.  
+  Draft, 7 September 2026.  
+  [PDF](/papers/delta13-regularity-definable-uniformization.pdf)
+
 - **Separating \(\Pi^1_{n+2}\) and \(\Sigma^1_{n+2}\) Maximal Almost Disjoint Families**.  
   Draft, 6 September 2026.  
   [PDF](/papers/separating-pi1nplus2-sigma1nplus2-mad-families.pdf)
