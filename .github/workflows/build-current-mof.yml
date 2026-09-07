@@ -1,4 +1,4 @@
-name: Build current MOF preprint
+name: Finalize current MOF preprint
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  finalize:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -18,29 +18,35 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Reconstruct LaTeX source
+      - name: Move paper to preprints and clean build files
         run: |
-          cat .site-build/mof-source-1.b64 .site-build/mof-source-2.b64 .site-build/mof-source-3.b64 | base64 -d | gunzip > /tmp/mof.tex
+          python - <<'PY'
+          from pathlib import Path
 
-      - name: Install LaTeX
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+          path = Path('publications.md')
+          text = path.read_text(encoding='utf-8')
 
-      - name: Compile PDF
-        run: |
-          mkdir -p /tmp/mof-build
-          pdflatex -interaction=nonstopmode -halt-on-error -output-directory=/tmp/mof-build /tmp/mof.tex
-          pdflatex -interaction=nonstopmode -halt-on-error -output-directory=/tmp/mof-build /tmp/mof.tex
-          cp /tmp/mof-build/mof.pdf papers/higher-projectively-definable-mofs.pdf
+          marker = '\n13. **Projective maximal families of orthogonal measures and global'
+          start = text.find(marker)
+          if start == -1:
+              raise SystemExit('Submitted MOF entry not found')
+          end = text.find('\n\n## Drafts', start)
+          if end == -1:
+              raise SystemExit('Drafts section marker not found')
+          text = text[:start] + text[end:]
 
-      - name: Commit updated PDF
-        run: |
+          old_title = '**Higher projectively definable maximal orthogonal families**'
+          new_title = '**Higher projective maximal orthogonal families of measures**'
+          if old_title not in text:
+              raise SystemExit('Existing preprint entry not found')
+          text = text.replace(old_title, new_title, 1)
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+          git rm -f .site-build/mof-source-1.b64 .site-build/mof-source-2.b64 .site-build/mof-source-3.b64 .github/workflows/build-current-mof.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add papers/higher-projectively-definable-mofs.pdf
-          if git diff --cached --quiet; then
-            exit 0
-          fi
-          git commit -m 'Update higher projective MOF preprint PDF'
+          git add publications.md
+          git commit -m 'Move higher projective MOF paper to preprints'
           git push origin HEAD:main
