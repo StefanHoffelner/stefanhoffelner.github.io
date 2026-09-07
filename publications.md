@@ -81,7 +81,6 @@ permalink: /publications/
 12. **Martin's Axiom, large continuum and global \(\Sigma^1_n\)-uniformization**. Submitted.  
     [arXiv](https://doi.org/10.48550/arXiv.2605.21189) · [PDF](/papers/martins-axiom-large-continuum-global-sigma-uniformization.pdf)
 
-
 ## Drafts
 
 - **\(\boldsymbol{\Delta}^1_3\) regularity and failure of definable uniformization**.  
@@ -94,12 +93,18 @@ permalink: /publications/
 
 ## Preprints/Notes
 
-- **Higher projective maximal orthogonal families of measures**  
+- **Higher projective maximal orthogonal families of measures**.  
   Preprint.  
   [PDF](/papers/higher-projectively-definable-mofs.pdf)
+
+- **Projective maximal families of orthogonal measures and global \(\Sigma\)-uniformization**.  
+  Preprint.  
+  [PDF](/papers/projective-maximal-families-orthogonal-measures-global-sigma-uniformization.pdf)
+
 - **Coanalytic MAD families and global \(\Sigma\)-uniformization**.  
   Preprint.  
   [PDF](/papers/coanalytic-mad-families-global-sigma-uniformization.pdf)
+
 ## PhD thesis
 
 - **Projective Wellorders and the Nonstationary Ideal**. PhD thesis, Kurt Gödel Research Center, University of Vienna, 2016.
