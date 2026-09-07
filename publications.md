@@ -81,8 +81,6 @@ permalink: /publications/
 12. **Martin's Axiom, large continuum and global \(\Sigma^1_n\)-uniformization**. Submitted.  
     [arXiv](https://doi.org/10.48550/arXiv.2605.21189) · [PDF](/papers/martins-axiom-large-continuum-global-sigma-uniformization.pdf)
 
-13. **Projective maximal families of orthogonal measures and global \(\Sigma\)-uniformization**. Submitted.  
-    [PDF](/papers/projective-maximal-families-orthogonal-measures-global-sigma-uniformization.pdf)
 
 ## Drafts
 
@@ -96,7 +94,7 @@ permalink: /publications/
 
 ## Preprints/Notes
 
-- **Higher projectively definable maximal orthogonal families**  
+- **Higher projective maximal orthogonal families of measures**  
   Preprint.  
   [PDF](/papers/higher-projectively-definable-mofs.pdf)
 - **Coanalytic MAD families and global \(\Sigma\)-uniformization**.  
