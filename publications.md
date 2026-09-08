@@ -3,9 +3,9 @@ title: Publications
 permalink: /publications/
 ---
 
-# Publications and preprints
+# Publications
 
-## Published and accepted papers
+## Publications
 
 1. **A \(\Sigma^1_4\) wellorder of the reals with NS saturated**, with S. D. Friedman.  
    *Journal of Symbolic Logic* 84, no. 4, 1466–1483, 2019.  
@@ -43,7 +43,7 @@ permalink: /publications/
    *Annals of Pure and Applied Logic*, 2026.  
    [arXiv](https://doi.org/10.48550/arXiv.2507.01187)
 
-## Submitted papers
+## Submitted
 
 1. **Forcing the \(\Pi^1_n\)-Uniformization Property**. Submitted.  
    [arXiv](https://doi.org/10.48550/arXiv.2103.11748) · [PDF](/papers/forcing-pi1n-uniformization-property.pdf)
@@ -84,17 +84,15 @@ permalink: /publications/
 13. **Projective maximal families of orthogonal measures and global \(\Sigma\)-uniformization**. Submitted.  
     [PDF](/papers/projective-maximal-families-orthogonal-measures-global-sigma-uniformization.pdf)
 
-## Drafts
+## Preprints
 
 - **\(\boldsymbol{\Delta}^1_3\) regularity and failure of definable uniformization**.  
-  Draft, 7 September 2026.  
+  Preprint, 7 September 2026.  
   [PDF](/papers/delta13-regularity-definable-uniformization.pdf)
 
 - **Separating \(\Pi^1_{n+2}\) and \(\Sigma^1_{n+2}\) Maximal Almost Disjoint Families**.  
-  Draft, 6 September 2026.  
+  Preprint, 6 September 2026.  
   [PDF](/papers/separating-pi1nplus2-sigma1nplus2-mad-families.pdf)
-
-## Preprints/Notes
 
 - **Higher projective maximal orthogonal families of measures**.  
   Preprint.  
