@@ -8,40 +8,40 @@ permalink: /publications/
 ## Publications
 
 1. **A \(\Sigma^1_4\) wellorder of the reals with NS saturated**, with S. D. Friedman.  
-   *Journal of Symbolic Logic* 84, no. 4, 1466–1483, 2019.  
+   *Journal of Symbolic Logic* **84** (4), 1466–1483, 2019.  
    [DOI](https://doi.org/10.1017/jsl.2019.43)
 
 2. **A model where NS is saturated and \(\Delta_1\)-definable**.  
-   *Journal of Symbolic Logic* 86, no. 1, 25–59, 2021.  
+   *Journal of Symbolic Logic* **86** (1), 25–59, 2021.  
    [DOI](https://doi.org/10.1017/jsl.2021.23)
 
 3. **Forcing the \(\Sigma^1_3\)-separation property**.  
-   *Journal of Mathematical Logic* 22, no. 2, Article ID 2250008, 38 pp., 2022.  
+   *Journal of Mathematical Logic* **22** (2), Article 2250008, 38 pp., 2022.  
    [DOI](https://doi.org/10.1142/S0219061322500088)
 
 4. **Forcing the \(\Pi^1_3\)-Reduction Property and a Failure of \(\Pi^1_3\)-Uniformization**.  
-   *Annals of Pure and Applied Logic* 174, no. 8, 2023.  
+   *Annals of Pure and Applied Logic* **174** (8), Article 103292, 2023.  
    [DOI](https://doi.org/10.1016/j.apal.2023.103292)
 
 5. **Forcing Axioms and the Definability of the nonstationary Ideal on the first Uncountable**, with P. Larson, R. Schindler and L. Wu.  
-   *Journal of Symbolic Logic*, 2023.  
+   *Journal of Symbolic Logic* **89** (4), 1641–1658, 2024.  
    [DOI](https://doi.org/10.1017/jsl.2023.40)
 
 6. **Forcing Axioms and the Uniformization Property**.  
-   *Annals of Pure and Applied Logic* 175, no. 10, 2024.  
+   *Annals of Pure and Applied Logic* **175** (10), Article 103466, 2024.  
    [DOI](https://doi.org/10.1016/j.apal.2024.103466)
 
 7. **PFA and the definability of the nonstationary ideal**, with P. Larson, R. Schindler and L. Wu.  
-   *Journal of Symbolic Logic*, accepted manuscript, 2025.  
+   *Journal of Symbolic Logic* **91** (2), 832–839, 2026.  
    [DOI](https://doi.org/10.1017/jsl.2025.31)
 
 8. **The global \(\Sigma^1_{n+2}\)-Uniformization Property and BPFA**.  
-   *Advances in Mathematics*, 2025.  
+   *Advances in Mathematics* **470**, Article 110272, 2025.  
    [DOI](https://doi.org/10.1016/j.aim.2025.110272)
 
 9. **MA(I) and a Failure of Separation on the third Level**.  
-   *Annals of Pure and Applied Logic*, 2026.  
-   [arXiv](https://doi.org/10.48550/arXiv.2507.01187)
+   *Annals of Pure and Applied Logic* **177** (3), Article 103667, 2026.  
+   [DOI](https://doi.org/10.1016/j.apal.2025.103667)
 
 ## Submitted
 
