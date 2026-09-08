@@ -105,3 +105,5 @@ permalink: /publications/
 ## PhD thesis
 
 - **Projective Wellorders and the Nonstationary Ideal**. PhD thesis, Kurt Gödel Research Center, University of Vienna, 2016.
+
+[← Back to homepage](/)
