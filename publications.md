@@ -43,6 +43,10 @@ permalink: /publications/
    *Annals of Pure and Applied Logic* **177** (3), Article 103667, 2026.  
    [DOI](https://doi.org/10.1016/j.apal.2025.103667)
 
+10. **A Universe with large Continuum, global \(\Sigma\)-Uniformization and a projective Well-Order of its Reals**.  
+    *ZML: Zeitschrift für Mathematische Logik und Grundlagen der Mathematik*. Accepted for publication.  
+    [arXiv](https://doi.org/10.48550/arXiv.2506.12393) · [PDF](/papers/large-continuum-global-sigma-uniformization.pdf)
+
 ## Submitted
 
 1. **Forcing the \(\Pi^1_n\)-Uniformization Property**. Submitted.  
@@ -54,45 +58,41 @@ permalink: /publications/
 3. **Forcing \(\Pi^1_3\)-uniformization and a \(\Delta^1_3\)-definable wellorder**. Submitted.  
    [arXiv](https://doi.org/10.48550/arXiv.2506.21778) · [PDF](/papers/forcing-pi13-uniformization-delta13-wellorder.pdf)
 
-4. **A Universe with large Continuum, global \(\Sigma\)-Uniformization and a projective Well-Order of its Reals**. Submitted.  
-   [arXiv](https://doi.org/10.48550/arXiv.2506.12393) · [PDF](/papers/large-continuum-global-sigma-uniformization.pdf)
-
-5. **\(NS_{\omega_1}\) saturated, \(\Delta_1(\{\omega_1\})\)-definable and a \(\Delta^1_4\)-definable well-order of the reals**. Submitted.  
+4. **\(NS_{\omega_1}\) saturated, \(\Delta_1(\{\omega_1\})\)-definable and a \(\Delta^1_4\)-definable well-order of the reals**. Submitted.  
    [arXiv](https://doi.org/10.48550/arXiv.2507.01183) · [PDF](/papers/ns-saturated-delta1-definable-delta14-wellorder.pdf)
 
-6. **Forcing upper \(\Sigma\)-uniformization in the presence of lower \(\Pi\)-reduction or uniformization**. Submitted.  
+5. **Forcing upper \(\Sigma\)-uniformization in the presence of lower \(\Pi\)-reduction or uniformization**. Submitted.  
    [arXiv](https://doi.org/10.48550/arXiv.2511.05081) · [PDF](/papers/forcing-upper-sigma-uniformization.pdf)
 
-7. **On \(\Sigma^1_3\)- and \(\Sigma^1_4\)-uniformization**. Submitted.  
+6. **On \(\Sigma^1_3\)- and \(\Sigma^1_4\)-uniformization**. Submitted.  
    [arXiv](https://doi.org/10.48550/arXiv.2604.19360) · [PDF](/papers/on-sigma13-and-sigma14-uniformization.pdf)
 
-8. **On a local variant of the 12th Delfino Problem — the \(\Sigma\)-side**, with Sandra Müller. Submitted.  
+7. **On a local variant of the 12th Delfino Problem — the \(\Sigma\)-side**, with Sandra Müller. Submitted.  
    [arXiv](https://doi.org/10.48550/arXiv.2606.13199) · [PDF](/papers/local-delfino-sigma-side.pdf)
 
-9. **On a local variant of the 12th Delfino problem — the \(\Pi\)-side**. Submitted.  
+8. **On a local variant of the 12th Delfino problem — the \(\Pi\)-side**. Submitted.  
    [arXiv](https://doi.org/10.48550/arXiv.2606.13210) · [PDF](/papers/local-delfino-pi-side.pdf)
 
-10. **Forcing \(\mathbf{\Sigma}^1_1\)-Separation on \(\omega_1^{\omega_1}\)**. Submitted.  
-    [arXiv](https://doi.org/10.48550/arXiv.2605.21175) · [PDF](/papers/generalized-separation.pdf)
+9. **Forcing \(\mathbf{\Sigma}^1_1\)-Separation on \(\omega_1^{\omega_1}\)**. Submitted.  
+   [arXiv](https://doi.org/10.48550/arXiv.2605.21175) · [PDF](/papers/generalized-separation.pdf)
 
-11. **On graphs of total projective functions**. Submitted.  
+10. **On graphs of total projective functions**. Submitted.  
     [arXiv](https://doi.org/10.48550/arXiv.2605.21184) · [PDF](/papers/on-graphs-of-total-projective-functions.pdf)
 
-12. **Martin's Axiom, large continuum and global \(\Sigma^1_n\)-uniformization**. Submitted.  
+11. **Martin's Axiom, large continuum and global \(\Sigma^1_n\)-uniformization**. Submitted.  
     [arXiv](https://doi.org/10.48550/arXiv.2605.21189) · [PDF](/papers/martins-axiom-large-continuum-global-sigma-uniformization.pdf)
 
-13. **Projective maximal families of orthogonal measures and global \(\Sigma\)-uniformization**. Submitted.  
+12. **Projective maximal families of orthogonal measures and global \(\Sigma\)-uniformization**. Submitted.  
     [PDF](/papers/projective-maximal-families-orthogonal-measures-global-sigma-uniformization.pdf)
+
+13. **Separating \(\Pi^1_{n+2}\) and \(\Sigma^1_{n+2}\) Maximal Almost Disjoint Families**. Submitted.  
+    [PDF](/papers/separating-pi1nplus2-sigma1nplus2-mad-families.pdf)
 
 ## Preprints
 
 - **\(\boldsymbol{\Delta}^1_3\) regularity and failure of definable uniformization**.  
   Preprint, 7 September 2026.  
   [PDF](/papers/delta13-regularity-definable-uniformization.pdf)
-
-- **Separating \(\Pi^1_{n+2}\) and \(\Sigma^1_{n+2}\) Maximal Almost Disjoint Families**.  
-  Preprint, 6 September 2026.  
-  [PDF](/papers/separating-pi1nplus2-sigma1nplus2-mad-families.pdf)
 
 - **Higher projective maximal orthogonal families of measures**.  
   Preprint.  
