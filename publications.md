@@ -90,6 +90,10 @@ permalink: /publications/
 
 ## Preprints
 
+- **Forcing global \(\Pi^2_n\) uniformization, with and without projective determinacy**.  
+  Preprint, 1 November 2026.  
+  [PDF](/papers/forcing-global-pi2n-uniformization.pdf)
+
 - **\(\boldsymbol{\Delta}^1_3\) regularity and failure of definable uniformization**.  
   Preprint, 7 September 2026.  
   [PDF](/papers/delta13-regularity-definable-uniformization.pdf)
