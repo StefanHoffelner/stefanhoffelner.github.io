@@ -76,13 +76,10 @@ permalink: /publications/
 9. **On graphs of total projective functions**. Submitted.  
    [arXiv](https://doi.org/10.48550/arXiv.2605.21184) · [PDF](/papers/on-graphs-of-total-projective-functions.pdf)
 
-10. **Martin's Axiom, large continuum and global \(\Sigma^1_n\)-uniformization**. Submitted.  
-    [arXiv](https://doi.org/10.48550/arXiv.2605.21189) · [PDF](/papers/martins-axiom-large-continuum-global-sigma-uniformization.pdf)
-
-11. **Projective maximal families of orthogonal measures and global \(\Sigma\)-uniformization**. Submitted.  
+10. **Projective maximal families of orthogonal measures and global \(\Sigma\)-uniformization**. Submitted.  
     [PDF](/papers/projective-maximal-families-orthogonal-measures-global-sigma-uniformization.pdf)
 
-12. **Separating \(\Pi^1_{n+2}\) and \(\Sigma^1_{n+2}\) Maximal Almost Disjoint Families**. Submitted.  
+11. **Separating \(\Pi^1_{n+2}\) and \(\Sigma^1_{n+2}\) Maximal Almost Disjoint Families**. Submitted.  
     [PDF](/papers/separating-pi1nplus2-sigma1nplus2-mad-families.pdf)
 
 ## Preprints
@@ -94,6 +91,10 @@ permalink: /publications/
 - **\(\boldsymbol{\Delta}^1_3\) regularity and failure of definable uniformization**.  
   Preprint, 7 September 2026.  
   [PDF](/papers/delta13-regularity-definable-uniformization.pdf)
+
+- **Martin's Axiom, large continuum and global \(\Sigma^1_n\)-uniformization**.  
+  Preprint, 20 May 2026.  
+  [arXiv](https://doi.org/10.48550/arXiv.2605.21189) · [PDF](/papers/martins-axiom-large-continuum-global-sigma-uniformization.pdf)
 
 - **Higher projective maximal orthogonal families of measures**.  
   Preprint.  
