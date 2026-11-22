@@ -92,13 +92,13 @@ permalink: /publications/
   Preprint, 7 September 2026.  
   [PDF](/papers/delta13-regularity-definable-uniformization.pdf)
 
+- **Higher projective maximal orthogonal families of measures**.  
+  Preprint, 16 June 2026.  
+  [PDF](/papers/higher-projectively-definable-mofs.pdf)
+
 - **Martin's Axiom, large continuum and global \(\Sigma^1_n\)-uniformization**.  
   Preprint, 20 May 2026.  
   [arXiv](https://doi.org/10.48550/arXiv.2605.21189) · [PDF](/papers/martins-axiom-large-continuum-global-sigma-uniformization.pdf)
-
-- **Higher projective maximal orthogonal families of measures**.  
-  Preprint.  
-  [PDF](/papers/higher-projectively-definable-mofs.pdf)
 
 - **Coanalytic MAD families and global \(\Sigma\)-uniformization**.  
   Preprint.  
