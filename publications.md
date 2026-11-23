@@ -84,6 +84,10 @@ permalink: /publications/
 
 ## Preprints
 
+- **Forcing \(\boldsymbol{\Sigma}^1_3\)-Separation and a \(\Delta^1_3\) Wellorder**.  
+  Preprint, 24 November 2026.  
+  [PDF](/papers/forcing-sigma13-separation-delta13-wellorder.pdf)
+
 - **Forcing global \(\Pi^2_n\) uniformization, with and without projective determinacy**.  
   Preprint, 1 November 2026.  
   [PDF](/papers/forcing-global-pi2n-uniformization.pdf)
