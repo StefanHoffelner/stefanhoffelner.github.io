@@ -43,8 +43,8 @@ Email: stefan.hoffelner@tuwien.ac.at
   [\(\Pi\)-side arXiv](https://doi.org/10.48550/arXiv.2606.13210) · [\(\Pi\)-side PDF](/papers/local-delfino-pi-side.pdf)  
   [\(\Sigma\)-side arXiv](https://doi.org/10.48550/arXiv.2606.13199) · [\(\Sigma\)-side PDF](/papers/local-delfino-sigma-side.pdf)
 
-- **PFA and the definability of the nonstationary ideal**, with P. Larson, R. Schindler and L. Wu.  
-  This paper studies how forcing axioms interact with definability questions around the nonstationary ideal.  
-  [DOI](https://doi.org/10.1017/jsl.2025.31)
+- **Forcing global Π²ₙ uniformization, with and without projective determinacy**.  
+  The construction forces uniformization at every finite level of the second-order Π hierarchy without adding reals. It works over *L* and, assuming large cardinals, over a model of projective determinacy.  
+  [PDF](/papers/forcing-global-pi2n-uniformization.pdf)
 
 See the full [publications list](/publications/). 
