@@ -84,6 +84,10 @@ permalink: /publications/
 
 ## Preprints
 
+- **Global Σ-separation and fixed-level Π-uniformization in forcing extensions of _L_**.  
+  Preprint, 25 November 2026.  
+  [PDF](/papers/global-sigma-separation-fixed-level-pi-uniformization.pdf)
+
 - **Forcing \(\boldsymbol{\Sigma}^1_3\)-Separation and a \(\Delta^1_3\) Wellorder**.  
   Preprint, 24 November 2026.  
   [PDF](/papers/forcing-sigma13-separation-delta13-wellorder.pdf)

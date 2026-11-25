@@ -38,10 +38,9 @@ Email: stefan.hoffelner@tuwien.ac.at
   This paper separates projective reduction from projective uniformization by producing a model where \(\Pi^1_3\)-reduction holds but \(\Pi^1_3\)-uniformization fails.  
   [DOI](https://doi.org/10.1016/j.apal.2023.103292)
 
-- **Local forms of Woodin's 12th Delfino problem**, including joint work with Sandra Müller.  
-  These companion papers prove finite-level local versions of Woodin's 12th Delfino problem, with complementary \(\Pi\)-side and \(\Sigma\)-side constructions.  
-  [\(\Pi\)-side arXiv](https://doi.org/10.48550/arXiv.2606.13210) · [\(\Pi\)-side PDF](/papers/local-delfino-pi-side.pdf)  
-  [\(\Sigma\)-side arXiv](https://doi.org/10.48550/arXiv.2606.13199) · [\(\Sigma\)-side PDF](/papers/local-delfino-sigma-side.pdf)
+- **Global Σ-separation and fixed-level Π-uniformization in forcing extensions of _L_**.  
+  In one forcing extension of _L_, Σ¹ₙ-separation holds simultaneously for all _n_ ≥ 3. For each fixed _n_ ≥ 3, a separate extension satisfies Π¹ₙ-uniformization. Both results hold relative to every real parameter.  
+  [PDF](/papers/global-sigma-separation-fixed-level-pi-uniformization.pdf)
 
 - **Forcing global Π²ₙ uniformization, with and without projective determinacy**.  
   The construction forces uniformization at every finite level of the second-order Π hierarchy without adding reals. It works over *L* and, assuming large cardinals, over a model of projective determinacy.  
