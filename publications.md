@@ -85,27 +85,27 @@ permalink: /publications/
 ## Preprints
 
 - **Global Σ-separation and fixed-level Π-uniformization in forcing extensions of _L_**.  
-  Preprint, 25 November 2026.  
+  Preprint.  
   [PDF](/papers/global-sigma-separation-fixed-level-pi-uniformization.pdf)
 
 - **Forcing \(\boldsymbol{\Sigma}^1_3\)-Separation and a \(\Delta^1_3\) Wellorder**.  
-  Preprint, 24 November 2026.  
+  Preprint.  
   [PDF](/papers/forcing-sigma13-separation-delta13-wellorder.pdf)
 
 - **Forcing global \(\Pi^2_n\) uniformization, with and without projective determinacy**.  
-  Preprint, 1 November 2026.  
+  Preprint.  
   [PDF](/papers/forcing-global-pi2n-uniformization.pdf)
 
 - **\(\boldsymbol{\Delta}^1_3\) regularity and failure of definable uniformization**.  
-  Preprint, 7 September 2026.  
+  Preprint.  
   [PDF](/papers/delta13-regularity-definable-uniformization.pdf)
 
 - **Higher projective maximal orthogonal families of measures**.  
-  Preprint, 16 June 2026.  
+  Preprint.  
   [PDF](/papers/higher-projectively-definable-mofs.pdf)
 
 - **Martin's Axiom, large continuum and global \(\Sigma^1_n\)-uniformization**.  
-  Preprint, 20 May 2026.  
+  Preprint.  
   [arXiv](https://doi.org/10.48550/arXiv.2605.21189) · [PDF](/papers/martins-axiom-large-continuum-global-sigma-uniformization.pdf)
 
 - **Coanalytic MAD families and global \(\Sigma\)-uniformization**.  
